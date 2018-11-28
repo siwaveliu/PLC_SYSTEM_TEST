@@ -8,6 +8,7 @@ import plc_tb_ctrl
 import meter
 import config
 import time
+import formatter.gdw1376p2
 
 
 #设置主节点地址函数
@@ -53,65 +54,26 @@ def set_cco_mac_addr(cct,mac_addr):
 #添加从节点地址
 def add_sub_node_addr(cct, mac_addr_list, wait_ack=True):
     """
-
     :type cct: concentrator.Concentrator
     """
     assert isinstance(cct, concentrator.Concentrator)
-    
     cct.clear_port_rx_buf()
-
     '''
-              num: 1
+          num: 1
           list:
-          - addr: 00-00-00-00-00-01
-            proto_type: PROTO_DLT645_07
+          addr: 00-00-00-00-00-01
+          proto_type: PROTO_DLT645_07
     '''
     mac_dict_list =[]
     couter = 0 # type: int
+    dl_afn11f1_pkt = plc_tb_ctrl.PlcSystemTestbench._load_data_file(data_file='afn11f1_dl.yaml')
     for addr in mac_addr_list:
         mac_dict_list.append({'addr':addr,'proto_type':'PROTO_DLT645_07'})
         couter += 1
-        if couter >= 15:
-            frame = concentrator.build_gdw1376p2_frame(dict_content= {
-            'head':
-              {'len': 0},
-            'cf':
-              {'dir': 'DL',
-              'prm': 'MASTER',
-              'comm_mode': 'BB_PLC'
-                },
-            'user_data':{
-              'value':{
-                'r':{
-                  'relay_level': 0,
-                  'conflict_detect_flag': 0,
-                  'comm_module_flag': 0,
-                  'subnode_flag': 0,
-                  'route_flag': 0,
-                  'coding_type': 'NO_ENCODING',
-                  'channel_id': 0,
-                  'reply_len': 0,
-                  'comm_rate_flag': 'BPS',
-                  'comm_rate': 0,
-                  'sn': 0
-                  }, #end of r
-                'a': 'null',
-                'afn': 0x11,
-                'data':{
-                  'dt1': 1,
-                  'dt2': 0,
-                  'data':{
-
-                      'num': len(mac_dict_list),
-                      'list':mac_dict_list
-
-                    }
-                  } #end of data
-                }#end of value
-              },#end of user_data
-            'tail':{'cs': 0}
-            }) #end of dict_content
-
+        if couter % 15 == 0 or couter == len(mac_addr_list):
+            dl_afn11f1_pkt['user_data']['value']["data"]['num'] = len(mac_dict_list)
+            dl_afn11f1_pkt['user_data']['value']["data"]['list'] = mac_dict_list
+            frame = concentrator.build_gdw1376p2_frame(dict_content=dl_afn11f1_pkt)
             assert frame is not None
             cct.send_frame(frame)
             # 等待确认
@@ -119,57 +81,7 @@ def add_sub_node_addr(cct, mac_addr_list, wait_ack=True):
                 cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
             else:
                 cct.wait_for_gdw1376p2_frame(afn=0x00)
-            couter = 0
             mac_dict_list = []
-
-    if couter > 0:
-        frame = concentrator.build_gdw1376p2_frame(dict_content={
-            'head':
-                {'len': 0},
-            'cf':
-                {'dir': 'DL',
-                 'prm': 'MASTER',
-                 'comm_mode': 'BB_PLC'
-                 },
-            'user_data': {
-                'value': {
-                    'r': {
-                        'relay_level': 0,
-                        'conflict_detect_flag': 0,
-                        'comm_module_flag': 0,
-                        'subnode_flag': 0,
-                        'route_flag': 0,
-                        'coding_type': 'NO_ENCODING',
-                        'channel_id': 0,
-                        'reply_len': 0,
-                        'comm_rate_flag': 'BPS',
-                        'comm_rate': 0,
-                        'sn': 0
-                    },  # end of r
-                    'a': 'null',
-                    'afn': 0x11,
-                    'data': {
-                        'dt1': 1,
-                        'dt2': 0,
-                        'data': {
-
-                            'num': len(mac_dict_list),
-                            'list': mac_dict_list
-
-                        }
-                    }  # end of data
-                }  # end of value
-            },  # end of user_data
-            'tail': {'cs': 0}
-        })  # end of dict_content
-
-        assert frame is not None
-        cct.send_frame(frame)
-        # 等待确认
-        if wait_ack:
-            cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
-        else:
-            cct.wait_for_gdw1376p2_frame(afn=0x00)
 
 #删除从节点地址
 def del_sub_node_addr(cct,mac_addr_list):
@@ -182,55 +94,19 @@ def del_sub_node_addr(cct,mac_addr_list):
           list:
           - addr: 00-00-00-00-00-01
     '''
-#     mac_dict_list =[]
-#     for addr in mac_addr_list:
-#         mac_dict_list.append({'addr':addr})
-        #mac_str_list.append('proto_type: PROTO_DLT645_07')
-
-    frame = concentrator.build_gdw1376p2_frame(dict_content= {
-    'head':
-      {'len': 0},
-    'cf':
-      {'dir': 'DL',
-      'prm': 'MASTER',
-      'comm_mode': 'BB_PLC'
-        },
-    'user_data':{
-      'value':{
-        'r':{
-          'relay_level': 0,
-          'conflict_detect_flag': 0,
-          'comm_module_flag': 0,
-          'subnode_flag': 0,
-          'route_flag': 0,
-          'coding_type': 'NO_ENCODING',
-          'channel_id': 0,
-          'reply_len': 0,
-          'comm_rate_flag': 'BPS',
-          'comm_rate': 0,
-          'sn': 0
-          }, #end of r
-        'a': 'null',
-        'afn': 0x11,
-        'data':{
-          'dt1': 2,
-          'dt2': 0,
-          'data':{
-
-              'num': len(mac_addr_list),
-              'list':mac_addr_list
-
-            }
-          } #end of data
-        }#end of value
-      },#end of user_data
-    'tail':{'cs': 0}
-    }) #end of dict_content
-
-    assert frame is not None
-    cct.send_frame(frame)
-    # 等待确认
-    cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
+    mac_dict_list = []
+    couter = 0  # type: int
+    dl_afn11f2_pkt = plc_tb_ctrl.PlcSystemTestbench._load_data_file(data_file='afn11f2_dl.yaml')
+    for couter in range(1, len(mac_addr_list) + 1):
+        if couter % 15 == 0 or couter == len(mac_addr_list):
+            dl_afn11f2_pkt['user_data']['value']["data"]['num'] = len(mac_dict_list)
+            dl_afn11f2_pkt['user_data']['value']["data"]['list'] = mac_dict_list
+            frame = concentrator.build_gdw1376p2_frame(dict_content=dl_afn11f2_pkt)
+            assert frame is not None
+            cct.send_frame(frame)
+            # 等待确认
+            cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
+            mac_dict_list = []
 
 
 #发送AFN10F21查询网络拓扑

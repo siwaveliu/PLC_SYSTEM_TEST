@@ -1,35 +1,26 @@
 # -- coding: utf-8 --
-import os
 import os.path
-import subprocess
 import string
-import sys
-import imp
-# import win32gui
-#import win32con
-#import win32process
-import serial
+import subprocess
+
 import threading
-from struct import *
 import time
-from datetime import datetime
+from struct import *
+
 import robot
-from multiprocessing import Process, Queue
+import yaml
+from construct import *
 from robot.api import logger
 from robot.libraries.BuiltIn import BuiltIn
 from robot.running.context import EXECUTION_CONTEXTS
-import ctypes
-import json
-import yaml
-from formats import *
-import plc_packet_helper
-import test_frame_helper
-from construct import *
-import plc_tb_uart
-import config
-import sitrace_logger
-import usb_relay
+
 import concentrator
+import config
+import plc_packet_helper
+import plc_tb_uart
+import sitrace_logger
+import test_frame_helper
+import usb_relay
 
 DEFAULT_WAIT_TIME = 10
 
@@ -567,7 +558,8 @@ class PlcSystemTestbench(object):
         frame_body = result['body']
         self.tb_uart.send_test_frame(frame_body, cf)
 
-    def _load_data_file(self, data_file):
+    @staticmethod
+    def _load_data_file(data_file):
         msg = None
         data_file_full_path = os.path.join(curr_tc_dir, data_file)
         if not os.path.exists(data_file_full_path):
@@ -578,7 +570,6 @@ class PlcSystemTestbench(object):
         data = f.read()
         f.close()
         msg = yaml.load(data)
-
         return msg
 
     def _wait_for_fc_pl_data(self, fc_pl_checker=None, timeout=None, timeout_cb=None, *args):

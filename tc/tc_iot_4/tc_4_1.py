@@ -45,8 +45,7 @@ def run(tb, band):
     # tc_common.reset_cco_param_area(cct_other)
 
     #set sub node address
-    plc_tb_ctrl._debug("set sub node address to consorting cco, and start the escort net")
-
+    # plc_tb_ctrl._debug("set sub node address to consorting cco, and start the escort net")
     # 启动陪测CCO和STA组网
     # f = open('./互操作性表架拓扑地址_陪测.txt', 'r')
     # addr_list = f.readline()
@@ -80,7 +79,7 @@ def run(tb, band):
     plc_tb_ctrl._debug(sec_nodes_addr_list)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
 
-    tc_common.check_nw_top(tb.cct, nw_top_main, 3600)
+    tc_common.check_nw_top(tb.cct, nw_top_main, 500)
 
 
 
