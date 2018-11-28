@@ -1,0 +1,37 @@
+---
+# 本地通信模块报文通信测试 下行报文
+head:
+  len: 0
+cf:
+  dir: DL
+  prm: MASTER
+  comm_mode: BB_PLC
+user_data:
+  value:
+    r:
+      relay_level: 0
+      conflict_detect_flag: 0
+      comm_module_flag: 0
+      subnode_flag: 0
+      route_flag: 0
+      coding_type: NO_ENCODING
+      channel_id: 0
+      reply_len: 0
+      comm_rate_flag: BPS
+      comm_rate: 0
+      sn: 0
+    a: null
+    afn: 0x04
+    data:
+      dt1: 4
+      dt2: 0
+      data:
+        comm_rate:          0
+        node_addr:          00-00-00-00-00-1F
+        proto_type:         PROTO_DLT645_07
+        data_len:           16
+        data:               [0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08,
+                             0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18,
+                            ]
+tail:
+  cs: 0

@@ -1,0 +1,12 @@
+---
+# example data for APL_UPGRADE_EXEC downstream frame
+header:
+    port:             0x12
+    id:               APL_UPGRADE_EXEC
+    sec_mode:         0
+    ctrl_word:        0
+body:
+    proto_ver:        PROTO_VER1
+    time_2_rst:       43
+    upg_id:           0x4321
+    try_running_time: 65

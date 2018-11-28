@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181126 20:26:57.530" generator="Robot 3.0.2 (Python 2.7.15 on win32)">
+<suite source="C:\D\plc_system_test" id="s1" name="Plc System Test">
+<suite source="C:\D\plc_system_test\tc.4.robot" id="s1-s1" name="Tc.4">
+<test id="s1-s1-t1" name="tc_4.1">
+<kw type="setup" name="Init Test" library="plc_tb_ctrl">
+<msg timestamp="20181126 20:26:57.727" level="INFO">start detail logging</msg>
+<status status="PASS" endtime="20181126 20:27:02.727" starttime="20181126 20:26:57.727"></status>
+</kw>
+<kw name="Run Iot Test" library="plc_tb_ctrl.PlcSystemTestbench">
+<arguments>
+<arg>tc_4_1</arg>
+</arguments>
+<msg timestamp="20181126 20:27:02.727" level="INFO">Close TB port</msg>
+<msg timestamp="20181126 20:27:02.946" level="INFO">Open TB port</msg>
+<msg timestamp="20181126 20:27:02.946" level="INFO">C:\D\plc_system_test\\</msg>
+<msg timestamp="20181126 20:27:03.165" level="FAIL">TypeError: unbound method get_variable_value() must be called with BuiltIn instance as first argument (got str instance instead)</msg>
+<msg timestamp="20181126 20:27:03.165" level="DEBUG">Traceback (most recent call last):
+  File "C:\D\plc_system_test\lib\plc_tb_ctrl.py", line 346, in run_iot_test
+    band = BuiltIn.get_variable_value("{$band}")</msg>
+<status status="FAIL" endtime="20181126 20:27:03.165" starttime="20181126 20:27:02.727"></status>
+</kw>
+<kw type="teardown" name="Record Test Status" library="plc_tb_ctrl">
+<msg timestamp="20181126 20:27:03.165" level="INFO">begin 5 seconds waiting before exit...</msg>
+<msg timestamp="20181126 20:27:09.166" level="INFO">stop detail logging</msg>
+<status status="PASS" endtime="20181126 20:27:09.166" starttime="20181126 20:27:03.165"></status>
+</kw>
+<status status="FAIL" endtime="20181126 20:27:09.166" critical="yes" starttime="20181126 20:26:57.727">TypeError: unbound method get_variable_value() must be called with BuiltIn instance as first argument (got str instance instead)</status>
+</test>
+<status status="FAIL" endtime="20181126 20:27:09.166" starttime="20181126 20:26:57.639"></status>
+</suite>
+<status status="FAIL" endtime="20181126 20:27:09.166" starttime="20181126 20:26:57.624"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Plc System Test" pass="0">Plc System Test</stat>
+<stat fail="1" id="s1-s1" name="Tc.4" pass="0">Plc System Test.Tc.4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

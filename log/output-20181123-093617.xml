@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181123 09:36:17.387" generator="Robot 3.0.2 (Python 2.7.15 on win32)">
+<suite source="C:\D\plc_system_test" id="s1" name="Plc System Test">
+<suite source="C:\D\plc_system_test\tc.4.robot" id="s1-s1" name="Tc.4">
+<test id="s1-s1-t1" name="tc_4.1">
+<kw name="Run Iot Test" library="plc_tb_ctrl.PlcSystemTestbench">
+<arguments>
+<arg>tc_4_1</arg>
+</arguments>
+<msg timestamp="20181123 09:36:18.689" level="INFO">./tc\tc_iot_4\tc_4_1.py</msg>
+<msg timestamp="20181123 09:36:18.919" level="INFO">Open concentrator port</msg>
+<msg timestamp="20181123 09:36:18.919" level="INFO">power off all of meters and cco, delay 5s</msg>
+<msg timestamp="20181123 09:36:23.922" level="INFO">power on all of meters and cco.</msg>
+<msg timestamp="20181123 09:36:23.922" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=3,DT1=2,DT2=1</msg>
+<msg timestamp="20181123 09:36:27.405" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:27.405" level="INFO">set CCO addr=00-00-00-00-00-9C</msg>
+<msg timestamp="20181123 09:36:27.405" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=0,DT1=1,DT2=0</msg>
+<msg timestamp="20181123 09:36:27.465" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:27.465" level="INFO">reset CCO param area</msg>
+<msg timestamp="20181123 09:36:27.465" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=0,DT1=1,DT2=0</msg>
+<msg timestamp="20181123 09:36:27.545" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:27.545" level="INFO">set sub node address to consorting cco, and start the escort net</msg>
+<msg timestamp="20181123 09:36:27.545" level="INFO">set sub node address to main cco, and start the main net</msg>
+<msg timestamp="20181123 09:36:27.555" level="INFO">['00-20-18-09-11-22', '00-20-18-09-10-35', '00-20-18-09-11-29', '00-20-18-09-10-29', '00-20-18-09-10-80', '00-20-18-09-11-27', '00-20-18-09-10-24', '00-20-18-09-10-61', '00-20-18-09-11-30', '00-20-18-09-10-63', '00-20-18-09-10-62', '00-20-18-09-10-65', '00-20-18-09-11-34', '00-20-18-09-10-67', '00-20-18-09-10-66', '00-20-18-09-10-69', '00-20-18-09-10-68', '00-20-18-09-10-27', '00-20-18-09-11-33', '00-20-18-09-10-21', '00-20-18-09-10-23', '00-20-18-09-10-22', '00-20-18-09-11-24', '00-20-18-09-10-40', '00-20-18-09-11-31', '00-20-18-09-11-23', '00-20-18-09-11-32', '00-20-18-09-10-34', '00-20-18-09-11-37', '00-20-18-09-11-25', '00-20-18-09-10-28', '00-20-18-09-10-38', '00-20-18-09-10-26', '00-20-18-09-11-35', '00-20-18-09-11-21', '00-20-18-09-10-64', '00-20-18-09-10-72', '00-20-18-09-10-73', '00-20-18-09-10-70', '00-20-18-09-10-71', '00-20-18-09-10-76', '00-20-18-09-10-77', '00-20-18-09-10-74', '00-20-18-09-10-75', '00-20-18-09-10-36', '00-20-18-09-10-37', '00-20-18-09-10-78', '00-20-18-09-10-79', '00-20-18-09-10-32', '00-20-18-09-10-33', '00-20-18-09-10-30', '00-20-18-09-10-31', '00-20-18-09-11-39', '00-20-18-09-10-39', '00-20-18-09-11-40', '00-20-18-09-11-38', '00-20-18-09-11-26', '00-20-18-09-11-36', '00-20-18-09-11-28', '00-20-18-09-10-25']</msg>
+<msg timestamp="20181123 09:36:27.925" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=0,DT1=1,DT2=0</msg>
+<msg timestamp="20181123 09:36:28.105" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:28.115" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:28.175" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:28.175" level="INFO">node num: 0</msg>
+<msg timestamp="20181123 09:36:29.188" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:29.238" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:29.238" level="INFO">node num: 0</msg>
+<msg timestamp="20181123 09:36:30.239" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:30.299" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:30.299" level="INFO">node num: 0</msg>
+<msg timestamp="20181123 09:36:31.299" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:31.349" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:31.349" level="INFO">node num: 0</msg>
+<msg timestamp="20181123 09:36:32.350" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:32.410" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:32.410" level="INFO">node num: 0</msg>
+<msg timestamp="20181123 09:36:33.411" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:33.461" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:33.461" level="INFO">node num: 0</msg>
+<msg timestamp="20181123 09:36:34.463" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:34.522" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:34.522" level="INFO">node num: 0</msg>
+<msg timestamp="20181123 09:36:35.523" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:35.576" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:35.576" level="INFO">node num: 0</msg>
+<msg timestamp="20181123 09:36:36.583" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:36.643" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:36.643" level="INFO">node num: 0</msg>
+<msg timestamp="20181123 09:36:37.645" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:37.715" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:37.715" level="INFO">node num: 1</msg>
+<msg timestamp="20181123 09:36:38.716" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:38.786" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:38.786" level="INFO">node num: 1</msg>
+<msg timestamp="20181123 09:36:39.788" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:39.858" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:39.858" level="INFO">node num: 1</msg>
+<msg timestamp="20181123 09:36:40.859" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:40.930" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:40.930" level="INFO">node num: 1</msg>
+<msg timestamp="20181123 09:36:41.931" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:42.001" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:42.001" level="INFO">node num: 1</msg>
+<msg timestamp="20181123 09:36:43.002" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:43.072" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:43.072" level="INFO">node num: 1</msg>
+<msg timestamp="20181123 09:36:44.073" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:44.154" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:44.154" level="INFO">node num: 1</msg>
+<msg timestamp="20181123 09:36:45.155" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:45.256" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:45.256" level="INFO">node num: 4</msg>
+<msg timestamp="20181123 09:36:46.257" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:46.357" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:46.367" level="INFO">node num: 4</msg>
+<msg timestamp="20181123 09:36:47.369" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:47.479" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:47.479" level="INFO">node num: 4</msg>
+<msg timestamp="20181123 09:36:48.483" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:48.611" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:48.611" level="INFO">node num: 6</msg>
+<msg timestamp="20181123 09:36:49.622" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:49.752" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:49.752" level="INFO">node num: 6</msg>
+<msg timestamp="20181123 09:36:50.753" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:50.883" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:50.883" level="INFO">node num: 6</msg>
+<msg timestamp="20181123 09:36:51.884" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:52.024" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:52.024" level="INFO">node num: 6</msg>
+<msg timestamp="20181123 09:36:53.025" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:53.156" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:53.156" level="INFO">node num: 6</msg>
+<msg timestamp="20181123 09:36:54.157" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:54.287" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:54.287" level="INFO">node num: 6</msg>
+<msg timestamp="20181123 09:36:55.288" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:55.460" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:55.460" level="INFO">node num: 9</msg>
+<msg timestamp="20181123 09:36:56.461" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:56.629" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:56.629" level="INFO">node num: 9</msg>
+<msg timestamp="20181123 09:36:57.630" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:57.820" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:57.820" level="INFO">node num: 11</msg>
+<msg timestamp="20181123 09:36:58.821" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:36:59.022" level="INFO">Received</msg>
+<msg timestamp="20181123 09:36:59.022" level="INFO">node num: 11</msg>
+<msg timestamp="20181123 09:37:00.023" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:00.223" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:00.223" level="INFO">node num: 11</msg>
+<msg timestamp="20181123 09:37:01.224" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:01.456" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:01.456" level="INFO">node num: 13</msg>
+<msg timestamp="20181123 09:37:02.465" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:02.687" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:02.687" level="INFO">node num: 13</msg>
+<msg timestamp="20181123 09:37:03.688" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:03.918" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:03.918" level="INFO">node num: 13</msg>
+<msg timestamp="20181123 09:37:04.921" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:05.141" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:05.141" level="INFO">node num: 13</msg>
+<msg timestamp="20181123 09:37:06.142" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:06.372" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:06.372" level="INFO">node num: 13</msg>
+<msg timestamp="20181123 09:37:07.374" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:07.624" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:07.624" level="INFO">node num: 15</msg>
+<msg timestamp="20181123 09:37:08.626" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:08.886" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:08.886" level="INFO">node num: 16</msg>
+<msg timestamp="20181123 09:37:09.887" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:10.177" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:10.177" level="INFO">node num: 19</msg>
+<msg timestamp="20181123 09:37:11.180" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:11.470" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:11.470" level="INFO">node num: 19</msg>
+<msg timestamp="20181123 09:37:12.481" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:12.782" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:12.782" level="INFO">node num: 19</msg>
+<msg timestamp="20181123 09:37:13.783" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:14.083" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:14.083" level="INFO">node num: 19</msg>
+<msg timestamp="20181123 09:37:15.086" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:15.386" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:15.396" level="INFO">node num: 19</msg>
+<msg timestamp="20181123 09:37:16.397" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:16.737" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:16.737" level="INFO">node num: 22</msg>
+<msg timestamp="20181123 09:37:17.739" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:18.089" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:18.089" level="INFO">node num: 23</msg>
+<msg timestamp="20181123 09:37:19.089" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:19.439" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:19.439" level="INFO">node num: 23</msg>
+<msg timestamp="20181123 09:37:20.450" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:20.790" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:20.790" level="INFO">node num: 23</msg>
+<msg timestamp="20181123 09:37:21.791" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:22.141" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:22.142" level="INFO">node num: 23</msg>
+<msg timestamp="20181123 09:37:23.144" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:23.525" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:23.525" level="INFO">node num: 26</msg>
+<msg timestamp="20181123 09:37:24.525" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:24.915" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:24.915" level="INFO">node num: 26</msg>
+<msg timestamp="20181123 09:37:25.926" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:26.327" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:26.327" level="INFO">node num: 27</msg>
+<msg timestamp="20181123 09:37:27.328" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:27.728" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:27.728" level="INFO">node num: 27</msg>
+<msg timestamp="20181123 09:37:28.729" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:29.189" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:29.189" level="INFO">node num: 31</msg>
+<msg timestamp="20181123 09:37:30.191" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:30.681" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:30.681" level="INFO">node num: 33</msg>
+<msg timestamp="20181123 09:37:31.682" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:32.172" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:32.172" level="INFO">node num: 34</msg>
+<msg timestamp="20181123 09:37:33.183" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:33.663" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:33.663" level="INFO">node num: 34</msg>
+<msg timestamp="20181123 09:37:34.663" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:35.154" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:35.154" level="INFO">node num: 34</msg>
+<msg timestamp="20181123 09:37:36.164" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:36.655" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:36.655" level="INFO">node num: 34</msg>
+<msg timestamp="20181123 09:37:37.656" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:38.217" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:38.217" level="INFO">node num: 40</msg>
+<msg timestamp="20181123 09:37:39.224" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:39.798" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:39.798" level="INFO">node num: 40</msg>
+<msg timestamp="20181123 09:37:40.801" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:41.440" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:41.440" level="INFO">node num: 45</msg>
+<msg timestamp="20181123 09:37:42.443" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:43.083" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:43.083" level="INFO">node num: 45</msg>
+<msg timestamp="20181123 09:37:44.084" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:44.805" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:44.805" level="INFO">node num: 52</msg>
+<msg timestamp="20181123 09:37:45.806" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:46.536" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:46.536" level="INFO">node num: 52</msg>
+<msg timestamp="20181123 09:37:47.541" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:48.264" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:48.264" level="INFO">node num: 52</msg>
+<msg timestamp="20181123 09:37:49.269" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:49.989" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:49.989" level="INFO">node num: 52</msg>
+<msg timestamp="20181123 09:37:50.990" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:51.732" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:51.732" level="INFO">node num: 53</msg>
+<msg timestamp="20181123 09:37:52.733" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:53.473" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:53.473" level="INFO">node num: 53</msg>
+<msg timestamp="20181123 09:37:54.484" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:55.225" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:55.225" level="INFO">node num: 53</msg>
+<msg timestamp="20181123 09:37:56.225" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:56.976" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:56.976" level="INFO">node num: 54</msg>
+<msg timestamp="20181123 09:37:57.986" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:37:58.727" level="INFO">Received</msg>
+<msg timestamp="20181123 09:37:58.727" level="INFO">node num: 54</msg>
+<msg timestamp="20181123 09:37:59.729" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:00.520" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:00.520" level="INFO">node num: 58</msg>
+<msg timestamp="20181123 09:38:01.521" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:02.311" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:02.311" level="INFO">node num: 58</msg>
+<msg timestamp="20181123 09:38:03.312" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:04.113" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:04.113" level="INFO">node num: 58</msg>
+<msg timestamp="20181123 09:38:05.114" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:05.925" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:05.925" level="INFO">node num: 59</msg>
+<msg timestamp="20181123 09:38:06.926" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:07.726" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:07.726" level="INFO">node num: 59</msg>
+<msg timestamp="20181123 09:38:08.727" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:09.540" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:09.540" level="INFO">node num: 59</msg>
+<msg timestamp="20181123 09:38:10.540" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:11.361" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:11.361" level="INFO">node num: 59</msg>
+<msg timestamp="20181123 09:38:12.363" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:13.183" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:13.183" level="INFO">node num: 59</msg>
+<msg timestamp="20181123 09:38:14.183" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:15.004" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:15.004" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:16.005" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:16.825" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:16.825" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:17.826" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:18.646" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:18.646" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:19.648" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:20.469" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:20.469" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:21.470" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:22.290" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:22.290" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:23.291" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:24.113" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:24.113" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:25.114" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:25.935" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:25.935" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:26.936" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:27.757" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:27.757" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:28.758" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:29.578" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:29.578" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:30.580" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:31.407" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:31.408" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:32.411" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:33.222" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:33.222" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:34.223" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:35.043" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:35.043" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:36.044" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:36.864" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:36.864" level="INFO">node num: 60</msg>
+<msg timestamp="20181123 09:38:37.866" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=16,DT1=16,DT2=2</msg>
+<msg timestamp="20181123 09:38:38.706" level="INFO">Received</msg>
+<msg timestamp="20181123 09:38:38.706" level="INFO">node num: 61</msg>
+<msg timestamp="20181123 09:38:38.706" level="INFO">00-20-18-09-11-24
+00-20-18-09-10-33
+00-20-18-09-11-37
+00-20-18-09-10-61
+00-20-18-09-10-40
+00-20-18-09-10-77
+00-20-18-09-11-29
+00-20-18-09-11-31
+00-20-18-09-11-21
+00-20-18-09-11-32
+00-20-18-09-10-76
+00-20-18-09-11-23
+00-20-18-09-10-35
+00-20-18-09-10-29
+00-20-18-09-10-28
+00-20-18-09-11-26
+00-20-18-09-10-27
+00-20-18-09-11-22
+00-20-18-09-10-26
+00-20-18-09-11-36
+00-20-18-09-11-27
+00-20-18-09-11-33
+00-20-18-09-11-30
+00-20-18-09-10-73
+00-20-18-09-11-34
+00-20-18-09-10-71</msg>
+<msg timestamp="20181123 09:38:38.706" level="FAIL">AssertionError</msg>
+<msg timestamp="20181123 09:38:38.706" level="DEBUG">Traceback (most recent call last):
+  File "C:\D\plc_system_test\lib\plc_tb_ctrl.py", line 334, in run_iot_test
+    tc.run(self)
+  File "./tc\tc_iot_4\tc_4_1.py", line 88, in run
+    tc_common.check_nw_top(cct, nw_top_main, 3600)
+  File "C:\D\plc_system_test\lib\tc_common.py", line 1032, in check_nw_top
+    assert nw_top[node.addr] &lt;= node.level</msg>
+<status status="FAIL" endtime="20181123 09:38:38.706" starttime="20181123 09:36:18.659"></status>
+</kw>
+<status status="FAIL" endtime="20181123 09:38:38.826" critical="yes" starttime="20181123 09:36:18.659">AssertionError</status>
+</test>
+<status status="FAIL" endtime="20181123 09:38:38.826" starttime="20181123 09:36:18.499"></status>
+</suite>
+<status status="FAIL" endtime="20181123 09:38:38.836" starttime="20181123 09:36:18.439"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Plc System Test" pass="0">Plc System Test</stat>
+<stat fail="1" id="s1-s1" name="Tc.4" pass="0">Plc System Test.Tc.4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

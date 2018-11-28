@@ -1,0 +1,40 @@
+
+METER_PORT = 'COM8'
+METER_BAUDRATE = 2400
+
+TEST_PORT = 'COM8'
+TEST_PORT_BAUDRATE = 115200
+
+CONCENTRATOR_PORT = 'COM8'
+CONCENTRATOR_BAUDRATE = 9600
+
+TB_PORT = 'COM6'
+TB_BAUDRATE = 115200
+
+TB_SITRACE_PORT = 'COM5'
+TB_SITRACE_BAUDRATE = 921600
+
+DUT_SITRACE_PORT = 'COM7'
+DUT_SITRACE_BAUDRATE = 921600
+
+
+DUT_JLINK_SN = '59400978'
+TB_JLINK_SN = '269200585'
+
+JLINK_PATH = "C:/Program Files (x86)/SEGGER/JLink_V612a/JLink.exe"
+
+SITRACE_PATH = "E:/Program Files (x86)/SiTrace/SiTrace.exe"
+
+
+AUTO_LOG = True
+
+#SIWP9006
+DEVICE="Cortex-M0"
+#PZ6806L
+#DEVICE="STM32F103ZE"
+
+# DUT's clock is 1 times slower than the normal
+# i.e. It takes PC 2 seconds while it elapses only 1 second by DUT side 
+CLOCK_RATE = 2
+# DUT's clock is same as the normal
+#CLOCK_RATE = 1

@@ -1,0 +1,23 @@
+---
+# MME_ASSOC_CNF frame
+header:
+    mmtype:          MME_ASSOC_CNF
+body:
+    mac_sta:         BB-BB-BB-BB-BB-BB
+    mac_cco:         AA-AA-AA-AA-AA-AA
+    result:          NML_ASSOCIATION_OK
+    level:           1
+    tei_sta:         2
+    tei_proxy:       1
+    frag_num:        1
+    frag_sn:         1
+    random_num:      0x1234
+    retry_times:     0
+    p2p_sn:          0xABCD
+    path_sn:         4321
+    info:
+        direct_station_num:    0
+        direct_proxy_num:      0
+        table_size:            0
+        direct_sta_tei:        []
+        direct_proxy_tei: []

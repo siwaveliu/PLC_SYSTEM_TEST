@@ -1,0 +1,23 @@
+---
+# example data for MME_ROUTE_REQ frame
+header:
+    mmtype:          MME_ROUTE_REQ
+body:
+    ver:                0
+    sn:                 1234
+    route_prefer_flag:  NML_PREFERRED
+    payload_type:       NML_SPREAD_ROUTE_LIST
+    payload_len:        16
+    data:
+    -   tei:            0xB1
+        comm_succ_rate: 91
+        quality:        15
+    -   tei:            0xB2
+        comm_succ_rate: 92
+        quality:        16
+    -   tei:            0xB3
+        comm_succ_rate: 93
+        quality:        17
+    -   tei:            0xB4
+        comm_succ_rate: 94
+        quality:        18

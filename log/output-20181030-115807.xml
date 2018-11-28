@@ -1,0 +1,3859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181030 11:58:08.145" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="D:\svn\sources\SIWP9006\plc_system_test" id="s1" name="Plc System Test">
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.2.robot" id="s1-s1" name="Tc.2">
+<test id="s1-s1-t1" name="tc_2.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.235" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.235" starttime="20181030 11:58:08.235"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.237" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.238" starttime="20181030 11:58:08.237">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.238" critical="yes" starttime="20181030 11:58:08.233">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t2" name="tc_2.1.b0">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.240" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.240" starttime="20181030 11:58:08.240"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.243" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.243" starttime="20181030 11:58:08.242">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.243" critical="yes" starttime="20181030 11:58:08.238">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t3" name="tc_2.1.b1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.245" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.246" starttime="20181030 11:58:08.245"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.248" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.248" starttime="20181030 11:58:08.248">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.248" critical="yes" starttime="20181030 11:58:08.243">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t4" name="tc_2.1.b2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.251" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.251" starttime="20181030 11:58:08.251"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.253" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.253" starttime="20181030 11:58:08.253">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.253" critical="yes" starttime="20181030 11:58:08.249">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t5" name="tc_2.1.b3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.256" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.256" starttime="20181030 11:58:08.256"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.258" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.258" starttime="20181030 11:58:08.258">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.259" critical="yes" starttime="20181030 11:58:08.254">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t6" name="tc_2.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.261" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.261" starttime="20181030 11:58:08.261"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.263" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.264" starttime="20181030 11:58:08.263">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.264" critical="yes" starttime="20181030 11:58:08.259">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t7" name="tc_2.2.b0">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.266" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.266" starttime="20181030 11:58:08.266"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.268" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.268" starttime="20181030 11:58:08.268">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.269" critical="yes" starttime="20181030 11:58:08.264">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t8" name="tc_2.2.b1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.271" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.271" starttime="20181030 11:58:08.271"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.273" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.274" starttime="20181030 11:58:08.273">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.274" critical="yes" starttime="20181030 11:58:08.269">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t9" name="tc_2.2.b2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.276" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.276" starttime="20181030 11:58:08.276"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.279" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.279" starttime="20181030 11:58:08.278">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.279" critical="yes" starttime="20181030 11:58:08.274">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t10" name="tc_2.2.b3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.282" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.282" starttime="20181030 11:58:08.281"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.284" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.284" starttime="20181030 11:58:08.284">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.284" critical="yes" starttime="20181030 11:58:08.279">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t11" name="tc_2.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.287" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.287" starttime="20181030 11:58:08.287"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.289" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.290" starttime="20181030 11:58:08.289">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.290" critical="yes" starttime="20181030 11:58:08.285">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t12" name="tc_2.3_b0">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.292" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.293" starttime="20181030 11:58:08.292"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.295" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.295" starttime="20181030 11:58:08.295">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.295" critical="yes" starttime="20181030 11:58:08.290">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t13" name="tc_2.3_b1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.298" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.298" starttime="20181030 11:58:08.298"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.300" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.300" starttime="20181030 11:58:08.300">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.300" critical="yes" starttime="20181030 11:58:08.296">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t14" name="tc_2.3_b2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.303" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.303" starttime="20181030 11:58:08.303"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.305" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.305" starttime="20181030 11:58:08.305">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.306" critical="yes" starttime="20181030 11:58:08.301">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t15" name="tc_2.3_b3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.308" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.308" starttime="20181030 11:58:08.308"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.310" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.310" starttime="20181030 11:58:08.310">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.311" critical="yes" starttime="20181030 11:58:08.306">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t16" name="tc_2.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.313" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.313" starttime="20181030 11:58:08.313"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.315" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.316" starttime="20181030 11:58:08.315">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.316" critical="yes" starttime="20181030 11:58:08.311">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t17" name="tc_2.4.b0">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.318" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.318" starttime="20181030 11:58:08.318"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.320" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.321" starttime="20181030 11:58:08.320">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.321" critical="yes" starttime="20181030 11:58:08.316">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t18" name="tc_2.4.b1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.323" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.323" starttime="20181030 11:58:08.323"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.325" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.326" starttime="20181030 11:58:08.325">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.326" critical="yes" starttime="20181030 11:58:08.321">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t19" name="tc_2.4.b2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.328" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.328" starttime="20181030 11:58:08.328"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.331" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.331" starttime="20181030 11:58:08.331">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.331" critical="yes" starttime="20181030 11:58:08.326">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t20" name="tc_2.4.b3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.333" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.334" starttime="20181030 11:58:08.333"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.336" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.336" starttime="20181030 11:58:08.336">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.336" critical="yes" starttime="20181030 11:58:08.331">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t21" name="tc_2.4.loopback">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.339" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.339" starttime="20181030 11:58:08.339"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.341" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.341" starttime="20181030 11:58:08.341">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.341" critical="yes" starttime="20181030 11:58:08.337">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t22" name="tc_2.5.b0_1mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.344" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.344" starttime="20181030 11:58:08.344"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.346" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.346" starttime="20181030 11:58:08.346">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.347" critical="yes" starttime="20181030 11:58:08.342">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t23" name="tc_2.5.b0_8mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.349" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.349" starttime="20181030 11:58:08.349"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.351" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.352" starttime="20181030 11:58:08.351">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.352" critical="yes" starttime="20181030 11:58:08.347">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t24" name="tc_2.5.b0_15mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.354" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.354" starttime="20181030 11:58:08.354"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.357" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.357" starttime="20181030 11:58:08.356">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.357" critical="yes" starttime="20181030 11:58:08.352">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t25" name="tc_2.5.b1_1mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.359" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.359" starttime="20181030 11:58:08.359"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.362" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.362" starttime="20181030 11:58:08.362">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.362" critical="yes" starttime="20181030 11:58:08.357">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t26" name="tc_2.5.b1_3mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.365" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.365" starttime="20181030 11:58:08.364"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.367" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.367" starttime="20181030 11:58:08.367">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.367" critical="yes" starttime="20181030 11:58:08.362">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t27" name="tc_2.5.b1_6mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.370" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.370" starttime="20181030 11:58:08.369"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.372" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.372" starttime="20181030 11:58:08.372">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.372" critical="yes" starttime="20181030 11:58:08.368">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t28" name="tc_2.5.b2_0p5mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.375" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.375" starttime="20181030 11:58:08.374"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.386" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.386" starttime="20181030 11:58:08.386">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.386" critical="yes" starttime="20181030 11:58:08.373">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t29" name="tc_2.5.b2_2mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.389" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.389" starttime="20181030 11:58:08.389"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.392" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.392" starttime="20181030 11:58:08.391">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.392" critical="yes" starttime="20181030 11:58:08.387">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t30" name="tc_2.5.b2_5mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.395" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.395" starttime="20181030 11:58:08.395"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.397" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.397" starttime="20181030 11:58:08.397">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.397" critical="yes" starttime="20181030 11:58:08.392">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t31" name="tc_2.5.b3_1mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.400" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.400" starttime="20181030 11:58:08.399"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.402" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.402" starttime="20181030 11:58:08.402">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.402" critical="yes" starttime="20181030 11:58:08.398">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t32" name="tc_2.5.b3_3mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.405" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.405" starttime="20181030 11:58:08.404"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.407" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.407" starttime="20181030 11:58:08.407">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.407" critical="yes" starttime="20181030 11:58:08.403">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t33" name="tc_2.5.b3_6mhz">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.410" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.410" starttime="20181030 11:58:08.410"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.412" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.412" starttime="20181030 11:58:08.412">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.412" critical="yes" starttime="20181030 11:58:08.408">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t34" name="tc_2.6.b0_imp_fs50_1s_iq">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.415" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.415" starttime="20181030 11:58:08.415"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.417" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.417" starttime="20181030 11:58:08.417">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.418" critical="yes" starttime="20181030 11:58:08.413">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t35" name="tc_2.6.b0_imp_fs50_150ms_iq">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.420" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.420" starttime="20181030 11:58:08.420"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.422" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.423" starttime="20181030 11:58:08.422">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.423" critical="yes" starttime="20181030 11:58:08.418">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t36" name="tc_2.6.b1_imp_fs50_1s_iq">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.425" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.425" starttime="20181030 11:58:08.425"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.428" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.428" starttime="20181030 11:58:08.427">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.428" critical="yes" starttime="20181030 11:58:08.423">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t37" name="tc_2.6.b1_imp_fs50_150ms_iq">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.430" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.431" starttime="20181030 11:58:08.430"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.433" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.433" starttime="20181030 11:58:08.433">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.433" critical="yes" starttime="20181030 11:58:08.428">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t38" name="tc_2.6.b2_imp_fs50_1s_iq">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.436" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.436" starttime="20181030 11:58:08.436"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.438" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.438" starttime="20181030 11:58:08.438">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.438" critical="yes" starttime="20181030 11:58:08.434">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t39" name="tc_2.6.b2_imp_fs50_150ms_iq">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.441" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.441" starttime="20181030 11:58:08.441"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.443" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.443" starttime="20181030 11:58:08.443">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.444" critical="yes" starttime="20181030 11:58:08.439">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t40" name="tc_2.6.b3_imp_fs50_1s_iq">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.446" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.446" starttime="20181030 11:58:08.446"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.449" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.449" starttime="20181030 11:58:08.448">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.449" critical="yes" starttime="20181030 11:58:08.444">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t41" name="tc_2.6.b3_imp_fs50_150ms_iq">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.451" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.451" starttime="20181030 11:58:08.451"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.454" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.454" starttime="20181030 11:58:08.453">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.454" critical="yes" starttime="20181030 11:58:08.449">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t42" name="tc_2.100">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.456" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.456" starttime="20181030 11:58:08.456"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.459" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.459" starttime="20181030 11:58:08.459">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.459" critical="yes" starttime="20181030 11:58:08.454">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t43" name="tc_2.7">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.462" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.462" starttime="20181030 11:58:08.461"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.464" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.464" starttime="20181030 11:58:08.464">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.464" critical="yes" starttime="20181030 11:58:08.459">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t44" name="tc_2.7.b0">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.467" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.467" starttime="20181030 11:58:08.466"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.469" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.469" starttime="20181030 11:58:08.469">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.469" critical="yes" starttime="20181030 11:58:08.465">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t45" name="tc_2.7.b1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.472" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.472" starttime="20181030 11:58:08.472"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.475" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.475" starttime="20181030 11:58:08.475">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.475" critical="yes" starttime="20181030 11:58:08.470">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t46" name="tc_2.7.b2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.478" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.478" starttime="20181030 11:58:08.478"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.480" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.480" starttime="20181030 11:58:08.480">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.481" critical="yes" starttime="20181030 11:58:08.476">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s1-t47" name="tc_2.7.b3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.483" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.483" starttime="20181030 11:58:08.483"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.486" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.486" starttime="20181030 11:58:08.485">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:08.486" critical="yes" starttime="20181030 11:58:08.481">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.487" starttime="20181030 11:58:08.219"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.1.robot" id="s1-s2" name="Tc.3.1">
+<test id="s1-s2-t1" name="tc_3.1.1.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.497" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.497" starttime="20181030 11:58:08.497"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.500" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.500" starttime="20181030 11:58:08.500">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.500" critical="yes" starttime="20181030 11:58:08.495">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s2-t2" name="tc_3.1.1.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.503" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.503" starttime="20181030 11:58:08.502"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.505" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.505" starttime="20181030 11:58:08.505">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.505" critical="yes" starttime="20181030 11:58:08.500">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s2-t3" name="tc_3.1.1.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.508" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.508" starttime="20181030 11:58:08.507"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.510" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.510" starttime="20181030 11:58:08.510">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.510" critical="yes" starttime="20181030 11:58:08.506">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s2-t4" name="tc_3.1.1.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.513" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.513" starttime="20181030 11:58:08.513"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.514" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.514" starttime="20181030 11:58:08.514">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.514" critical="yes" starttime="20181030 11:58:08.511">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.516" starttime="20181030 11:58:08.491"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.1.robot" id="s1-s3" name="Tc.3.2.1">
+<test id="s1-s3-t1" name="tc_3.2.1.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.522" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.522" starttime="20181030 11:58:08.522"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.525" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.525" starttime="20181030 11:58:08.525">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.525" critical="yes" starttime="20181030 11:58:08.520">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s3-t2" name="tc_3.2.1.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.528" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.528" starttime="20181030 11:58:08.527"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.530" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.530" starttime="20181030 11:58:08.530">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.530" critical="yes" starttime="20181030 11:58:08.526">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s3-t3" name="tc_3.2.1.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.533" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.533" starttime="20181030 11:58:08.533"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.535" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.535" starttime="20181030 11:58:08.535">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.536" critical="yes" starttime="20181030 11:58:08.531">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s3-t4" name="tc_3.2.1.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.538" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.538" starttime="20181030 11:58:08.538"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.540" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.541" starttime="20181030 11:58:08.540">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.541" critical="yes" starttime="20181030 11:58:08.536">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s3-t5" name="tc_3.2.1.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.543" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.544" starttime="20181030 11:58:08.543"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.546" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.546" starttime="20181030 11:58:08.546">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.546" critical="yes" starttime="20181030 11:58:08.541">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s3-t6" name="tc_3.2.1.6">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.549" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.549" starttime="20181030 11:58:08.548"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.551" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.551" starttime="20181030 11:58:08.551">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.551" critical="yes" starttime="20181030 11:58:08.546">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.552" starttime="20181030 11:58:08.516"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.10.robot" id="s1-s4" name="Tc.3.2.10">
+<test id="s1-s4-t1" name="case 3.2.10.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.559" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.559" starttime="20181030 11:58:08.559"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.562" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.562" starttime="20181030 11:58:08.561">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.562" critical="yes" starttime="20181030 11:58:08.557">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s4-t2" name="case 3.2.10.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.564" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.565" starttime="20181030 11:58:08.564"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.567" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.567" starttime="20181030 11:58:08.567">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.567" critical="yes" starttime="20181030 11:58:08.562">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s4-t3" name="case 3.2.10.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.570" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.570" starttime="20181030 11:58:08.569"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.572" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.572" starttime="20181030 11:58:08.572">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.572" critical="yes" starttime="20181030 11:58:08.567">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s4-t4" name="case 3.2.10.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.575" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.575" starttime="20181030 11:58:08.575"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.577" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.577" starttime="20181030 11:58:08.577">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.578" critical="yes" starttime="20181030 11:58:08.573">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s4-t5" name="case 3.2.10.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.580" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.580" starttime="20181030 11:58:08.580"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.582" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.583" starttime="20181030 11:58:08.582">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.583" critical="yes" starttime="20181030 11:58:08.578">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s4-t6" name="case 3.2.10.6">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.585" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.585" starttime="20181030 11:58:08.585"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.588" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.588" starttime="20181030 11:58:08.587">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.588" critical="yes" starttime="20181030 11:58:08.583">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s4-t7" name="case 3.2.10.7">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.590" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.590" starttime="20181030 11:58:08.590"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.593" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.593" starttime="20181030 11:58:08.593">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.593" critical="yes" starttime="20181030 11:58:08.588">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s4-t8" name="case 3.2.10.8">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.596" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.596" starttime="20181030 11:58:08.595"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.598" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.598" starttime="20181030 11:58:08.598">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.598" critical="yes" starttime="20181030 11:58:08.593">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s4-t9" name="case 3.2.10.9">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.601" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.601" starttime="20181030 11:58:08.601"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.603" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.603" starttime="20181030 11:58:08.603">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.603" critical="yes" starttime="20181030 11:58:08.599">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s4-t10" name="case 3.2.10.10">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.606" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.606" starttime="20181030 11:58:08.606"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.609" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.609" starttime="20181030 11:58:08.608">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.609" critical="yes" starttime="20181030 11:58:08.604">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.609" starttime="20181030 11:58:08.553"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.11.robot" id="s1-s5" name="Tc.3.2.11">
+<test id="s1-s5-t1" name="case 3.2.11.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.617" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.617" starttime="20181030 11:58:08.617"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.620" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.620" starttime="20181030 11:58:08.619">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.620" critical="yes" starttime="20181030 11:58:08.615">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t2" name="case 3.2.11.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.622" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.622" starttime="20181030 11:58:08.622"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.625" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.625" starttime="20181030 11:58:08.625">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.625" critical="yes" starttime="20181030 11:58:08.620">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t3" name="case 3.2.11.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.628" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.628" starttime="20181030 11:58:08.628"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.630" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.630" starttime="20181030 11:58:08.630">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.630" critical="yes" starttime="20181030 11:58:08.625">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t4" name="case 3.2.11.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.633" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.633" starttime="20181030 11:58:08.633"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.635" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.635" starttime="20181030 11:58:08.635">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.635" critical="yes" starttime="20181030 11:58:08.631">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t5" name="case 3.2.11.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.638" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.638" starttime="20181030 11:58:08.638"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.640" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.640" starttime="20181030 11:58:08.640">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.641" critical="yes" starttime="20181030 11:58:08.636">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t6" name="case 3.2.11.6">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.643" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.643" starttime="20181030 11:58:08.643"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.646" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.646" starttime="20181030 11:58:08.645">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.646" critical="yes" starttime="20181030 11:58:08.641">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t7" name="case 3.2.11.7">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.648" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.648" starttime="20181030 11:58:08.648"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.651" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.651" starttime="20181030 11:58:08.650">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.651" critical="yes" starttime="20181030 11:58:08.646">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t8" name="case 3.2.11.8">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.654" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.654" starttime="20181030 11:58:08.653"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.656" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.656" starttime="20181030 11:58:08.656">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.656" critical="yes" starttime="20181030 11:58:08.651">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t9" name="case 3.2.11.9">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.659" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.659" starttime="20181030 11:58:08.659"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.662" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.662" starttime="20181030 11:58:08.662">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.662" critical="yes" starttime="20181030 11:58:08.657">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t10" name="case 3.2.11.10">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.665" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.665" starttime="20181030 11:58:08.664"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.667" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.667" starttime="20181030 11:58:08.667">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.667" critical="yes" starttime="20181030 11:58:08.662">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t11" name="case 3.2.11.11">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.670" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.670" starttime="20181030 11:58:08.670"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.672" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.672" starttime="20181030 11:58:08.672">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.672" critical="yes" starttime="20181030 11:58:08.668">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t12" name="case 3.2.11.12">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.675" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.675" starttime="20181030 11:58:08.675"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.677" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.678" starttime="20181030 11:58:08.677">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.678" critical="yes" starttime="20181030 11:58:08.673">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t13" name="case 3.2.11.13">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.680" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.680" starttime="20181030 11:58:08.680"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.683" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.683" starttime="20181030 11:58:08.682">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.683" critical="yes" starttime="20181030 11:58:08.678">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t14" name="case 3.2.11.14">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.686" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.686" starttime="20181030 11:58:08.685"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.688" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.688" starttime="20181030 11:58:08.688">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.688" critical="yes" starttime="20181030 11:58:08.683">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t15" name="case 3.2.11.15">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.691" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.691" starttime="20181030 11:58:08.691"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.693" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.694" starttime="20181030 11:58:08.693">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.694" critical="yes" starttime="20181030 11:58:08.689">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s5-t16" name="case 3.2.11.16">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.696" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.696" starttime="20181030 11:58:08.696"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.699" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.699" starttime="20181030 11:58:08.698">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.699" critical="yes" starttime="20181030 11:58:08.694">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.700" starttime="20181030 11:58:08.611"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.2.robot" id="s1-s6" name="Tc.3.2.2">
+<test id="s1-s6-t1" name="tc_3.2.2.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.708" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.708" starttime="20181030 11:58:08.708"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.710" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.711" starttime="20181030 11:58:08.710">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.711" critical="yes" starttime="20181030 11:58:08.706">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s6-t2" name="tc_3.2.2.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.713" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.713" starttime="20181030 11:58:08.713"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.716" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.716" starttime="20181030 11:58:08.716">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.716" critical="yes" starttime="20181030 11:58:08.711">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.716" starttime="20181030 11:58:08.701"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.3.robot" id="s1-s7" name="Tc.3.2.3">
+<test id="s1-s7-t1" name="tc_3.2.3.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.724" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.724" starttime="20181030 11:58:08.724"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.726" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.726" starttime="20181030 11:58:08.726">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.727" critical="yes" starttime="20181030 11:58:08.722">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s7-t2" name="tc_3.2.3.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.729" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.729" starttime="20181030 11:58:08.729"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.731" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.732" starttime="20181030 11:58:08.731">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.732" critical="yes" starttime="20181030 11:58:08.727">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s7-t3" name="tc_3.2.3.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.734" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.735" starttime="20181030 11:58:08.734"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.737" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.737" starttime="20181030 11:58:08.737">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.737" critical="yes" starttime="20181030 11:58:08.732">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s7-t4" name="tc_3.2.3.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.740" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.740" starttime="20181030 11:58:08.739"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.742" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.742" starttime="20181030 11:58:08.742">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.742" critical="yes" starttime="20181030 11:58:08.737">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.743" starttime="20181030 11:58:08.717"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.4.robot" id="s1-s8" name="Tc.3.2.4">
+<test id="s1-s8-t1" name="tc_3.2.4.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.750" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.750" starttime="20181030 11:58:08.750"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.753" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.753" starttime="20181030 11:58:08.752">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.753" critical="yes" starttime="20181030 11:58:08.748">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t2" name="tc_3.2.4.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.755" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.755" starttime="20181030 11:58:08.755"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.758" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.758" starttime="20181030 11:58:08.758">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.758" critical="yes" starttime="20181030 11:58:08.753">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t3" name="tc_3.2.4.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.761" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.761" starttime="20181030 11:58:08.761"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.763" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.763" starttime="20181030 11:58:08.763">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.763" critical="yes" starttime="20181030 11:58:08.758">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t4" name="tc_3.2.4.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.766" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.766" starttime="20181030 11:58:08.766"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.768" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.768" starttime="20181030 11:58:08.768">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.769" critical="yes" starttime="20181030 11:58:08.764">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t5" name="tc_3.2.4.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.771" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.771" starttime="20181030 11:58:08.771"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.773" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.774" starttime="20181030 11:58:08.773">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.774" critical="yes" starttime="20181030 11:58:08.769">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t6" name="tc_3.2.4.6">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.776" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.776" starttime="20181030 11:58:08.776"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.779" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.779" starttime="20181030 11:58:08.778">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.779" critical="yes" starttime="20181030 11:58:08.774">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t7" name="tc_3.2.4.7">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.781" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.782" starttime="20181030 11:58:08.781"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.784" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.784" starttime="20181030 11:58:08.784">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.784" critical="yes" starttime="20181030 11:58:08.779">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t8" name="tc_3.2.4.8">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.787" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.787" starttime="20181030 11:58:08.786"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.789" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.789" starttime="20181030 11:58:08.789">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.789" critical="yes" starttime="20181030 11:58:08.784">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t9" name="tc_3.2.4.9">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.792" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.792" starttime="20181030 11:58:08.792"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.794" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.794" starttime="20181030 11:58:08.794">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.795" critical="yes" starttime="20181030 11:58:08.790">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t10" name="tc_3.2.4.10">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.797" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.797" starttime="20181030 11:58:08.797"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.800" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.800" starttime="20181030 11:58:08.799">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.800" critical="yes" starttime="20181030 11:58:08.795">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t11" name="tc_3.2.4.11">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.802" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.803" starttime="20181030 11:58:08.802"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.805" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.805" starttime="20181030 11:58:08.805">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.805" critical="yes" starttime="20181030 11:58:08.800">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t12" name="tc_3.2.4.12">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.808" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.808" starttime="20181030 11:58:08.807"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.810" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.810" starttime="20181030 11:58:08.810">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.810" critical="yes" starttime="20181030 11:58:08.805">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t13" name="tc_3.2.4.13">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.813" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.813" starttime="20181030 11:58:08.813"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.815" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.816" starttime="20181030 11:58:08.815">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.816" critical="yes" starttime="20181030 11:58:08.811">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t14" name="tc_3.2.4.14">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.818" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.818" starttime="20181030 11:58:08.818"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.821" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.821" starttime="20181030 11:58:08.820">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.821" critical="yes" starttime="20181030 11:58:08.816">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t15" name="tc_3.2.4.15">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.823" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.823" starttime="20181030 11:58:08.823"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.826" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.826" starttime="20181030 11:58:08.826">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.826" critical="yes" starttime="20181030 11:58:08.821">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t16" name="tc_3.2.4.16">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.829" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.829" starttime="20181030 11:58:08.829"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.831" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.831" starttime="20181030 11:58:08.831">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.832" critical="yes" starttime="20181030 11:58:08.827">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t17" name="tc_3.2.4.17">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.834" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.834" starttime="20181030 11:58:08.834"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.836" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.836" starttime="20181030 11:58:08.836">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.837" critical="yes" starttime="20181030 11:58:08.832">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s8-t18" name="tc_3.2.4.18">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.839" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.839" starttime="20181030 11:58:08.839"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.842" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.842" starttime="20181030 11:58:08.841">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.842" critical="yes" starttime="20181030 11:58:08.837">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.843" starttime="20181030 11:58:08.744"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.5.robot" id="s1-s9" name="Tc.3.2.5">
+<test id="s1-s9-t1" name="tc_3.2.5.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.851" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.851" starttime="20181030 11:58:08.851"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.853" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.854" starttime="20181030 11:58:08.853">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.854" critical="yes" starttime="20181030 11:58:08.849">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s9-t2" name="tc_3.2.5.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.856" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.856" starttime="20181030 11:58:08.856"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.859" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.859" starttime="20181030 11:58:08.858">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.859" critical="yes" starttime="20181030 11:58:08.854">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s9-t3" name="tc_3.2.5.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.861" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.861" starttime="20181030 11:58:08.861"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.864" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.864" starttime="20181030 11:58:08.864">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.864" critical="yes" starttime="20181030 11:58:08.859">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s9-t4" name="tc_3.2.5.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.867" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.867" starttime="20181030 11:58:08.866"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.869" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.869" starttime="20181030 11:58:08.869">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.869" critical="yes" starttime="20181030 11:58:08.864">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s9-t5" name="tc_3.2.5.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.872" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.872" starttime="20181030 11:58:08.871"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.874" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.874" starttime="20181030 11:58:08.874">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.874" critical="yes" starttime="20181030 11:58:08.870">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s9-t6" name="tc_3.2.5.6">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.877" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.877" starttime="20181030 11:58:08.877"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.879" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.879" starttime="20181030 11:58:08.879">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.879" critical="yes" starttime="20181030 11:58:08.875">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s9-t7" name="tc_3.2.5.7">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.882" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.882" starttime="20181030 11:58:08.881"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.884" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.884" starttime="20181030 11:58:08.884">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.884" critical="yes" starttime="20181030 11:58:08.879">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s9-t8" name="tc_3.2.5.8">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.887" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.887" starttime="20181030 11:58:08.886"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.889" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.889" starttime="20181030 11:58:08.889">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.890" critical="yes" starttime="20181030 11:58:08.885">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s9-t9" name="tc_3.2.5.9">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.893" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.893" starttime="20181030 11:58:08.892"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.895" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.895" starttime="20181030 11:58:08.895">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.895" critical="yes" starttime="20181030 11:58:08.890">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s9-t10" name="tc_3.2.5.10">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.898" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.898" starttime="20181030 11:58:08.898"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.900" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.900" starttime="20181030 11:58:08.900">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.900" critical="yes" starttime="20181030 11:58:08.896">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.901" starttime="20181030 11:58:08.844"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.6.robot" id="s1-s10" name="Tc.3.2.6">
+<test id="s1-s10-t1" name="case 3.2.6.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.909" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.909" starttime="20181030 11:58:08.909"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.911" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.912" starttime="20181030 11:58:08.911">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.912" critical="yes" starttime="20181030 11:58:08.907">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s10-t2" name="case 3.2.6.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.914" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.914" starttime="20181030 11:58:08.914"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.917" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.917" starttime="20181030 11:58:08.916">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.917" critical="yes" starttime="20181030 11:58:08.912">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s10-t3" name="case 3.2.6.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.919" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.920" starttime="20181030 11:58:08.919"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.922" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.922" starttime="20181030 11:58:08.922">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.922" critical="yes" starttime="20181030 11:58:08.917">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s10-t4" name="case 3.2.6.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.925" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.925" starttime="20181030 11:58:08.924"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.927" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.927" starttime="20181030 11:58:08.927">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.927" critical="yes" starttime="20181030 11:58:08.923">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s10-t5" name="case 3.2.6.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.930" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.930" starttime="20181030 11:58:08.930"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.932" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.933" starttime="20181030 11:58:08.932">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.933" critical="yes" starttime="20181030 11:58:08.928">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s10-t6" name="case 3.2.6.6">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.935" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.935" starttime="20181030 11:58:08.935"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.938" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.938" starttime="20181030 11:58:08.938">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.938" critical="yes" starttime="20181030 11:58:08.933">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s10-t7" name="case 3.2.6.7">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.941" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.941" starttime="20181030 11:58:08.940"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.943" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.943" starttime="20181030 11:58:08.943">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.944" critical="yes" starttime="20181030 11:58:08.939">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s10-t8" name="case 3.2.6.50">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.946" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.946" starttime="20181030 11:58:08.946"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.948" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.949" starttime="20181030 11:58:08.948">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.949" critical="yes" starttime="20181030 11:58:08.944">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.949" starttime="20181030 11:58:08.902"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.7.robot" id="s1-s11" name="Tc.3.2.7">
+<test id="s1-s11-t1" name="case 3.2.7.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.957" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.957" starttime="20181030 11:58:08.957"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.959" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.960" starttime="20181030 11:58:08.959">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.960" critical="yes" starttime="20181030 11:58:08.955">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s11-t2" name="case 3.2.7.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.962" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.962" starttime="20181030 11:58:08.962"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.965" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.965" starttime="20181030 11:58:08.964">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.965" critical="yes" starttime="20181030 11:58:08.960">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s11-t3" name="case 3.2.7.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.967" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.968" starttime="20181030 11:58:08.967"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.970" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.970" starttime="20181030 11:58:08.970">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.970" critical="yes" starttime="20181030 11:58:08.965">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.971" starttime="20181030 11:58:08.950"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.8.robot" id="s1-s12" name="Tc.3.2.8">
+<test id="s1-s12-t1" name="case 3.2.8.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.978" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.978" starttime="20181030 11:58:08.978"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.980" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.980" starttime="20181030 11:58:08.980">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.981" critical="yes" starttime="20181030 11:58:08.976">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s12-t2" name="case 3.2.8.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.983" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.983" starttime="20181030 11:58:08.983"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.986" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.986" starttime="20181030 11:58:08.985">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.986" critical="yes" starttime="20181030 11:58:08.981">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s12-t3" name="case 3.2.8.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.988" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.988" starttime="20181030 11:58:08.988"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.991" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.991" starttime="20181030 11:58:08.991">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.991" critical="yes" starttime="20181030 11:58:08.986">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s12-t4" name="case 3.2.8.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:08.994" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.994" starttime="20181030 11:58:08.993"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:08.996" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:08.996" starttime="20181030 11:58:08.996">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:08.996" critical="yes" starttime="20181030 11:58:08.991">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:08.997" starttime="20181030 11:58:08.971"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.9.robot" id="s1-s13" name="Tc.3.2.9">
+<test id="s1-s13-t1" name="case 3.2.9.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.004" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.005" starttime="20181030 11:58:09.004"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.007" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.007" starttime="20181030 11:58:09.007">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.007" critical="yes" starttime="20181030 11:58:09.002">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s13-t2" name="case 3.2.9.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.010" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.010" starttime="20181030 11:58:09.010"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.013" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.013" starttime="20181030 11:58:09.013">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.013" critical="yes" starttime="20181030 11:58:09.008">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s13-t3" name="case 3.2.9.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.016" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.016" starttime="20181030 11:58:09.015"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.018" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.018" starttime="20181030 11:58:09.018">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.018" critical="yes" starttime="20181030 11:58:09.013">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s13-t4" name="case 3.2.9.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.021" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.021" starttime="20181030 11:58:09.020"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.023" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.023" starttime="20181030 11:58:09.023">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.023" critical="yes" starttime="20181030 11:58:09.019">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s13-t5" name="case 3.2.9.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.026" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.026" starttime="20181030 11:58:09.026"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.028" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.028" starttime="20181030 11:58:09.028">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.029" critical="yes" starttime="20181030 11:58:09.024">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s13-t6" name="case 3.2.9.6">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.031" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.031" starttime="20181030 11:58:09.031"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.034" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.034" starttime="20181030 11:58:09.034">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.034" critical="yes" starttime="20181030 11:58:09.029">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s13-t7" name="case 3.2.9.7">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.037" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.037" starttime="20181030 11:58:09.036"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.039" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.039" starttime="20181030 11:58:09.039">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.039" critical="yes" starttime="20181030 11:58:09.034">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s13-t8" name="case 3.2.9.8">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.042" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.042" starttime="20181030 11:58:09.042"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.044" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.044" starttime="20181030 11:58:09.044">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.045" critical="yes" starttime="20181030 11:58:09.040">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:09.045" starttime="20181030 11:58:08.998"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.1.robot" id="s1-s14" name="Tc.3.3.1">
+<test id="s1-s14-t1" name="case 3.3.1.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.053" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.053" starttime="20181030 11:58:09.053"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.056" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.056" starttime="20181030 11:58:09.055">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.056" critical="yes" starttime="20181030 11:58:09.051">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s14-t2" name="case 3.3.1.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.058" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.059" starttime="20181030 11:58:09.058"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.061" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.061" starttime="20181030 11:58:09.061">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.061" critical="yes" starttime="20181030 11:58:09.056">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s14-t3" name="case 3.3.1.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.064" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.064" starttime="20181030 11:58:09.064"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.066" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.067" starttime="20181030 11:58:09.066">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.067" critical="yes" starttime="20181030 11:58:09.062">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s14-t4" name="case 3.3.1.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.069" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.069" starttime="20181030 11:58:09.069"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.071" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.072" starttime="20181030 11:58:09.071">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.072" critical="yes" starttime="20181030 11:58:09.067">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s14-t5" name="case 3.3.1.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.074" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.074" starttime="20181030 11:58:09.074"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.077" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.077" starttime="20181030 11:58:09.077">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.077" critical="yes" starttime="20181030 11:58:09.072">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s14-t6" name="case 3.3.1.6">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.080" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.080" starttime="20181030 11:58:09.080"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.082" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.082" starttime="20181030 11:58:09.082">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.082" critical="yes" starttime="20181030 11:58:09.078">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s14-t7" name="case 3.3.1.7">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.085" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.085" starttime="20181030 11:58:09.085"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.087" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.087" starttime="20181030 11:58:09.087">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.088" critical="yes" starttime="20181030 11:58:09.083">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s14-t8" name="case 3.3.1.8">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.090" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.090" starttime="20181030 11:58:09.090"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.093" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.093" starttime="20181030 11:58:09.093">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.093" critical="yes" starttime="20181030 11:58:09.088">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:09.094" starttime="20181030 11:58:09.047"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.2.robot" id="s1-s15" name="Tc.3.3.2">
+<test id="s1-s15-t1" name="case 3.3.2.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.101" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.101" starttime="20181030 11:58:09.101"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.104" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.104" starttime="20181030 11:58:09.104">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.104" critical="yes" starttime="20181030 11:58:09.099">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s15-t2" name="case 3.3.2.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.106" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.107" starttime="20181030 11:58:09.106"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.109" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.109" starttime="20181030 11:58:09.109">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.109" critical="yes" starttime="20181030 11:58:09.104">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s15-t3" name="case 3.3.2.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.112" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.112" starttime="20181030 11:58:09.112"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.114" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.114" starttime="20181030 11:58:09.114">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.115" critical="yes" starttime="20181030 11:58:09.110">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s15-t4" name="case 3.3.2.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.117" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.117" starttime="20181030 11:58:09.117"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.119" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.120" starttime="20181030 11:58:09.119">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.120" critical="yes" starttime="20181030 11:58:09.115">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s15-t5" name="case 3.3.2.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.122" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.122" starttime="20181030 11:58:09.122"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.124" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.125" starttime="20181030 11:58:09.124">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.125" critical="yes" starttime="20181030 11:58:09.120">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:09.126" starttime="20181030 11:58:09.095"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.3.robot" id="s1-s16" name="Tc.3.3.3">
+<test id="s1-s16-t1" name="case 3.3.3.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.134" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.134" starttime="20181030 11:58:09.134"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.137" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.137" starttime="20181030 11:58:09.137">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.137" critical="yes" starttime="20181030 11:58:09.132">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s16-t2" name="case 3.3.3.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.140" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.140" starttime="20181030 11:58:09.140"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.142" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.142" starttime="20181030 11:58:09.142">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.142" critical="yes" starttime="20181030 11:58:09.137">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s16-t3" name="case 3.3.3.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.145" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.145" starttime="20181030 11:58:09.145"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.148" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.148" starttime="20181030 11:58:09.147">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.148" critical="yes" starttime="20181030 11:58:09.143">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:09.148" starttime="20181030 11:58:09.127"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.4.robot" id="s1-s17" name="Tc.3.3.4">
+<test id="s1-s17-t1" name="case 3.3.4.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.157" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.157" starttime="20181030 11:58:09.156"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.159" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.160" starttime="20181030 11:58:09.159">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.160" critical="yes" starttime="20181030 11:58:09.154">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s17-t2" name="case 3.3.4.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.162" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.162" starttime="20181030 11:58:09.162"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.165" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.165" starttime="20181030 11:58:09.164">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.165" critical="yes" starttime="20181030 11:58:09.160">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s17-t3" name="case 3.3.4.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.167" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.167" starttime="20181030 11:58:09.167"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.170" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.170" starttime="20181030 11:58:09.170">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.170" critical="yes" starttime="20181030 11:58:09.165">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s17-t4" name="case 3.3.4.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.173" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.173" starttime="20181030 11:58:09.173"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.175" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.175" starttime="20181030 11:58:09.175">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.175" critical="yes" starttime="20181030 11:58:09.170">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s17-t5" name="case 3.3.4.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.178" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.178" starttime="20181030 11:58:09.178"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.180" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.180" starttime="20181030 11:58:09.180">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.181" critical="yes" starttime="20181030 11:58:09.176">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:09.181" starttime="20181030 11:58:09.149"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.5.robot" id="s1-s18" name="Tc.3.3.5">
+<test id="s1-s18-t1" name="case 3.3.5.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.189" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.189" starttime="20181030 11:58:09.189"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.191" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.191" starttime="20181030 11:58:09.191">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.192" critical="yes" starttime="20181030 11:58:09.186">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s18-t2" name="case 3.3.5.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.194" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.195" starttime="20181030 11:58:09.194"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.197" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.197" starttime="20181030 11:58:09.197">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.197" critical="yes" starttime="20181030 11:58:09.192">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:09.198" starttime="20181030 11:58:09.182"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.6.robot" id="s1-s19" name="Tc.3.3.6">
+<test id="s1-s19-t1" name="case 3.3.6.0">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.205" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.205" starttime="20181030 11:58:09.205"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.207" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.207" starttime="20181030 11:58:09.207">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.208" critical="yes" starttime="20181030 11:58:09.203">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t2" name="case 3.3.6.1">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.210" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.210" starttime="20181030 11:58:09.210"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.213" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.213" starttime="20181030 11:58:09.212">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.213" critical="yes" starttime="20181030 11:58:09.208">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t3" name="case 3.3.6.2">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.216" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.216" starttime="20181030 11:58:09.215"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.218" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.218" starttime="20181030 11:58:09.218">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>CCO</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.218" critical="yes" starttime="20181030 11:58:09.213">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t4" name="case 3.3.6.3">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.221" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.221" starttime="20181030 11:58:09.221"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.223" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.223" starttime="20181030 11:58:09.223">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.223" critical="yes" starttime="20181030 11:58:09.219">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t5" name="case 3.3.6.4">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.226" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.226" starttime="20181030 11:58:09.226"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.229" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.229" starttime="20181030 11:58:09.228">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.229" critical="yes" starttime="20181030 11:58:09.224">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t6" name="case 3.3.6.5">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.231" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.231" starttime="20181030 11:58:09.231"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.234" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.234" starttime="20181030 11:58:09.234">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.234" critical="yes" starttime="20181030 11:58:09.229">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t7" name="case 3.3.6.6">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.236" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.237" starttime="20181030 11:58:09.236"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.239" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.239" starttime="20181030 11:58:09.239">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.239" critical="yes" starttime="20181030 11:58:09.234">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t8" name="case 3.3.6.7">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.242" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.242" starttime="20181030 11:58:09.241"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.244" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.244" starttime="20181030 11:58:09.244">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.244" critical="yes" starttime="20181030 11:58:09.239">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t9" name="case 3.3.6.8">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.247" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.247" starttime="20181030 11:58:09.247"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.249" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.249" starttime="20181030 11:58:09.249">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.249" critical="yes" starttime="20181030 11:58:09.245">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t10" name="case 3.3.6.9">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.252" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.252" starttime="20181030 11:58:09.252"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.253" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.253" starttime="20181030 11:58:09.253">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.254" critical="yes" starttime="20181030 11:58:09.250">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s19-t11" name="case 3.3.6.10">
+<kw type="setup" name="Init Test">
+<msg timestamp="20181030 11:58:09.257" level="FAIL">No keyword with name 'Init Test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.257" starttime="20181030 11:58:09.257"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.259" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.260" starttime="20181030 11:58:09.259">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<tags>
+<tag>STA</tag>
+</tags>
+<status status="FAIL" endtime="20181030 11:58:09.260" critical="yes" starttime="20181030 11:58:09.254">Setup failed:
+No keyword with name 'Init Test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:09.260" starttime="20181030 11:58:09.198"></status>
+</suite>
+<suite source="D:\svn\sources\SIWP9006\plc_system_test\tc.4.robot" id="s1-s20" name="Tc.4">
+<test id="s1-s20-t1" name="tc_4.1">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_1</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.267" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.268" starttime="20181030 11:58:09.267"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.270" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.270" starttime="20181030 11:58:09.270">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.270" critical="yes" starttime="20181030 11:58:09.265">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s20-t2" name="tc_4.2">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_2</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.273" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.273" starttime="20181030 11:58:09.273"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.275" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.275" starttime="20181030 11:58:09.275">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.275" critical="yes" starttime="20181030 11:58:09.271">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s20-t3" name="tc_4.3">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_3</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.278" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.278" starttime="20181030 11:58:09.278"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.281" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.281" starttime="20181030 11:58:09.280">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.281" critical="yes" starttime="20181030 11:58:09.276">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s20-t4" name="tc_4.4">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_4</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.283" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.283" starttime="20181030 11:58:09.283"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.286" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.286" starttime="20181030 11:58:09.286">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.286" critical="yes" starttime="20181030 11:58:09.281">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s20-t5" name="tc_4.5">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_5</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.289" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.289" starttime="20181030 11:58:09.288"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.291" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.291" starttime="20181030 11:58:09.291">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.291" critical="yes" starttime="20181030 11:58:09.286">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s20-t6" name="tc_4.6">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_6</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.294" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.294" starttime="20181030 11:58:09.294"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.297" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.297" starttime="20181030 11:58:09.297">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.297" critical="yes" starttime="20181030 11:58:09.292">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s20-t7" name="tc_4.7">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_7</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.300" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.300" starttime="20181030 11:58:09.300"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.303" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.303" starttime="20181030 11:58:09.302">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.303" critical="yes" starttime="20181030 11:58:09.298">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s20-t8" name="tc_4.8">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_8</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.305" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.305" starttime="20181030 11:58:09.305"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.308" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.308" starttime="20181030 11:58:09.308">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.308" critical="yes" starttime="20181030 11:58:09.303">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s20-t9" name="tc_4.9">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_9</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.311" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.311" starttime="20181030 11:58:09.311"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.313" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.313" starttime="20181030 11:58:09.313">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.314" critical="yes" starttime="20181030 11:58:09.308">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<test id="s1-s20-t10" name="tc_4.10">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_10</arg>
+</arguments>
+<msg timestamp="20181030 11:58:09.316" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.316" starttime="20181030 11:58:09.316"></status>
+</kw>
+<kw type="teardown" name="Record Test Status">
+<msg timestamp="20181030 11:58:09.319" level="FAIL">No keyword with name 'Record Test Status' found.</msg>
+<status status="FAIL" endtime="20181030 11:58:09.319" starttime="20181030 11:58:09.318">No keyword with name 'Record Test Status' found.</status>
+</kw>
+<status status="FAIL" endtime="20181030 11:58:09.319" critical="yes" starttime="20181030 11:58:09.314">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+No keyword with name 'Record Test Status' found.</status>
+</test>
+<status status="FAIL" endtime="20181030 11:58:09.319" starttime="20181030 11:58:09.262"></status>
+</suite>
+<status status="FAIL" endtime="20181030 11:58:09.323" starttime="20181030 11:58:08.203"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="184" pass="0">Critical Tests</stat>
+<stat fail="184" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="66" pass="0">CCO</stat>
+<stat fail="80" pass="0">STA</stat>
+</tag>
+<suite>
+<stat fail="184" id="s1" name="Plc System Test" pass="0">Plc System Test</stat>
+<stat fail="47" id="s1-s1" name="Tc.2" pass="0">Plc System Test.Tc.2</stat>
+<stat fail="4" id="s1-s2" name="Tc.3.1" pass="0">Plc System Test.Tc.3.1</stat>
+<stat fail="6" id="s1-s3" name="Tc.3.2.1" pass="0">Plc System Test.Tc.3.2.1</stat>
+<stat fail="10" id="s1-s4" name="Tc.3.2.10" pass="0">Plc System Test.Tc.3.2.10</stat>
+<stat fail="16" id="s1-s5" name="Tc.3.2.11" pass="0">Plc System Test.Tc.3.2.11</stat>
+<stat fail="2" id="s1-s6" name="Tc.3.2.2" pass="0">Plc System Test.Tc.3.2.2</stat>
+<stat fail="4" id="s1-s7" name="Tc.3.2.3" pass="0">Plc System Test.Tc.3.2.3</stat>
+<stat fail="18" id="s1-s8" name="Tc.3.2.4" pass="0">Plc System Test.Tc.3.2.4</stat>
+<stat fail="10" id="s1-s9" name="Tc.3.2.5" pass="0">Plc System Test.Tc.3.2.5</stat>
+<stat fail="8" id="s1-s10" name="Tc.3.2.6" pass="0">Plc System Test.Tc.3.2.6</stat>
+<stat fail="3" id="s1-s11" name="Tc.3.2.7" pass="0">Plc System Test.Tc.3.2.7</stat>
+<stat fail="4" id="s1-s12" name="Tc.3.2.8" pass="0">Plc System Test.Tc.3.2.8</stat>
+<stat fail="8" id="s1-s13" name="Tc.3.2.9" pass="0">Plc System Test.Tc.3.2.9</stat>
+<stat fail="8" id="s1-s14" name="Tc.3.3.1" pass="0">Plc System Test.Tc.3.3.1</stat>
+<stat fail="5" id="s1-s15" name="Tc.3.3.2" pass="0">Plc System Test.Tc.3.3.2</stat>
+<stat fail="3" id="s1-s16" name="Tc.3.3.3" pass="0">Plc System Test.Tc.3.3.3</stat>
+<stat fail="5" id="s1-s17" name="Tc.3.3.4" pass="0">Plc System Test.Tc.3.3.4</stat>
+<stat fail="2" id="s1-s18" name="Tc.3.3.5" pass="0">Plc System Test.Tc.3.3.5</stat>
+<stat fail="11" id="s1-s19" name="Tc.3.3.6" pass="0">Plc System Test.Tc.3.3.6</stat>
+<stat fail="10" id="s1-s20" name="Tc.4" pass="0">Plc System Test.Tc.4</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20181030 11:58:08.176" level="ERROR">Taking listener 'listener' into use failed: Importing listener 'listener' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\listener.py", line 3, in &lt;module&gt;
+    import plc_tb_ctrl
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.231" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.2.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.232" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.2.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.493" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.1.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.494" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.1.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.519" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.1.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.519" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.1.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.556" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.10.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.556" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.10.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.614" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.11.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.615" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.11.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.704" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.2.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.705" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.2.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.720" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.3.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.721" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.3.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.746" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.4.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.747" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.4.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.847" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.5.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.848" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.5.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.905" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.6.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.906" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.6.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.953" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.7.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.954" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.7.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.974" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.8.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:08.975" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.8.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.001" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.9.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.002" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.2.9.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.050" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.1.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.051" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.1.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.098" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.2.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.098" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.2.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.130" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.3.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.131" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.3.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.153" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.4.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.154" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.4.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.185" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.5.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.186" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.5.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.201" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.6.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.202" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.3.3.6.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.264" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.4.robot': Importing test library 'plc_tb_ctrl' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20181030 11:58:09.264" level="ERROR">Error in file 'D:\svn\sources\SIWP9006\plc_system_test\tc.4.robot': Importing test library 'plc_tb_ctrl.PlcSystemTestbench' failed: ImportError: No module named serial
+Traceback (most recent call last):
+  File "D:\svn\sources\SIWP9006\plc_system_test\lib\plc_tb_ctrl.py", line 10, in &lt;module&gt;
+    import serial
+PYTHONPATH:
+  D:\svn\sources\SIWP9006\plc_system_test\lib
+  C:\windows\SYSTEM32\python27.zip
+  C:\Program Files\python2\DLLs
+  C:\Program Files\python2\lib
+  C:\Program Files\python2\lib\plat-win
+  C:\Program Files\python2\lib\lib-tk
+  C:\Program Files\python2
+  C:\Program Files\python2\lib\site-packages
+  C:\Program Files\python2\lib\site-packages\wx-2.8-msw-unicode</msg>
+</errors>
+</robot>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181122 21:16:17.142" generator="Robot 3.0.2 (Python 2.7.15 on win32)">
+<suite source="C:\D\plc_system_test" id="s1" name="Plc System Test">
+<suite source="C:\D\plc_system_test\tc.4.robot" id="s1-s1" name="Tc.4">
+<test id="s1-s1-t1" name="tc_4.1">
+<kw name="run iot test">
+<arguments>
+<arg>tc_4_1</arg>
+</arguments>
+<msg timestamp="20181122 21:16:17.288" level="FAIL">No keyword with name 'run iot test' found.</msg>
+<status status="FAIL" endtime="20181122 21:16:17.288" starttime="20181122 21:16:17.288"></status>
+</kw>
+<kw type="teardown" name="Record Test Status" library="plc_tb_ctrl">
+<msg timestamp="20181122 21:16:17.288" level="INFO">begin 5 seconds waiting before exit...</msg>
+<msg timestamp="20181122 21:16:22.294" level="INFO">stop DUT logging</msg>
+<msg timestamp="20181122 21:16:22.294" level="FAIL">AttributeError: 'PlcSystemTestbench' object has no attribute 'dut_log'</msg>
+<msg timestamp="20181122 21:16:22.294" level="DEBUG">Traceback (most recent call last):
+  File "C:\D\plc_system_test\lib\plc_tb_ctrl.py", line 166, in record_test_status
+    TB_INSTANCE._stop_dut_logging()
+  File "C:\D\plc_system_test\lib\plc_tb_ctrl.py", line 1020, in _stop_dut_logging
+    terminate_process(self.dut_log)</msg>
+<status status="FAIL" endtime="20181122 21:16:22.294" starttime="20181122 21:16:17.288">AttributeError: 'PlcSystemTestbench' object has no attribute 'dut_log'</status>
+</kw>
+<status status="FAIL" endtime="20181122 21:16:22.294" critical="yes" starttime="20181122 21:16:17.288">No keyword with name 'run iot test' found.
+
+Also teardown failed:
+AttributeError: 'PlcSystemTestbench' object has no attribute 'dut_log'</status>
+</test>
+<status status="FAIL" endtime="20181122 21:16:22.294" starttime="20181122 21:16:17.248"></status>
+</suite>
+<status status="FAIL" endtime="20181122 21:16:22.294" starttime="20181122 21:16:17.218"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Plc System Test" pass="0">Plc System Test</stat>
+<stat fail="1" id="s1-s1" name="Tc.4" pass="0">Plc System Test.Tc.4</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20181122 21:16:17.278" level="ERROR">Error in file 'C:\D\plc_system_test\tc.4.robot': Initializing test library 'plc_tb_ctrl.PlcSystemTestbench' with no arguments failed: WindowsError: [Error 193] %1 \xb2\xbb\xca\xc7\xd3\xd0\xd0\xa7\xb5\xc4 Win32
+Traceback (most recent call last):
+  File "C:\D\plc_system_test\lib\plc_tb_ctrl.py", line 249, in __init__
+    self.usb_relay_device = usb_relay.UsbRelay()
+  File "C:\D\plc_system_test\lib\usb_relay.py", line 13, in __init__
+    self.usb_relay_device = CDLL('usb_relay_device.dll')
+  File "C:\Python27\lib\ctypes\__init__.py", line 366, in __init__
+    self._handle = _dlopen(self._name, mode)</msg>
+</errors>
+</robot>

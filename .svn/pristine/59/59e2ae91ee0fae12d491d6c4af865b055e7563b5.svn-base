@@ -1,0 +1,14 @@
+*** Settings ***
+Test Setup        Init Test
+Test Teardown     Record Test Status
+Library           OperatingSystem
+Library           Process
+Library           plc_tb_ctrl
+Library           plc_tb_ctrl.PlcSystemTestbench
+
+*** Test Cases ***
+tc_2.2
+    run test    tc_2_2
+tc_2.100
+    [Tags]    STA
+    run test    tc_2_100

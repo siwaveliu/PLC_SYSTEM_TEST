@@ -1,0 +1,13 @@
+---
+# example data for APL_UPGRADE_START upstream frame
+header:
+    port:              0x12
+    id:                APL_UPGRADE_START
+    sec_mode:          0
+    ctrl_word:         0
+body:
+    proto_ver:         PROTO_VER1
+    upg_start_result:  0
+    upg_id:            0x1234
+
+

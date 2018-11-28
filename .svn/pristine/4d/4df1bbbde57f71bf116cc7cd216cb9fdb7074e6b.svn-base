@@ -1,0 +1,14 @@
+---
+# example data for MME_PROXY_CHANGE_REQ frame
+header:
+    mmtype:          MME_PROXY_CHANGE_REQ
+body:
+    tei:             0xBB
+    proxy_tei:       [0xC1, 0xC2, 0xC3, 0xC4, 0xC5]
+    old_proxy:       0xC0
+    proxy_type:      PROXY_TYPE_STATION_SELECTED
+    reason:          PROXY_CHANGE_PERIOD
+    p2p_sn:          1234
+    phase_2:         PHASE_C
+    phase_1:         PHASE_B
+    phase_0:         PHASE_A

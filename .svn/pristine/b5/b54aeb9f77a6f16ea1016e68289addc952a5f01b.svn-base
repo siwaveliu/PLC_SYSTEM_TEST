@@ -1,0 +1,34 @@
+# 激活从节点主动注册 下行报文
+---
+head:
+  len:                      0
+cf:
+  dir:                      DL
+  prm:                      MASTER
+  comm_mode:                BB_PLC
+user_data:
+  value:
+    r:
+      relay_level:          0
+      conflict_detect_flag: 0
+      comm_module_flag:     0
+      subnode_flag:         0
+      route_flag:           0
+      coding_type:          NO_ENCODING
+      channel_id:           0
+      reply_len:            0
+      comm_rate_flag:       BPS
+      comm_rate:            0
+      sn:                   0
+    a:                      null
+    afn:                    0x11
+    data:
+      dt1:                  16
+      dt2:                  0
+      data:
+        start_time:                [0x32, 0x16, 0x8, 0x4, 0x2, 0x18]   # BCD, 秒分时日月年
+        duration:                  1                                   # minutes
+        re_send_times:             1
+        rand_wait_time_slice_num:  10
+tail:
+  cs:                       0

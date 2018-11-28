@@ -1,0 +1,9 @@
+---
+# example data for MME_ZERO_CROSS_NTB_COLLECT_IND frame
+header:
+    mmtype:          MME_ZERO_CROSS_NTB_COLLECT_IND
+body:
+    tei:             0xBB
+    type:            ZERO_CROSS_COLLECT_TYPE_ALL
+    period:          ZERO_CROSS_COLLECT_PERIOD_ONE
+    num:             12

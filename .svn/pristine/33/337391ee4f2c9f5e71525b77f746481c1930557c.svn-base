@@ -1,0 +1,13 @@
+---
+# example data for MME_ROUTE_REPLY frame
+header:
+    mmtype:          MME_ROUTE_REPLY
+body:
+    ver:                0
+    sn:                 1234
+    payload_type:       NML_SPREAD_ROUTE_LIST
+    payload_len:        4
+    data:
+    -   tei:            0x5
+        comm_succ_rate: 91
+        quality:        15

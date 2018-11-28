@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181123 14:29:23.491" generator="Robot 3.0.2 (Python 2.7.15 on win32)">
+<suite source="C:\D\plc_system_test" id="s1" name="Plc System Test">
+<suite source="C:\D\plc_system_test\tc.4.robot" id="s1-s1" name="Tc.4">
+<test id="s1-s1-t1" name="tc_4.1">
+<kw type="setup" name="Init Test" library="plc_tb_ctrl">
+<msg timestamp="20181123 14:29:23.684" level="INFO">start detail logging</msg>
+<status status="PASS" endtime="20181123 14:29:28.699" starttime="20181123 14:29:23.684"></status>
+</kw>
+<kw name="Run Iot Test" library="plc_tb_ctrl.PlcSystemTestbench">
+<arguments>
+<arg>tc_4_1</arg>
+</arguments>
+<msg timestamp="20181123 14:29:28.699" level="INFO">Close TB port</msg>
+<msg timestamp="20181123 14:29:28.918" level="INFO">Open TB port</msg>
+<msg timestamp="20181123 14:29:28.918" level="INFO">C:\D\plc_system_test\\</msg>
+<msg timestamp="20181123 14:29:28.980" level="INFO">Open concentrator port</msg>
+<msg timestamp="20181123 14:29:28.980" level="INFO">power off all of meters and cco, delay 5s</msg>
+<msg timestamp="20181123 14:29:33.992" level="INFO">power on all of meters and cco.</msg>
+<msg timestamp="20181123 14:29:33.992" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=3,DT1=2,DT2=1</msg>
+<msg timestamp="20181123 14:29:38.021" level="INFO">Received</msg>
+<msg timestamp="20181123 14:29:38.021" level="INFO">set CCO addr=00-00-00-00-00-9C</msg>
+<msg timestamp="20181123 14:29:38.021" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=0,DT1=1,DT2=0</msg>
+<msg timestamp="20181123 14:29:38.083" level="INFO">Received</msg>
+<msg timestamp="20181123 14:29:38.083" level="INFO">reset CCO param area</msg>
+<msg timestamp="20181123 14:29:38.083" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=0,DT1=1,DT2=0</msg>
+<msg timestamp="20181123 14:29:38.146" level="INFO">Received</msg>
+<msg timestamp="20181123 14:29:38.146" level="INFO">set sub node address to consorting cco, and start the escort net</msg>
+<msg timestamp="20181123 14:29:38.146" level="INFO">set sub node address to main cco, and start the main net</msg>
+<msg timestamp="20181123 14:29:38.146" level="INFO">['00-20-18-09-11-22', '00-20-18-09-10-35', '00-20-18-09-11-29', '00-20-18-09-10-29', '00-20-18-09-10-80', '00-20-18-09-11-27', '00-20-18-09-10-24', '00-20-18-09-10-61', '00-20-18-09-11-30', '00-20-18-09-10-63', '00-20-18-09-10-62', '00-20-18-09-10-65', '00-20-18-09-11-34', '00-20-18-09-10-67', '00-20-18-09-10-66', '00-20-18-09-10-69', '00-20-18-09-10-68', '00-20-18-09-10-27', '00-20-18-09-11-33', '00-20-18-09-10-21', '00-20-18-09-10-23', '00-20-18-09-10-22', '00-20-18-09-11-24', '00-20-18-09-10-40', '00-20-18-09-11-31', '00-20-18-09-11-23', '00-20-18-09-11-32', '00-20-18-09-10-34', '00-20-18-09-11-37', '00-20-18-09-11-25', '00-20-18-09-10-28', '00-20-18-09-10-38', '00-20-18-09-10-26', '00-20-18-09-11-35', '00-20-18-09-11-21', '00-20-18-09-10-64', '00-20-18-09-10-72', '00-20-18-09-10-73', '00-20-18-09-10-70', '00-20-18-09-10-71', '00-20-18-09-10-76', '00-20-18-09-10-77', '00-20-18-09-10-74', '00-20-18-09-10-75', '00-20-18-09-10-36', '00-20-18-09-10-37', '00-20-18-09-10-78', '00-20-18-09-10-79', '00-20-18-09-10-32', '00-20-18-09-10-33', '00-20-18-09-10-30', '00-20-18-09-10-31', '00-20-18-09-11-39', '00-20-18-09-10-39', '00-20-18-09-11-40', '00-20-18-09-11-38', '00-20-18-09-11-26', '00-20-18-09-11-36', '00-20-18-09-11-28', '00-20-18-09-10-25']</msg>
+<msg timestamp="20181123 14:29:38.533" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=0,DT1=1,DT2=0</msg>
+<msg timestamp="20181123 14:29:38.689" level="INFO">Exp dt1: 1, Recv: 2 </msg>
+<msg timestamp="20181123 14:29:48.536" level="FAIL">10 seconds timeout</msg>
+<msg timestamp="20181123 14:29:48.536" level="DEBUG">Traceback (most recent call last):
+  File "C:\D\plc_system_test\lib\plc_tb_ctrl.py", line 346, in run_iot_test
+    tc.run(self)
+  File "C:\D\plc_system_test\\tc\tc_iot_4\tc_4_1.py", line 86, in run
+    tc_common.add_sub_node_addr(cct, sec_nodes_addr_list)
+  File "C:\D\plc_system_test\lib\tc_common.py", line 118, in add_sub_node_addr
+    cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
+  File "C:\D\plc_system_test\lib\concentrator.py", line 189, in wait_for_gdw1376p2_frame
+    raise AssertionError(timeout_error)</msg>
+<status status="FAIL" endtime="20181123 14:29:48.536" starttime="20181123 14:29:28.699"></status>
+</kw>
+<kw type="teardown" name="Record Test Status" library="plc_tb_ctrl">
+<msg timestamp="20181123 14:29:48.661" level="INFO">begin 5 seconds waiting before exit...</msg>
+<msg timestamp="20181123 14:29:54.667" level="INFO">stop detail logging</msg>
+<status status="PASS" endtime="20181123 14:29:54.683" starttime="20181123 14:29:48.661"></status>
+</kw>
+<status status="FAIL" endtime="20181123 14:29:54.683" critical="yes" starttime="20181123 14:29:23.684">10 seconds timeout</status>
+</test>
+<status status="FAIL" endtime="20181123 14:29:54.683" starttime="20181123 14:29:23.601"></status>
+</suite>
+<status status="FAIL" endtime="20181123 14:29:54.683" starttime="20181123 14:29:23.569"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Plc System Test" pass="0">Plc System Test</stat>
+<stat fail="1" id="s1-s1" name="Tc.4" pass="0">Plc System Test.Tc.4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,16 @@
+---
+# example data for APL_CCT_SIMU_METER_READ upstream frame
+header:
+    port:            0x11
+    id:              APL_CCT_SIMU_METER_READ
+    sec_mode:        0
+    ctrl_word:       0
+body:
+    proto_ver:       PROTO_VER1
+    rsp_status:      NORMAL_ACK
+    data_proto_type: PROTO_DLT645_2007
+    data_len:        8
+    sn:              0x1234
+    pkt_rsp_status:  0x0123
+    data:            [0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08]
+

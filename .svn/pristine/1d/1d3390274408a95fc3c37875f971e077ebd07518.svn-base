@@ -1,0 +1,30 @@
+# 路由控制类 暂停 下行报文
+---
+head:
+  len:                      0
+cf:
+  dir:                      DL
+  prm:                      MASTER
+  comm_mode:                BB_PLC
+user_data:
+  value:
+    r:
+      relay_level:          0
+      conflict_detect_flag: 0
+      comm_module_flag:     0
+      subnode_flag:         0
+      route_flag:           0
+      coding_type:          NO_ENCODING
+      channel_id:           0
+      reply_len:            0
+      comm_rate_flag:       BPS
+      comm_rate:            0
+      sn:                   0
+    a:                      null
+    afn:                    0x12
+    data:
+      dt1:                  AFN12F2_PAUSE
+      dt2:                  0
+      # 无数据单元
+tail:
+  cs:                       0

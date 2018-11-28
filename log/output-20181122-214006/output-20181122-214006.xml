@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181122 21:40:07.202" generator="Robot 3.0.2 (Python 2.7.15 on win32)">
+<suite source="C:\D\plc_system_test" id="s1" name="Plc System Test">
+<suite source="C:\D\plc_system_test\tc.4.robot" id="s1-s1" name="Tc.4">
+<test id="s1-s1-t1" name="tc_4.1">
+<kw name="Run Iot Test" library="plc_tb_ctrl.PlcSystemTestbench">
+<arguments>
+<arg>tc_4_1</arg>
+</arguments>
+<msg timestamp="20181122 21:40:07.426" level="INFO">./tc\tc_iot_4\tc_4_1.py</msg>
+<msg timestamp="20181122 21:40:07.442" level="INFO">power off all of meters and cco, delay 5s</msg>
+<msg timestamp="20181122 21:40:12.448" level="INFO">power on all of meters and cco.</msg>
+<msg timestamp="20181122 21:40:12.468" level="INFO">Open concentrator port</msg>
+<msg timestamp="20181122 21:40:12.468" level="INFO">Wait for gdw1376p2 frame. DIR=UL, AFN=3,DT1=2,DT2=1</msg>
+<msg timestamp="20181122 21:40:22.479" level="FAIL">10 seconds timeout</msg>
+<msg timestamp="20181122 21:40:22.480" level="DEBUG">Traceback (most recent call last):
+  File "C:\D\plc_system_test\lib\plc_tb_ctrl.py", line 334, in run_iot_test
+    tc.run(self)
+  File "./tc\tc_iot_4\tc_4_1.py", line 38, in run
+    gdw1376p2_frame = cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1)
+  File "C:\D\plc_system_test\lib\concentrator.py", line 186, in wait_for_gdw1376p2_frame
+    raise AssertionError(timeout_error)</msg>
+<status status="FAIL" endtime="20181122 21:40:22.480" starttime="20181122 21:40:07.400"></status>
+</kw>
+<kw type="teardown" name="Record Test Status" library="plc_tb_ctrl">
+<msg timestamp="20181122 21:40:22.598" level="INFO">begin 5 seconds waiting before exit...</msg>
+<msg timestamp="20181122 21:40:27.603" level="INFO">stop DUT logging</msg>
+<msg timestamp="20181122 21:40:27.603" level="FAIL">AttributeError: 'PlcSystemTestbench' object has no attribute 'dut_log'</msg>
+<msg timestamp="20181122 21:40:27.603" level="DEBUG">Traceback (most recent call last):
+  File "C:\D\plc_system_test\lib\plc_tb_ctrl.py", line 166, in record_test_status
+    TB_INSTANCE._stop_dut_logging()
+  File "C:\D\plc_system_test\lib\plc_tb_ctrl.py", line 1020, in _stop_dut_logging
+    terminate_process(self.dut_log)</msg>
+<status status="FAIL" endtime="20181122 21:40:27.603" starttime="20181122 21:40:22.598">AttributeError: 'PlcSystemTestbench' object has no attribute 'dut_log'</status>
+</kw>
+<status status="FAIL" endtime="20181122 21:40:27.603" critical="yes" starttime="20181122 21:40:07.400">10 seconds timeout
+
+Also teardown failed:
+AttributeError: 'PlcSystemTestbench' object has no attribute 'dut_log'</status>
+</test>
+<status status="FAIL" endtime="20181122 21:40:27.613" starttime="20181122 21:40:07.312"></status>
+</suite>
+<status status="FAIL" endtime="20181122 21:40:27.613" starttime="20181122 21:40:07.282"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Plc System Test" pass="0">Plc System Test</stat>
+<stat fail="1" id="s1-s1" name="Tc.4" pass="0">Plc System Test.Tc.4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

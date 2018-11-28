@@ -1,0 +1,17 @@
+---
+# example data for MME_ASSOC_GATHER_IND frame
+header:
+    mmtype:          MME_ASSOC_GATHER_IND
+body:
+    result:          ASSOC_GATHER_IND_PERMIT
+    level:           2
+    mac_cco:         AA-AA-AA-AA-AA-AA
+    proxy_tei:       0xC0
+    sta_num:         3
+    sta_list:
+    -   addr:        B1-B1-B1-B1-B1-B1
+        tei:         0xB11
+    -   addr:        B2-B2-B2-B2-B2-B2
+        tei:         0xB21
+    -   addr:        B3-B3-B3-B3-B3-B3
+        tei:         0xB31        

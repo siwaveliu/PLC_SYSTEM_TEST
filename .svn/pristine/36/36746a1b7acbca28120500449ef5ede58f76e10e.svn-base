@@ -1,0 +1,32 @@
+---
+# example data for APL_CCT_SIMU_METER_READ downstream frame
+header:
+    port:            0x11
+    id:              APL_CCT_SIMU_METER_READ
+    sec_mode:        0
+    ctrl_word:       0
+body:
+    proto_ver:       PROTO_VER1
+    no_rsp_retry:    RETRY
+    nack_retry:      NO_RETRY
+    retry_num:       2
+    data_proto_type: PROTO_DLT645_2007
+    data_len:        0
+    sn:              0x4321
+    exp_time:        0x10
+    pkt_interval:    0x20
+    data:            []
+    
+#    data:            [0x68, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x68,
+#                      0x11, 0x04, 0x33, 0x33, 0x34, 0x33, 0x00, 0x16,          
+#                      # 正向有功总电能
+                      
+#                      0x68, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x68,
+#                      0x11, 0x04, 0x34, 0x34, 0x33, 0x37, 0x00, 0x16,
+                      # 日期和星期
+                      
+#                      0x68, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x68,
+#                      0x11, 0x04, 0x35, 0x34, 0x33, 0x37, 0x00, 0x16,          
+#                      # 时间
+#                     ]
+

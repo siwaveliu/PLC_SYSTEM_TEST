@@ -1,0 +1,30 @@
+# 文件传输 上行报文
+---
+head:
+  len:                      0
+cf:
+  dir:                      UL
+  prm:                      SLAVE
+  comm_mode:                BB_PLC
+user_data:
+  value:
+    r:
+      relay_level:          0
+      comm_module_flag:     0
+      route_flag:           0
+      channel_id:           0
+      channel_type:         0
+      phase_id:             0
+      reply_sig_q:          0
+      cmd_sig_q:            0
+      event_flag:           0
+      sn:                   0
+    a:                      null
+    afn:                    0x15
+    data:
+      dt1:                  1
+      dt2:                  0
+      data:
+        block_id:           0
+tail:
+  cs:                       0

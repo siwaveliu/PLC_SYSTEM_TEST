@@ -1,0 +1,15 @@
+---
+# example data for APL_UPGRADE_STATE_QUERY upstream frame
+header:
+    port:              0x12
+    id:                APL_UPGRADE_STATE_QUERY
+    sec_mode:          0
+    ctrl_word:         0
+body:
+    proto_ver:         PROTO_VER1
+    upg_st:            UPG_STATE_RECEIVING
+    valid_data_blk:    33
+    start_blk_id:      0
+    upg_id:            0x1234
+    bit_map:           [0xFF, 0xEF, 0xF8, 0xFF, 0x01]
+
