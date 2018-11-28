@@ -1,0 +1,14 @@
+---
+# example data for APL_ACK_NACK downstream frame
+header:
+    port:          0x11
+    id:            APL_ACK_NACK
+    sec_mode:      0
+    ctrl_word:     0
+body:
+    proto_ver:     PROTO_VER1
+    direction:     DL
+    ack:           ACCEPT
+    sn:            0x4321
+    option:
+        ul_id:     0x21

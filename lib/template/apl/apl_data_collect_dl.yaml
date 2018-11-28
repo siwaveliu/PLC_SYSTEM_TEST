@@ -1,0 +1,19 @@
+---
+# example data for APL_DATA_COLLECT downstream frame
+header:
+    port:            0x11
+    id:              APL_DATA_COLLECT
+    sec_mode:        0
+    ctrl_word:       0
+body:
+    proto_ver:       PROTO_VER1
+    no_rsp_retry:    RETRY
+    nack_retry:      NO_RETRY
+    retry_num:       2
+    data_proto_type: PROTO_DLT645_2007
+    data_len:        8
+    sn:              0x4321
+    exp_time:        0x10
+    pkt_interval:    0x20
+    data:            [0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01]
+

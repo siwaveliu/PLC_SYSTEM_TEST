@@ -1,0 +1,7 @@
+---
+# example data for MME_ROUTE_ACK frame
+header:
+    mmtype:          MME_ROUTE_ACK
+body:
+    ver:             0
+    sn:              1234

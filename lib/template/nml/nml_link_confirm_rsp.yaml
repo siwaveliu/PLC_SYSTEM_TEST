@@ -1,0 +1,10 @@
+---
+# example data for MME_LINK_CONFIRM_RSP frame
+header:
+    mmtype:          MME_LINK_CONFIRM_RSP
+body:
+    ver:                0
+    level:              2
+    quality:            15
+    route_prefer_flag:  NML_PREFERRED
+    sn:                 1234

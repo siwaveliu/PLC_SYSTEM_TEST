@@ -1,0 +1,9 @@
+---
+# example data for MME_LINK_CONFIRM_REQ frame
+header:
+    mmtype:          MME_LINK_CONFIRM_REQ
+body:
+    ver:                0
+    sn:                 1234
+    confirm_sta_num:    5
+    confirm_sta_list:   [11, 12, 13, 14, 15]

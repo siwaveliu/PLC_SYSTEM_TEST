@@ -1,0 +1,14 @@
+---
+# example data for APL_UPGRADE_START downstream frame
+header:
+    port:            0x12
+    id:              APL_UPGRADE_START
+    sec_mode:        0
+    ctrl_word:       0
+body:
+    proto_ver:       PROTO_VER1
+    upg_id:          0x4321
+    upg_time_slot:   0x10
+    upg_block_size:  UPG_BLK_SZ_4
+    upg_file_size:   0x10000
+    upg_file_crc:    0x3210

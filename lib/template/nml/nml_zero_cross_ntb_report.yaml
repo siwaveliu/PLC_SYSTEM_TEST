@@ -1,0 +1,20 @@
+---
+# example data for MME_ZERO_CROSS_NTB_REPORT frame
+header:
+    mmtype:          MME_ZERO_CROSS_NTB_REPORT
+body:
+    tei:             0xBB
+    num:             123
+    phase1_num:      2
+    phase2_num:      2
+    phase3_num:      3
+    ntb:             5678
+    offset:          
+    -   odd:         1
+        even:        2
+    -   odd:         3
+        even:        4
+    -   odd:         5
+        even:        6        
+    offset_last:
+        odd:         7

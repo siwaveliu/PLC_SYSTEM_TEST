@@ -1,0 +1,40 @@
+# 监控从节点 上行报文
+---
+head:
+  len:                      0
+cf:
+  dir:                      UL
+  prm:                      SLAVE
+  comm_mode:                BB_PLC
+user_data:
+  value:
+    r:
+      relay_level:          0
+      comm_module_flag:     0
+      route_flag:           0
+      channel_id:           0
+      channel_type:         0
+      phase_id:             0
+      reply_sig_q:          0
+      cmd_sig_q:            0
+      event_flag:           0
+      sn:                   0
+    a:                      null
+    afn:                    0x13
+    data:
+      dt1:                  1
+      dt2:                  0
+      data:
+        ul_delay:           0
+        proto_type:         PROTO_DLT645_07
+        packet_len:         24
+        packet:             [0x68, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x68,
+                             0x91, 0x0C, 0x33, 0x33, 0x34, 0x34, 0x30, 0x30, 
+                             0x30, 0x49, 0x3B, 0x37, 0x35, 0x4B, 0x00, 0x16,
+                            ]
+                            # <-  应答帧，数据标识{D3,D2,D1,D0}    = {01, 01, 00, 00}
+                            #                                        {0x34, 0x34, 0x33, 0x33}
+                            #                     {分 时 日 月 年} = {16, 8, 4, 2, 18,} 
+                            #                                        {0x49, 0x3B, 0x37, 0x35, 0x4B}
+tail:
+  cs:                       0

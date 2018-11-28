@@ -1,0 +1,9 @@
+---
+# example data for MME_ROUTE_ERROR frame
+header:
+    mmtype:          MME_ROUTE_ERROR
+body:
+    ver:                    0
+    sn:                     1234
+    unreachable_sta_num:    5
+    unreachable_sta_list:   [11, 12, 13, 14, 15]
