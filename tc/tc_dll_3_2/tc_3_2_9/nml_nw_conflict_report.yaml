@@ -1,0 +1,9 @@
+---
+# example data for MME_NW_CONFLICT_REPORT frame
+header:
+    mmtype:          MME_NW_CONFLICT_REPORT
+body:
+    cco_mac:         AA-AA-AA-AA-AA-AA
+    num:             4
+    nid_size:        3
+    nids:            [0x111213, 0x212223, 0x313233, 0x414243]

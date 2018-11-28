@@ -1,0 +1,14 @@
+---
+# example data for MME_PROXY_CHANGE_CNF frame
+header:
+    mmtype:          MME_PROXY_CHANGE_CNF
+body:
+    result:          PROXY_CHANGE_DONE
+    frag_num:        1
+    frag_sn:         1
+    sta_tei:         0x3
+    proxy_tei:       0x4
+    p2p_sn:          4321
+    path_sn:         8765
+    sta_num:         0
+    sta_list:        []

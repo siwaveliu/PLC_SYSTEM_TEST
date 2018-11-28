@@ -1,0 +1,42 @@
+# 监控从节点 下行报文
+---
+head:
+  len:                      0
+cf:
+  dir:                      DL
+  prm:                      MASTER
+  comm_mode:                BB_PLC
+user_data:
+  value:
+    r:
+      relay_level:          0
+      conflict_detect_flag: 0
+      comm_module_flag:     1
+      subnode_flag:         0
+      route_flag:           0
+      coding_type:          NO_ENCODING
+      channel_id:           0
+      reply_len:            0
+      comm_rate_flag:       BPS
+      comm_rate:            0
+      sn:                   0
+    a:
+      src: '00-00-00-00-00-9C'
+      relay_addr: null
+      dst: '00-00-00-00-00-01'
+    afn:                    0x13
+    data:
+      dt1:                  1
+      dt2:                  0
+      data:
+        proto_type:         PROTO_DLT645_07
+        delay_flag:         NEED_NOT_CORRECT_DELAY
+        subnode_num:        0
+        addr:               []
+        packet_len:         16
+        packet:             [0x68, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x68,
+                             0x11, 0x04, 0x01, 0x01, 0x00, 0x00, 0x00, 0x16,
+                            ]
+                            # <-  主站请求帧，数据标识: {01, 01, 00, 00}
+tail:
+  cs:                       0

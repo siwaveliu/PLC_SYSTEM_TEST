@@ -1,0 +1,4 @@
+si JTAG
+speed 4000
+rnh
+exit

@@ -1,0 +1,33 @@
+---
+# example data for MME_ASSOC_REQ frame
+header:
+    mmtype:          MME_ASSOC_REQ
+body:
+    mac:             0-0-0-0-0-6
+    proxy_tei:
+    - 4
+    - 0
+    - 0
+    - 0
+    - 0
+    phase_2:         PHASE_UNKNOWN
+    phase_1:         PHASE_UNKNOWN
+    phase_0:         PHASE_A
+    device_type:     DEV_TYPE_STA_SMART_METER
+    mac_addr_type:   MAC_ADDR_TYPE_COMM_UNIT
+    rand_num:        1
+    custom_ver_info: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+    version_info:
+        boot_cause:  BC_HW_RESET
+        boot_ver:    1
+        sw_ver:      2
+        year:        2018
+        month:       2
+        day:         24
+        vendor_id:   3
+        chip_id:     2
+    hw_reset_times:  12
+    sw_reset_times:  13
+    proxy_type:      PROXY_TYPE_STATION_SELECTED
+    p2p_sn:          0x123456
+    mng_id:          [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]

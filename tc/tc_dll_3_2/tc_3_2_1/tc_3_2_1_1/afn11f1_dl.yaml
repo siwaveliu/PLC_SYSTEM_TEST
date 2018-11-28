@@ -1,0 +1,33 @@
+---
+head:
+  len: 0
+cf:
+  dir: DL
+  prm: MASTER
+  comm_mode: BB_PLC
+user_data:
+  value:
+    r:
+      relay_level: 0
+      conflict_detect_flag: 0
+      comm_module_flag: 0
+      subnode_flag: 0
+      route_flag: 0
+      coding_type: NO_ENCODING
+      channel_id: 0
+      reply_len: 0
+      comm_rate_flag: BPS
+      comm_rate: 0
+      sn: 0
+    a: null
+    afn: 0x11
+    data:
+      dt1: 1
+      dt2: 0
+      data:
+          num: 1
+          list:
+          - addr: 00-00-00-00-00-01
+            proto_type: PROTO_DLT645_07  
+tail:
+  cs: 0

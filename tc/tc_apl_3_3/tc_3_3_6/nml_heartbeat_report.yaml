@@ -1,0 +1,10 @@
+---
+# example data for MME_HEARTBEAT_REPORT frame
+header:
+    mmtype:          MME_HEARTBEAT_REPORT
+body:
+    org_src_tei:     0x02
+    good_ear_tei:    0x02
+    sta_num:         0
+    bit_map_len:     0
+    bitmap:          []

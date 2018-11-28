@@ -1,0 +1,13 @@
+---
+# example data for APL_DATA_TRANSFER downstream frame
+header:
+    port:            0x12
+    id:              APL_DATA_TRANSFER
+    sec_mode:        0
+    ctrl_word:       0
+body:
+    proto_ver:       PROTO_VER1
+    data_blk_size:   0
+    upg_id:          0x4321
+    data_blk_id:     321
+    data:            []
