@@ -1,8 +1,0 @@
-si JTAG
-speed 4000
-r
-loadfile plc.hex
-wreg MSP, 0x20040000
-setPC 0x1ffe0489
-g
-exit
