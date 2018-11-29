@@ -1,4 +1,5 @@
 # -- coding: utf-8 --
+import imp
 import os.path
 import string
 import subprocess
@@ -339,9 +340,12 @@ class PlcSystemTestbench(object):
         band = BuiltIn().get_variable_value("${band}")
         band = band.split(',')
 
+        net = BuiltIn().get_variable_value("${net}")
+        _debug(net)
+
+        # 执行用例
         for b in band:
             tc.run(self, b)
-
 
     def _init_uart(self, dev_port_baudrate):
         self.tb_uart.open_tb_test_port()
