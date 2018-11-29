@@ -61,6 +61,7 @@
       <change beforePath="$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tc/tc_iot_4/tc_4_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc/tc_iot_4/tc_4_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tc/tc_iot_4/tc_4_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc/tc_iot_4/tc_4_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tc/tc_iot_4/tc_4_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc/tc_iot_4/tc_4_4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tc/tc_phy_2/tc_2_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc/tc_phy_2/tc_2_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tc/tc_phy_2/tc_2_2_band1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc/tc_phy_2/tc_2_2_band1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tc/tc_phy_3_1/tc_3_1_1_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc/tc_phy_3_1/tc_3_1_1_1.py" afterDir="false" />
@@ -85,10 +86,82 @@
       <file leaf-file-name="tc_4_1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1863">
-              <caret line="81" column="51" selection-start-line="81" selection-start-column="51" selection-end-line="81" selection-end-column="51" />
+            <state relative-caret-position="678">
+              <caret line="69" column="52" lean-forward="true" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="52" />
               <folding>
                 <element signature="e#22#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cco_switch_band.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/cco_switch_band.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tc_4_2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-104">
+              <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="68" />
+              <folding>
+                <element signature="e#40#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tc_4_3.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="586">
+              <caret line="31" column="107" selection-start-line="31" selection-start-column="107" selection-end-line="31" selection-end-column="107" />
+              <folding>
+                <element signature="e#40#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tc_4_4.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tc_4_5.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_5.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="724">
+              <caret line="74" column="54" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plc_tb_ctrl.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/plc_tb_ctrl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5221">
+              <caret line="227" column="24" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="24" />
+              <folding>
+                <element signature="e#22#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,34 +170,10 @@
       <file leaf-file-name="tc_common.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/tc_common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-58">
-              <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+            <state relative-caret-position="333">
+              <caret line="1454" column="25" selection-start-line="1454" selection-start-column="22" selection-end-line="1454" selection-end-column="25" />
               <folding>
                 <element signature="e#22#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tc_4_3.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="76" column="15" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
-              <folding>
-                <element signature="e#40#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plc_tb_ctrl.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/plc_tb_ctrl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="227" column="24" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="24" />
-              <folding>
-                <element signature="e#22#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,14 +236,15 @@
         <option value="$PROJECT_DIR$/lib/usb_relay.py" />
         <option value="$PROJECT_DIR$/lib/usb_test.py" />
         <option value="$PROJECT_DIR$/lib/cco_switch_band.py" />
-        <option value="$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py" />
-        <option value="$PROJECT_DIR$/tc/tc_iot_4/tc_4_2.py" />
         <option value="$PROJECT_DIR$/lib/template/gdw1376p2/afn11f1_dl.yaml" />
         <option value="$PROJECT_DIR$/lib/formats/gdw1376p2.py" />
         <option value="$PROJECT_DIR$/lib/template/gdw1376p2/afn11f2_dl.yaml" />
         <option value="$PROJECT_DIR$/lib/plc_tb_ctrl.py" />
         <option value="$PROJECT_DIR$/lib/tc_common.py" />
+        <option value="$PROJECT_DIR$/tc/tc_iot_4/tc_4_2.py" />
+        <option value="$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py" />
         <option value="$PROJECT_DIR$/tc/tc_iot_4/tc_4_3.py" />
+        <option value="$PROJECT_DIR$/tc/tc_iot_4/tc_4_4.py" />
       </list>
     </option>
   </component>
@@ -427,7 +477,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49947917" visible="true" weight="0.3282365" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49947917" weight="0.3282365" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32925585" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5537975" visible="true" weight="0.14424112" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -492,8 +542,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/usb_relay.py" />
-    <entry file="file://$PROJECT_DIR$/lib/config.py" />
     <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -589,7 +637,6 @@
     <entry file="file://$PROJECT_DIR$/tc/tc_dll_3_2/tc_3_2_1/tc_3_2_1_1/tb_activate_req.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/config.py" />
     <entry file="file://$PROJECT_DIR$/lib/plc_tb_uart.py" />
     <entry file="file://$PROJECT_DIR$/lib/usb_test.py" />
     <entry file="file://$PROJECT_DIR$/lib/usb_relay.py" />
@@ -597,23 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/cco_switch_band.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
-          <folding>
-            <element signature="e#40#75#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -662,16 +692,6 @@
     <entry file="file://$PROJECT_DIR$/lib/template/gdw1376p2/afn00f1_dl.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1863">
-          <caret line="81" column="51" selection-start-line="81" selection-start-column="51" selection-end-line="81" selection-end-column="51" />
-          <folding>
-            <element signature="e#22#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/formats/gdw1376p2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
@@ -699,16 +719,6 @@
     <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/afn11f2_dl.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/plc_tb_ctrl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="227" column="24" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="24" />
-          <folding>
-            <element signature="e#22#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tc/tc_apl_3_3/tc_3_3_1/tc_3_3_1_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -723,23 +733,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/plc_tb_ctrl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5221">
+          <caret line="227" column="24" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="24" />
+          <folding>
+            <element signature="e#22#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cco_switch_band.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tc_common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+        <state relative-caret-position="333">
+          <caret line="1454" column="25" selection-start-line="1454" selection-start-column="22" selection-end-line="1454" selection-end-column="25" />
           <folding>
             <element signature="e#22#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="69" column="52" lean-forward="true" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="52" />
+          <folding>
+            <element signature="e#22#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="74" column="54" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="68" />
+          <folding>
+            <element signature="e#40#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="76" column="15" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
+        <state relative-caret-position="586">
+          <caret line="31" column="107" selection-start-line="31" selection-start-column="107" selection-end-line="31" selection-end-column="107" />
           <folding>
             <element signature="e#40#52#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>

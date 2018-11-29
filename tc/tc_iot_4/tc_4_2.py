@@ -42,36 +42,18 @@ def run(tb, band):
 
     # 添加先入网的从节点
     plc_tb_ctrl._debug("set half of nodes's address to main cco, and start the main net")
-    f = open(node_addr_list_file_static, 'r')
-    addr_list = f.readlines()
-    nw_top_main = {cco_mac_addr: 0}
-    for l in addr_list:
-        # key is meter address, value is level
-        key, value = l.split(':')
-        nw_top_main[key] = int(value.strip())
-    f.close()
-    sec_nodes_addr_list = []
-    for meter_addr, level in nw_top_main.iteritems():
-        if (level > 0):
-            sec_nodes_addr_list.append(meter_addr)
+    nw_top_main, sec_nodes_addr_list =tc_common.read_node_top_list(node_addr_list_file_static, cco_mac_addr, True)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
+    # 检查拓扑图
+    tc_common.check_nw_top(tb.cct, nw_top_main, 500)
 
     # 添加后入网的从节点
     plc_tb_ctrl._debug("set another half of nodes's address to main cco, and start the main net")
-    f = open(node_addr_list_file_dynatic, 'r')
-    addr_list = f.readlines()
-    nw_top_main_other = {}
-    for l in addr_list:
-        # key is meter address, value is level
-        key, value = l.split(':')
-        nw_top_main_other[key] = int(value.strip())
-        nw_top_main[key] = int(value.strip())
-    f.close()
-    sec_nodes_addr_list = []
-    for meter_addr, level in nw_top_main_other.iteritems():
-        sec_nodes_addr_list.append(meter_addr)
+    nw_top_main_other, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file_dynatic, None, True)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
-
+    # 更新拓扑图
+    nw_top_main.update(nw_top_main_other)
+    # 检查新的拓扑图
     tc_common.check_nw_top(tb.cct, nw_top_main, 500)
 
     # Dialogs.pause_execution("Add new secondary nodes")

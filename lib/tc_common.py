@@ -1450,3 +1450,29 @@ def write_cco_band(cct, band):
     cct.send_frame(frame)
     # 等待确认
     cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
+
+def read_node_top_list(file, cco_mac_addr=None, log=False):
+    # type: (unicode, str, bool) -> object
+    """
+    :param file: 电表地址和预期层级的txt文件
+    :param cco_mac_addr: 如果赋值，那么拓扑信息中会带有cco的信息
+    :return: 第一个值是拓扑信息字典，第二个是地址列表
+    """
+    f = open(file, 'r')
+    addr_list = f.readlines()
+    if cco_mac_addr is None:
+        nw_top_main = { }
+    else:
+        nw_top_main = { cco_mac_addr : 0}
+    for l in addr_list:
+        # key is meter address, value is level
+        key, value = l.split(':')
+        nw_top_main[key] = int(value.strip())
+    f.close()
+    sec_nodes_addr_list = []
+    for meter_addr, level in nw_top_main.iteritems():
+        if (level > 0):
+            sec_nodes_addr_list.append(meter_addr)
+    if log:
+        plc_tb_ctrl._debug(sec_nodes_addr_list)
+    return nw_top_main, sec_nodes_addr_list
