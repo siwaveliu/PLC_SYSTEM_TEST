@@ -112,3 +112,5 @@ log
 .vscode
 .settings
 
+#Pycharm
+.idea
