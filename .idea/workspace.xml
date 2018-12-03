@@ -8,6 +8,7 @@
       <change afterPath="$PROJECT_DIR$/tc/tc_iot_4/afn11f2_dl.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tc/tc_iot_4/dut_sta_addr.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tc/tc_iot_4/互操作性表架地址.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tc/tc_iot_4/互操作性表架拓扑地址_代理_树形.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tc/tc_iot_4/互操作性表架拓扑地址_动态_树形.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tc/tc_iot_4/互操作性表架拓扑地址_完整版_树形.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tc/tc_iot_4/互操作性表架拓扑地址_静态_树形.txt" afterDir="false" />
@@ -137,11 +138,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tc_4_4.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tc_4_4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="253">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+              <folding>
+                <element signature="e#40#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_flash.py" pinned="false" current-in-tab="true">
+        <entry file="file://Y:/liuboqiang/tools/read_flash.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -245,6 +258,7 @@
         <option value="$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py" />
         <option value="$PROJECT_DIR$/tc/tc_iot_4/tc_4_3.py" />
         <option value="$PROJECT_DIR$/tc/tc_iot_4/tc_4_4.py" />
+        <option value="Y:/liuboqiang/tools/read_flash.py" />
       </list>
     </option>
   </component>
@@ -258,10 +272,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="55" />
-    <option name="y" value="117" />
-    <option name="width" value="1232" />
-    <option name="height" value="810" />
+    <option name="x" value="485" />
+    <option name="y" value="256" />
+    <option name="width" value="974" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
@@ -542,9 +556,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/tc/tc_dll_3_2/tc_3_2_4/tc_3_2_4_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -806,8 +817,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tc/tc_iot_4/tc_4_4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="253">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="e#40#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Y:/liuboqiang/tools/read_flash.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
         </state>
       </provider>
     </entry>
