@@ -8,7 +8,7 @@ import plc_tb_ctrl
 import meter
 import config
 import time
-import formatter.gdw1376p2
+
 
 
 #设置主节点地址函数
@@ -67,12 +67,13 @@ def add_sub_node_addr(cct, mac_addr_list, wait_ack=True):
     mac_dict_list =[]
     couter = 0 # type: int
     dl_afn11f1_pkt = plc_tb_ctrl.PlcSystemTestbench._load_data_file(data_file='afn11f1_dl.yaml')
+    plc_tb_ctrl._debug(dl_afn11f1_pkt)
     for addr in mac_addr_list:
         mac_dict_list.append({'addr':addr,'proto_type':'PROTO_DLT645_07'})
         couter += 1
         if couter % 15 == 0 or couter == len(mac_addr_list):
-            dl_afn11f1_pkt['user_data']['value']["data"]['num'] = len(mac_dict_list)
-            dl_afn11f1_pkt['user_data']['value']["data"]['list'] = mac_dict_list
+            dl_afn11f1_pkt['user_data']['value']['data']['data']['num'] = len(mac_dict_list)
+            dl_afn11f1_pkt['user_data']['value']['data']['data']['list'] = mac_dict_list
             frame = concentrator.build_gdw1376p2_frame(dict_content=dl_afn11f1_pkt)
             assert frame is not None
             cct.send_frame(frame)
@@ -99,8 +100,8 @@ def del_sub_node_addr(cct,mac_addr_list):
     dl_afn11f2_pkt = plc_tb_ctrl.PlcSystemTestbench._load_data_file(data_file='afn11f2_dl.yaml')
     for couter in range(1, len(mac_addr_list) + 1):
         if couter % 15 == 0 or couter == len(mac_addr_list):
-            dl_afn11f2_pkt['user_data']['value']["data"]['num'] = len(mac_dict_list)
-            dl_afn11f2_pkt['user_data']['value']["data"]['list'] = mac_dict_list
+            dl_afn11f2_pkt['user_data']['value']['data']["data"]['num'] = len(mac_dict_list)
+            dl_afn11f2_pkt['user_data']['value']['data']["data"]['list'] = mac_dict_list
             frame = concentrator.build_gdw1376p2_frame(dict_content=dl_afn11f2_pkt)
             assert frame is not None
             cct.send_frame(frame)

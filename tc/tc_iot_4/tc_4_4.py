@@ -5,7 +5,6 @@ import concentrator
 import plc_tb_ctrl
 import tc_4_1
 import tc_common
-
 '''
 4.4 代理变更测试
 验证多站点时代理变更的能力
@@ -24,6 +23,8 @@ def run(tb, band):
     tc_4_1.run(tb, band)
     # 等待改变拓扑
     tc_common.pause_exec("Change attenuation and power down level3 STA, then press OK")
+    # 关闭代理层级
+    tb.usb_relay_device.open(5, 6)
     nw_top_main, sec_node_list = tc_common.read_node_top_list(node_addr_list_file_proxy, None, True)
     plc_tb_ctrl._debug("wait 700s for top change")
     time.sleep(700)
