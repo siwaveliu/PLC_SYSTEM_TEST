@@ -27,7 +27,7 @@ user_data:
       dt2:                  0
       data:
         start_time:                [0x32, 0x16, 0x8, 0x4, 0x2, 0x18]   # BCD, 秒分时日月年
-        duration:                  1                                   # minutes
+        duration:                  30                                   # minutes
         re_send_times:             1
         rand_wait_time_slice_num:  1
 tail:
