@@ -65,8 +65,8 @@ def run(tb, cct, band):
                 break
             payload = tb._wait_for_plc_beacon(endtime - time.time())[2]
             plc_tb_ctrl._debug(payload.cco_mac_addr)
-            if payload.cco_mac_addr == cco_mac_addr:
-                wait = False
+            # if payload.cco_mac_addr == cco_mac_addr:
+            wait = False
         assert wait == False, 'cco switch band timeout'
     tc_common.check_nw_top(cct, nw_top_main, 60)
 

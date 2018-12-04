@@ -1209,12 +1209,12 @@ class PlcSystemTestbench(object):
         assert 0 == result, "close relay fail"
 
     def meter_platform_power_reset(self):
-        self.usb_relay_device.open(1, 2, 3, 4, 5, 6)
+        self.usb_relay_device.open(1, 2, 3)
         time.sleep(5)
         self.tb_uart.close_tb_test_port()
         self.tb_uart.open_tb_test_port()
         _debug("power off all of meters and cco, delay 5s")
-        self.usb_relay_device.close(1, 2, 3, 4, 5, 6)
+        self.usb_relay_device.close(1, 2, 3)
         _debug("power on all of meters and cco. delay 5s for boot")
         time.sleep(5)
         self._deactivate_tb()

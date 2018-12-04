@@ -5,10 +5,6 @@ from robot.libraries import Dialogs
 import plc_tb_ctrl
 import concentrator
 import tc_common
-import plc_packet_helper
-import time
-import cco_switch_band
-import config
 import tc_4_1
 
 '''
