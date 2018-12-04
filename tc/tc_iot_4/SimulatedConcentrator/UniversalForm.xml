@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UniversalForm</name>
+    </assembly>
+    <members>
+        <member name="M:UniversalForm.Paint_RedCircle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            初始化红色圆形
+            </summary>
+            <param name="x">X轴坐标</param>
+            <param name="y">Y轴坐标</param>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+            <param name="control">添加到控件上</param>
+            <param name="isUnique">是否唯一</param>
+        </member>
+        <member name="M:UniversalForm.Paint_GrayCircle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            初始化灰色圆形
+            </summary>
+            <param name="x">X轴坐标</param>
+            <param name="y">Y轴坐标</param>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+            <param name="control">添加到控件上</param>
+            <param name="isUnique">是否唯一</param>
+        </member>
+        <member name="M:UniversalForm.Paint_GreenCircle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            初始化绿色圆形
+            </summary>
+            <param name="x">X轴坐标</param>
+            <param name="y">Y轴坐标</param>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+            <param name="control">添加到控件上</param>
+            <param name="isUnique">是否唯一</param>
+        </member>
+        <member name="M:UniversalForm.Paint_YellowCircle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            初始化黄色圆形
+            </summary>
+            <param name="x">X轴坐标</param>
+            <param name="y">Y轴坐标</param>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+            <param name="control">添加到控件上</param>
+            <param name="isUnique">是否唯一</param>
+        </member>
+        <member name="F:UniversalForm.SavePath.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:UniversalForm.SavePath.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:UniversalForm.SavePath.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:UniversalForm.SerialPortSet.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:UniversalForm.SerialPortSet.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:UniversalForm.SerialPortSet.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

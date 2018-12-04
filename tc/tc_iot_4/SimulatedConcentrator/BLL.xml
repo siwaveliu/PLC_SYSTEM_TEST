@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BLL</name>
+    </assembly>
+    <members>
+        <member name="P:BLL.AccessDB.ColumnOfUser.NullAble">
+            <summary>
+            是否允许为空
+            </summary>
+        </member>
+        <member name="M:BLL.AccessDB.CSharpTypeChangeToADOX(System.Type)">
+            <summary>
+            将变量的type转换成AODX的数据类型，该数据类型为Access中对应类型
+            </summary>
+            <param name="type"></param>
+            <returns>ADOX.DataTypeEnum</returns>
+        </member>
+        <member name="M:BLL.AccessDB.CreatAccessTables(System.String,BLL.AccessDB.ColumnOfUser[],System.Boolean)">
+            <summary>
+            根据ColumnOfUser创建Access表，第一列默认设置成主键
+            </summary>
+            <param name="tableName"></param>
+            <param name="columnUser"></param>
+            <param name="autoIncrementAble"></param>
+            <returns>设置成功返回true，否则抛出异常</returns>
+        </member>
+        <member name="M:BLL.AccessDB.insertRowToTable(System.String[],System.String[],System.String,System.Boolean)">
+            <summary>
+            将行数据插入数据库表中，默认在插入后不会关闭数据库
+            </summary>
+            <param name="strColumnName"></param>
+            <param name="insertData"></param>
+            <param name="tableName"></param>
+            <param name="isClose">在插入后是否关闭数据库连接，true：关闭；false：打开</param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.AccessDB.insertRowToTable_object(System.String[],System.Object[],System.String,System.Boolean)">
+            <summary>
+            将行数据插入数据库表中，默认在插入后不会关闭数据库
+            </summary>
+            <param name="strColumnName"></param>
+            <param name="insertData">待插入的数据</param>
+            <param name="tableName"></param>
+            <param name="isClose">在插入后是否关闭数据库连接，true：关闭；false：打开</param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.AccessDB.CompactAccessDB(System.String,System.String)">
+            <summary>
+            MBD compact method (c) 2004 Alexander Youmashev
+            !!IMPORTANT!!
+            !确保调用此方法前要压缩的数据库没有打开的连接，为防止万一，应在压缩前进行备份。
+            !!IMPORTANT!!
+            </summary>
+            <param name="connectionString">到源数据库的连接字符串，源数据库是指要压缩的数据库</param>
+            <param name="mdwfilename">目标数据库的物理文件名，含路径，目标数据库即压缩后得到的新数据库</param>
+        </member>
+        <member name="M:BLL.MyExcel.CreatExcel(System.String,System.Boolean,System.String)">
+            <summary>
+            创建Excel文件，完成后关闭。
+            </summary>
+            <param name="_path">Excel文件路径</param>
+            <param name="isCreat">是否覆盖，默认：true</param>
+            <param name="_secret">是否需要密码，默认：false</param>
+            <returns></returns>
+        </member>
+        <member name="F:BLL.ProtocolReceiveClass.packetInterval">
+             <summary>
+            修改成5s
+             </summary>
+        </member>
+        <member name="M:BLL.ProtocolReceiveClass.#ctor(System.Boolean,System.Int32,System.Boolean,BLL.ProtocolReceiveClass.FrameType[])">
+            <summary>
+            默认是打开按照协议接收数据的。
+            </summary>
+        </member>
+        <member name="M:BLL.ProtocolReceiveClass.Release">
+            <summary>
+            停止数据线程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:BLL.ProtocolReceiveClass.FrameType.Type_97">
+            摘要:
+                97帧，钜泉自定义数据类型
+                
+        </member>
+        <member name="F:BLL.ProtocolReceiveClass.FrameType.Type_645">
+            摘要:
+               645帧，国家电网定义与智能电表通信的数据类型
+             
+        </member>
+        <member name="F:BLL.ProtocolReceiveClass.FrameType.Type_3762">
+            摘要:
+                376.2帧，国家电网定义集中器与左模块通信的数据类型
+            
+        </member>
+        <member name="F:BLL.ProtocolReceiveClass.FrameType.Type_7E">
+            <summary>
+            头尾是7E的数据帧
+            </summary>
+        </member>
+        <member name="F:BLL.ProtocolReceiveClass.FrameType.Type_Unknown">
+            <summary>
+            未知类型
+            </summary>
+        </member>
+        <member name="F:BLL.ProtocolReceiveClass.FrameType.Type_Error">
+            <summary>
+            错误数据
+            </summary>
+        </member>
+        <member name="F:BLL.ProtocolReceiveClass.FrameType.Type_3762South">
+            <summary>
+            南网协议
+            </summary>
+        </member>
+        <member name="M:BLL.SerialPortConnect.#ctor(BLL.ProtocolReceiveClass,System.IO.Ports.SerialPort)">
+            <summary>
+            初始化连接
+            </summary>
+            <param name="_protocol"></param>
+            <param name="_port">如果不赋值，请使用Open（）设置串口</param>
+        </member>
+        <member name="M:BLL.SerialPortConnect.Open(System.String,System.Int32,System.IO.Ports.Parity,System.Int32,System.IO.Ports.StopBits,System.Boolean,System.Boolean,System.Byte)">
+            <summary>
+            输入串口名称，波特率，校验位，数据位，停止位，DtrEnable，RtsEnable，ParityReplace。
+            </summary>
+            <param name="_portName">串口名称，必须赋值</param>
+            <param name="_baudRate">波特率，默认9600</param>
+            <param name="_parity">校验位，默认Even</param>
+            <param name="_dataBits">数据位，默认8</param>
+            <param name="_stBits">停止位，默认One</param>
+            <param name="_dtrEnable">DtrEnable,默认false</param>
+            <param name="_rtsEnable">RtsEnable，默认false</param>
+            <param name="_Parityreplace">ParityReplace，默认0</param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.SerialPortConnect.Open">
+            <summary>
+            打开接收功能
+            </summary>
+            <returns>打开成功</returns>
+        </member>
+        <member name="M:BLL.SerialPortConnect.SetProtocol(BLL.ProtocolReceiveClass)">
+            <summary>
+            设置判定接收数据包的协议
+            </summary>
+            <param name="_protocol">判断依据的协议</param>
+            <returns>设置正常</returns>
+        </member>
+        <member name="M:BLL.SerialPortConnect.Pause(System.Boolean)">
+            <summary>
+            是否暂停串口接收数据
+            </summary>
+            <param name="_Execut">True：暂停；False：恢复</param>
+        </member>
+        <member name="M:BLL.SerialPortConnect.Read">
+            <summary>
+            读取串口缓存中的所有数据
+            </summary>
+            <returns>返回byte[]</returns>
+        </member>
+        <member name="M:BLL.USB2GPIO_CH341.AttenuatorControlFromNum(System.Int32)">
+            <summary>
+            自制衰减器//衰减量范围0 - 91dB。
+            </summary>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BLL.USB2GPIO_CH341.AttenuatorControlFromNum_V2(System.Int32)">
+            <summary>
+            自制衰减器V2，衰减率0-62；
+            </summary>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

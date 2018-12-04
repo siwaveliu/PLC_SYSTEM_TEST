@@ -112,3 +112,8 @@ log
 .vscode
 .settings
 
+#Pycharm
+.idea
+
+#模拟集中器测试报告
+模拟集中器测试报告/
