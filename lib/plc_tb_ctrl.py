@@ -169,7 +169,7 @@ def init_test():
     TB_INSTANCE._start_detail_logging()
 
     if config.PHY_AUTO_TEST:
-	    # make DUT exit test mode
+        # make DUT exit test mode
         logger = sitrace_logger.SitraceLogger(True)
         logger.open_port()
         logger.send_cli_cmd("ptst 0 0 0")
@@ -209,7 +209,7 @@ def init_test():
 
     TB_INSTANCE.set_event_low()
 
-	# TODO: bootloader2 tasks more time to boot
+    # TODO: bootloader2 tasks more time to boot
     time.sleep(5)
 
 

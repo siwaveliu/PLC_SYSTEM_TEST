@@ -15,6 +15,7 @@ import time
 def set_cco_mac_addr(cct,mac_addr):
     assert isinstance(cct, concentrator.Concentrator)
     cct.clear_port_rx_buf()
+    cct.mac_addr = mac_addr
     frame = concentrator.build_gdw1376p2_frame(dict_content= {
         'head':{'len':0},
         'cf':{'dir':'DL','prm':'MASTER','comm_mode':'BB_PLC'},
@@ -949,7 +950,7 @@ def check_nw_top(cct, nw_top, timeout=120):
     while True:
         afn10f21_ul_frame = query_nw_top(cct, 1, 61)
         if afn10f21_ul_frame is None:
-            timeoutcounter +=1;
+            timeoutcounter += 1
             cct.clear_port_rx_buf()
             assert timeoutcounter < 3, "read cco top info fail"
             continue
@@ -1039,38 +1040,41 @@ def verify_mr_result(dlt645_frame, di_list):
 def exec_cct_mr_single(tb, cct, cco_addr, sta_addr, timeout, num, di):
     succ_cnt = 0
     total_time_used = 0
+    sn = 0
     for i in range(num):
         dl_afn13f1_pkt = tb._load_data_file(data_file='afn13f1_dl.yaml')
-        dl_afn13f1_pkt['cf']['prm']  = 'MASTER'
-        dl_afn13f1_pkt['user_data']['value']['r']['comm_module_flag']  = 1
-        dl_afn13f1_pkt['user_data']['value']['r']['sn'] = i
-        dl_afn13f1_pkt['user_data']['value']['a']['src'] = cco_addr
-        dl_afn13f1_pkt['user_data']['value']['a']['dst'] = sta_addr
-        dlt645_frame = create_dlt645_data_read_req_frame(sta_addr, di)
-        dl_afn13f1_pkt['user_data']['value']['data']['data']['packet_len'] = len(dlt645_frame)
-        dl_afn13f1_pkt['user_data']['value']['data']['data']['packet'] = [ord(d) for d in dlt645_frame]
+        for sta in sta_addr:
+            sn += 1
+            dl_afn13f1_pkt['cf']['prm']  = 'MASTER'
+            dl_afn13f1_pkt['user_data']['value']['r']['comm_module_flag']  = 1
+            dl_afn13f1_pkt['user_data']['value']['r']['sn'] = i
+            dl_afn13f1_pkt['user_data']['value']['a']['src'] = cco_addr
+            dl_afn13f1_pkt['user_data']['value']['a']['dst'] = sta
+            dlt645_frame = create_dlt645_data_read_req_frame(sta, di)
+            dl_afn13f1_pkt['user_data']['value']['data']['data']['packet_len'] = len(dlt645_frame)
+            dl_afn13f1_pkt['user_data']['value']['data']['data']['packet'] = [ord(d) for d in dlt645_frame]
 
-        msdu = concentrator.build_gdw1376p2_frame(dict_content=dl_afn13f1_pkt)
-        assert msdu is not None
+            msdu = concentrator.build_gdw1376p2_frame(dict_content=dl_afn13f1_pkt)
+            assert msdu is not None
 
-        start_time = time.time()
-        cct.send_frame(msdu)
+            start_time = time.time()
+            cct.send_frame(msdu)
 
-        gdw1376p2_frame = cct.wait_for_gdw1376p2_frame(afn=0x13, dt1=0x01, dt2=0, timeout=timeout, tm_assert=False)
-        time_used = time.time() - start_time
+            gdw1376p2_frame = cct.wait_for_gdw1376p2_frame(afn=0x13, dt1=0x01, dt2=0, timeout=timeout, tm_assert=False)
+            time_used = time.time() - start_time
 
-        if gdw1376p2_frame is None:
-            result = "[{}]: FAIL".format(i)
-        else:
-            afn13f1_data = gdw1376p2_frame.user_data.value.data.data
-            if 0 == afn13f1_data.packet_len:
-                continue
+            if gdw1376p2_frame is None:
+                result = "[{}]: FAIL".format(i)
+            else:
+                afn13f1_data = gdw1376p2_frame.user_data.value.data.data
+                if 0 == afn13f1_data.packet_len:
+                    continue
 
-            dlt645_frame = "".join([chr(d) for d in afn13f1_data.packet])
-            if (verify_mr_result(dlt645_frame, [di])):
-                succ_cnt += 1
-                result = "[{}]: SUCC. Time: {:.2f} second".format(i, time_used)
-                total_time_used += time_used
+                dlt645_frame = "".join([chr(d) for d in afn13f1_data.packet])
+                if (verify_mr_result(dlt645_frame, [di])):
+                    succ_cnt += 1
+                    result = "[{}]: SUCC. Time: {:.2f} second".format(i, time_used)
+                    total_time_used += time_used
 
         plc_tb_ctrl._debug(result)
 

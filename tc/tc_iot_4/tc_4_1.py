@@ -14,6 +14,7 @@ def run(tb, band, escort=False):
     """
     Args:
         tb (plc_tb_ctrl.PlcSystemTestbench): testbench object .
+        如果没有开启陪测CCO，那么该函数会返回整个表架的拓扑图和地址列表
     """
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
@@ -68,7 +69,7 @@ def run(tb, band, escort=False):
     nw_top_main, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file, cco_mac_addr, True)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
     tc_common.check_nw_top(tb.cct, nw_top_main, 500)
-    return nw_top_main
+    return nw_top_main, sec_nodes_addr_list
 
 
 

@@ -1,0 +1,4040 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Model</name>
+    </assembly>
+    <members>
+        <member name="T:Model.Entity3762">
+            <summary>
+            需要信息域，控制域，地址域，应用数据域。
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.#ctor(System.Byte[])">
+            <summary>
+            解析数据帧时使用。
+            </summary>
+            <param name="_data">376.2内容</param>
+        </member>
+        <member name="M:Model.Entity3762.#ctor(Model.Entity3762.InfoArea,Model.Entity3762.ApplicationArea,Model.Entity3762.AddressArea,Model.Entity3762.ControlArea,System.Byte)">
+            <summary>
+            生成数据帧时使用。
+            </summary>
+            <param name="_control">控制域</param>
+            <param name="_info">信息域</param>
+            <param name="_address">地址域，对主节点操作时地址域为空</param>
+            <param name="_app">应用数据域</param>
+            /// <param name="_checkSum">校验和，输入0xFF，那么校验和直接等于0xFF,</param>
+        </member>
+        <member name="F:Model.Entity3762.length">
+            <summary>
+            该协议的帧长
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.Length">
+            <summary>
+            该协议的帧长
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.controlArea">
+            <summary>
+            实例化时可以选择type，生成数据帧时需要给conDirecion,lauchSign,commnicationMode赋值
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.infoArea">
+            <summary>
+            大多数情况下在生成数据帧时仅需设置modelSign、routeSign
+            或者传递data进来
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.addressArea">
+            <summary>
+            取决于信息域中通信模块标识，中继级别
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.appArea">
+            <summary>
+            可以使用已有AFNType，或者给AFN, DT1, DT2赋值
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.ControlArea.#ctor(System.Byte)">
+            <summary>
+            解析数据帧时使用
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="M:Model.Entity3762.ControlArea.#ctor(System.Boolean,System.Boolean,Model.Entity3762.ControlArea.CommunicationMode)">
+            <summary>
+            生成数据帧时使用，设置传输方向、启动方向和通信方式。
+            </summary>
+            <param name="_direction"></param>
+            <param name="_lauch"></param>
+            <param name="_mode"></param>
+        </member>
+        <member name="M:Model.Entity3762.ControlArea.#ctor(Model.Entity3762.ControlArea.ControlAreaType,Model.Entity3762.ControlArea.CommunicationMode)">
+            <summary>
+            生成数据帧时使用，使用已经设置好的控制域类型；通信类型默认为集中式路由。
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.data">
+            <summary>
+            控制域字节
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.direction">
+            <summary>
+            false：下行；true：上行
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ControlArea.Direction">
+            <summary>
+            false：下行；true：上行
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.startSign">
+            <summary>
+            false：从动站；true：启动站
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ControlArea.StartSign">
+            <summary>
+            false：从动站；true：启动站
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.comMode">
+            <summary>
+            通信方式
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ControlArea.ComMode">
+            <summary>
+            通信方式
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.ControlArea.CommunicationMode">
+            <summary>
+            通信方式的枚举定义
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.CommunicationMode.JZS_RoutePLC">
+            <summary>
+            集中式路由载波通信
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.CommunicationMode.FBS_RoutePLC">
+            <summary>
+            分布式路由载波通信
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.CommunicationMode.BPLC">
+            <summary>
+            宽带载波通信
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.CommunicationMode.Wireless">
+            <summary>
+            微功率无线通信
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.CommunicationMode.Ethernet">
+            <summary>
+            以太网TCP/IP
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ControlArea.CommunicationMode.Unknown">
+            <summary>
+            未知类型
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.ControlArea.ControlAreaType">
+            <summary>
+            控制域几种常见类型
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.InfoArea">
+            <summary>
+            此类为信息域基类
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.InfoArea.#ctor(System.Boolean,System.Byte[])">
+            <summary>
+            解析数据帧时使用。
+            </summary>
+            <param name="_lauchSign">启动方向</param>
+            <param name="_data">信息域数据</param>
+        </member>
+        <member name="M:Model.Entity3762.InfoArea.#ctor(System.Boolean,System.Int32,System.Boolean,System.Byte,System.Byte,System.Boolean,Model.Entity3762.ApplicationArea.AFNType)">
+            <summary>
+            信息域构造函数，根据内容生成相应的字节
+            </summary>
+            <param name="_modelSign">通信模块标识：false：对主节点操作；true：对从节点操作</param>
+            <param name="_sequenceNum">报文序列号：用以匹配上、下行报文的请求应答对应关系，值从0~255，循环使用</param>
+            <param name="_routeSign">路由标识：fasle = 表示通信模块带路由或工作在路由模式；true = 通信模块不带路由或工作在旁路模式</param>
+            <param name="_relayLevel">中继级别：取值范围0~15，0表示无中继。</param>
+            <param name="_channelSign">信道标识：取值0~15，0表示部分信道；1~15依次表示第1~15信道。</param>
+            <param name="_startSign">启动标识：false = 从动站；true = 启动站</param>
+        </member>
+        <member name="F:Model.Entity3762.InfoArea.iaMessage">
+            <summary>
+            信息域的信息，值为DownMessage或者UpMessage
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoArea.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoArea.RelayLevel">
+            <summary>
+            中继级别 0表示无中继
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoArea.ModelSign">
+            <summary>
+            通信模块标识 false：对主节点操作；true：对从节点操作
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoArea.RouteSign">
+            <summary>
+            路由标识 false：通信模块带路由或工作在路由模式；true：通信模块不带路由或工作在旁路模式
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoArea.ChannelSign">
+            <summary>
+            信道标识 0：不分信道；1~15其它信道编号
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoArea.SequenceNum">
+            <summary>
+            报文序列号,0x100时，使用自增变量selfSequenceNum
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.InfoArea.sequenceNum_Creat">
+            <summary>
+            帧序号自加的值
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.InfoArea.sequenceNum_Parse">
+            <summary>
+            帧序号接收的值
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.InfoArea.SetsequenceNum(System.Int32)">
+            <summary>
+            现在是模拟集中器方式，如果是模拟CCO的化，direction需要取反才可以。
+            </summary>
+            <param name="_sequenceNum">帧序号的值</param>
+        </member>
+        <member name="M:Model.Entity3762.InfoArea.GetMessageFromData(System.Byte[])">
+            <summary>
+            通过传递的data获取报文内容,需要根据传输方向解析
+            </summary>
+            <param name="_data">需要解析的信息域数据</param>
+        </member>
+        <member name="T:Model.Entity3762.InfoAreaUp">
+            <summary>
+            上行信息域
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.InfoAreaUp.#ctor(System.Boolean,System.Byte[])">
+            <summary>
+            解析数据帧时使用。
+            </summary>
+            <param name="_lauchSign">启动标识</param>
+            <param name="_data">信息域数据</param>
+        </member>
+        <member name="M:Model.Entity3762.InfoAreaUp.#ctor(System.Boolean,System.Int32,System.Boolean,System.Byte,System.Byte,System.Boolean,System.Byte,System.Byte,System.Byte,System.Byte,System.Boolean)">
+            <summary>
+            上行信息域构造函数，根据内容生成相应的字节
+            </summary>
+            <param name="_modelSign">通信模块标识：false：对主节点操作；true：对从节点操作</param>
+            <param name="_sequenceNum">报文序列号：用以匹配上、下行报文的请求应答对应关系，值从0~255，循环使用</param>
+            <param name="_routeSign">路由标识：fasle = 表示通信模块带路由或工作在路由模式；true = 通信模块不带路由或工作在旁路模式</param>
+            <param name="_relayLevel">中继级别：取值范围0~15，0表示无中继。</param>
+            <param name="_channelSign">信道标识：取值0~15，0表示部分信道；1~15依次表示第1~15信道。</param>
+            <param name="_lauchSign">启动标识：false = 从动站；true = 启动站</param>
+            <param name="_meterchannelfeature">电能表通道特征：取值范围0~15，0为保留；1表示物理信道为单相供电，逻辑信道为单信道；2表示物理信道为单相供电，逻辑信道为两信道；3表示物理信道为单相供电，逻辑信道为三信道；4表示物理信道为三相供电，逻辑信道为三信道；5~15保留</param>
+            <param name="_actualPhaseSign">实测相线标识：实测从节点逻辑主信道所在电源相别，0为不确定，1~3依次表示相别为第1相、第2相、第3相</param>
+            <param name="_endReponseQuality">末级应答信号品质：分为15级，取值范围0~15，0表示无信号品质，1表示最低品质。</param>
+            <param name="_endCommandQuality">末级命令信号品质：分为15级，取值范围0~15，0表示无信号品质，1表示最低品质。</param>
+            <param name="_eventSign">事件标志：false = 无上报事件；true = 有上报事件</param>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaUp.MeterChannelfeature">
+            <summary>
+            电能表通道特征
+            0：保留；
+            1：物理信道为单相供电，逻辑信道为单信道。
+            2；物理信道为单相供电，逻辑信道为单信道。
+            3；物理信道为单相供电，逻辑信道为两信道。
+            4；物理信道为单相供电，逻辑信道为三信道。
+            5；物理信道为三相供电，逻辑信道为三信道。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaUp.ActualPhaseSign">
+            <summary>
+            实测相线标识
+            0：不确定；1~3对应第1、2、3相线。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaUp.EndReponseQuality">
+            <summary>
+            末级应答品质
+            0：无信号品质；1：最低信号品质
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaUp.EndCommandQuality">
+            <summary>
+            末级命令品质
+            0：无信号品质；1：最低信号品质
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaUp.EventSign">
+            <summary>
+            事件标志
+            false：无事件上报；true：有事件上报。
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.InfoAreaDown">
+            <summary>
+            下行信息域
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.InfoAreaDown.#ctor(System.Boolean,System.Byte[])">
+            <summary>
+            解析数据帧时使用。
+            </summary>
+            <param name="_lauchSign">启动标识</param>
+            <param name="_data">信息域数据</param>
+        </member>
+        <member name="M:Model.Entity3762.InfoAreaDown.#ctor(System.Boolean,System.Int32,System.Boolean,System.Byte,System.Byte,System.Boolean,System.Boolean,System.Boolean,System.Byte,System.Byte,System.Boolean,System.Int32)">
+            <summary>
+            下行信息域构造函数，根据内容生成相应的字节
+            </summary>
+            <param name="_modelSign">通信模块标识：false：对主节点操作；true：对从节点操作</param>
+            <param name="_sequenceNum">报文序列号：用以匹配上、下行报文的请求应答对应关系，值从0~255，循环使用</param>
+            <param name="_routeSign">路由标识：fasle = 表示通信模块带路由或工作在路由模式；true = 通信模块不带路由或工作在旁路模式</param>
+            <param name="_relayLevel">中继级别：取值范围0~15，0表示无中继。</param>
+            <param name="_channelSign">信道标识：取值0~15，0表示部分信道；1~15依次表示第1~15信道。</param>
+            <param name="_lauchSign">启动标识：false = 从动站；true = 启动站</param>
+            <param name="_conflictDetect">冲突检测：false = 表示不进行冲突检测；true = 表示要进行冲突检测</param>
+            <param name="_attachedNodeSign">附属节点标识：指从节点附属节点标识，false = 无附加节点；true = 有附加节点</param>
+            <param name="_errorCorrectonSign">纠错编码标识：取值范围0~15，0表示信道未编码，1表示RS编码，2~15保留</param>
+            <param name="_expectBytes">预计应答字节数：取值0~255，用于计算延时等待时间；为0时，延时等待时间为默认时间</param>
+            <param name="_rateUnitSign">通信速率单位标识：0表示bit/s；1表示kbit/s；钜泉用法：true时为300 * value</param>
+            <param name="_communicationRate">通信速率：BIN格式，0表示默认速率</param>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaDown.ConflictDetect">
+            <summary>
+            冲突检测 false：不进行检测；true：进行检测。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaDown.AttachedNodeSign">
+            <summary>
+            附属节点标识 false：无附加节点；true：有附加节点
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaDown.ErrorCorrectonSign">
+            <summary>
+            纠错编码标识 0：信道未编码；1：RS编码。2~15保留。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaDown.ExpectBytes">
+            <summary>
+            预计应答字节数 用于计算延时等待时间，0：默认时间
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaDown.RateUnitSign">
+            <summary>
+            速率单位标识：false表示bit/s;true表示kbit/s。实际上jq做法，当为true时，波特率 = 通信速率 * 300；
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.InfoAreaDown.rateUnitSign">
+            <summary>
+            速率单位标识：false表示bit/s;true表示kbit/s。实际上jq做法，当为true时，波特率 = 通信速率 * 300；
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.InfoAreaDown.CommunicationRate">
+            <summary>
+            通信速率
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.InfoAreaDown.communicationRate">
+            <summary>
+            通信速率
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.AddressArea.#ctor(System.Byte[])">
+            <summary>
+            解析数据帧时使用。
+            </summary>
+            <param name="_modelSign">模块标识</param>
+            <param name="_data">地址域数据</param>
+        </member>
+        <member name="M:Model.Entity3762.AddressArea.#ctor(System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            生成数据帧时使用，如果无地址域，不需要给参数赋值。
+            </summary>
+            <param name="_oriAddress">源地址6字节，字节顺序已经转换。</param>
+            <param name="_relayAddress">中继地址 6*中继级别 ，字节顺序已经转换。</param>
+            <param name="_dstAddress">目的地址6字节，字节顺序已经转换。</param>
+        </member>
+        <member name="P:Model.Entity3762.AddressArea.OriAddress">
+            <summary>
+            源地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.AddressArea.RelayAddress">
+            <summary>
+            中继地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.AddressArea.DstAddress">
+            <summary>
+            目的地址
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.AddressArea.SetAddressArea(System.Byte[])">
+            <summary>
+            返回的中继地址已经恢复正常的顺序。
+            </summary>
+            <param name="_value"></param>
+        </member>
+        <member name="M:Model.Entity3762.ApplicationArea.#ctor(System.Byte[],System.Boolean)">
+            <summary>
+            解析数据帧时使用。
+            </summary>
+            <param name="_data">应用数据域字段</param>
+        </member>
+        <member name="M:Model.Entity3762.ApplicationArea.#ctor(Model.Entity3762.ApplicationArea.AFNType,System.Object,Model.Entity3762.ApplicationArea.StandardYear,Model.Entity3762.ApplicationArea.ProtocolType,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="_type"></param>
+            <param name="_data"></param>
+            <param name="_sY"></param>
+            <param name="_ptype"></param>
+        </member>
+        <member name="M:Model.Entity3762.ApplicationArea.#ctor(System.Byte,System.Byte,System.Byte,System.Byte[])">
+            <summary>
+            生成数据帧时使用
+            </summary>
+            <param name="_afn">应用功能码AFN</param>
+            <param name="_dt1">数据单元标识DT1</param>
+            <param name="_dt2">数据单元标识DT2</param>
+            <param name="_dataUnit">数据单元</param>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.afn">
+            <summary>
+            AFN应用层功能码）
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ApplicationArea.AFN">
+            <summary>
+            AFN（应用层功能码）
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.dt1">
+            <summary>
+            DT1（信息类第一个字节）
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ApplicationArea.DT1">
+            <summary>
+            DT1（信息类第一个字节）
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.dt2">
+            <summary>
+            DT2（信息类第一个字节）
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ApplicationArea.DT2">
+            <summary>
+            DT2（信息类第一个字节）
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.dataUnit">
+            <summary>
+            数据单元
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.dataUnitObj">
+            <summary>
+            数据单元对象
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ApplicationArea.DataUnit">
+            <summary>
+            数据单元
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.type">
+            <summary>
+            AFN + DT （应用层功能码 + 数据单元标识）
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ApplicationArea.Type">
+            <summary>
+            AFN + DT （应用层功能码 + 数据单元标识）
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.sYear">
+            <summary>
+            GDW376.2标准年限，年限不同部分帧格式不一样
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ApplicationArea.SYear">
+            <summary>
+            GDW376.2标准年限，年限不同部分帧格式不一样
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.ApplicationArea.DataUnitObj">
+            <summary>
+            数据单元对象
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.ApplicationArea.SetVariableFromData(System.Byte[],System.Boolean)">
+            <summary>
+            解析
+            </summary>
+            <param name="_value">待解析的数据单元</param>
+            <param name="_direction">传输方向</param>
+        </member>
+        <member name="T:Model.Entity3762.ApplicationArea.AFNType">
+            <summary>
+            AFN + DT的枚举 （应用层功能码 +数据单元标识）
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A00H_F1">
+            <summary>
+            确认
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A00H_F2">
+            <summary>
+            否认
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A01H_F1">
+            <summary>
+            硬件初始化
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A01H_F2">
+            <summary>
+            参数区初始化
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A01H_F3">
+            <summary>
+            数据区初始化
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A02H_F1">
+            <summary>
+            转发路由协议
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A02H_F5">
+            <summary>
+            09模块上电上报信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F1">
+            <summary>
+            厂商代码和版本信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F2">
+            <summary>
+            噪声值
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F3">
+            <summary>
+            从节点侦听信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F4">
+            <summary>
+            读取主节点
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F5">
+            <summary>
+            主节点状态字和通信速率
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F6">
+            <summary>
+            主节点干扰状态
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F7">
+            <summary>
+            读取从节点监控最大超时时间
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F8">
+            <summary>
+            查询无线通信参数
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F9">
+            <summary>
+            查询从节点通信延时
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F10">
+            <summary>
+            本地通信单元信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F11">
+            <summary>
+            本地通信模块AFN索引
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A03H_F16">
+            <summary>
+            读取宽带载波通信参数
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A04H_F1">
+            <summary>
+            发送测试
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A04H_F2">
+            <summary>
+            从节点点名
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A04H_F3">
+            <summary>
+            本地通信模块报文通信测试
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A05H_F1">
+            <summary>
+            修改主节点地址
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A05H_F2">
+            <summary>
+            控制从节点事件上报
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A05H_F3">
+            <summary>
+            广播校时
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A05H_F4">
+            <summary>
+            设置从节点监控最大超时时间
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A05H_F5">
+            <summary>
+            设置无线通信参数
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A05H_F16">
+            <summary>
+            设置宽带载波通信参数
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A06H_F1">
+            <summary>
+            上报从节点信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A06H_F2">
+            <summary>
+            上报抄读数据
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A06H_F3">
+            <summary>
+            上报路由工况变动信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A06H_F4">
+            <summary>
+            上报从节点信息及设备类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A06H_F5">
+            <summary>
+            上报从节点事件
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A10H_F1">
+            <summary>
+            从节点数量
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A10H_F2">
+            <summary>
+            从节点信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A10H_F4">
+            <summary>
+            路由运行状态
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A10H_F6">
+            <summary>
+            主动注册的从节点信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A10H_F21">
+            <summary>
+            查询网络拓扑信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A10H_F27">
+            <summary>
+            查询网络拓扑信息-东软
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A10H_F111">
+            <summary>
+            查询多网络信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A10H_F112">
+            <summary>
+            查询宽带载波芯片信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A11H_F1">
+            <summary>
+            添加从节点
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A11H_F2">
+            <summary>
+            删除从节点
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A11H_F4">
+            <summary>
+            设置工作模式
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A11H_F5">
+            <summary>
+            激活从节点主动注册
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A11H_F6">
+            <summary>
+            终止从节点主动注册
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A04H_F12">
+            <summary>
+            台区识别
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A12H_F1">
+            <summary>
+            重启路由
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A12H_F2">
+            <summary>
+            暂停路由
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A12H_F3">
+            <summary>
+            恢复路由
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A13H_F1">
+            <summary>
+            监控从节点
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A14H_F1">
+            <summary>
+            路由请求抄读内容
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A14H_F2">
+            <summary>
+            路由请求集中器时钟
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A14H_F3">
+            <summary>
+            请求依通信时延修正通信数据
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.A15H_F1">
+            <summary>
+            文件传输
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.AF1H_F1">
+            <summary>
+            并发抄表，每次可以携带多个数据项
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.AFNType.Unknown">
+            <summary>
+            未知类型
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.ApplicationArea.ReturnDataUnit(Model.Entity3762.ApplicationArea.AFNType,System.Object,Model.Entity3762.ApplicationArea.StandardYear,Model.Entity3762.ApplicationArea.ProtocolType,System.Boolean)">
+            <summary>
+            通过AFN type返回 AFN和数据标识
+            </summary>
+            <param name="_afn"></param>
+            <returns>new byte[]{AFN DT1 DT2}</returns>
+        </member>
+        <member name="M:Model.Entity3762.ApplicationArea.Return_13H_F1(System.Byte[],Model.Entity3762.ApplicationArea.StandardYear,Model.Entity3762.ApplicationArea.ProtocolType)">
+            <summary>
+            13H_F1，通信时延和从节点附属数量固定为0
+            </summary>
+            <param name="_data">转发的数据内容</param>
+            <param name="_sY">标准类型</param>
+            <param name="_ptype">协议类型</param>
+            <returns>返回13H_F1的数据单元</returns>
+        </member>
+        <member name="M:Model.Entity3762.ApplicationArea.Return_00H_F1(System.Byte[],Model.Entity3762.ApplicationArea.StandardYear)">
+            <summary>
+            00H_F1，默认无需填写任何参数
+            </summary>
+            <param name="_data">确认帧的值，没有特殊需求可以不要填写</param>
+            <param name="_sY">标准类型</param>
+            <returns>返回00H_F1的数据单元</returns>
+        </member>
+        <member name="M:Model.Entity3762.ApplicationArea.HexStringToHexByte(System.String)">
+            <summary>
+            将16进制的字符串转换成16进制字节数组
+            </summary>
+            <param name="hexString">需要转换的字符串</param>
+            <returns>16进制数组</returns>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.TypeOf_00H_F2.Timeout">
+            <summary>
+            超时
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.TypeOf_00H_F2.InvalidDataUnit">
+            <summary>
+            数据项不存在
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.TypeOf_00H_F2.LengthErr">
+            <summary>
+            长度错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.TypeOf_00H_F2.ParityErr">
+            <summary>
+            校验错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.TypeOf_00H_F2.InfoNone">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.ProtocolType.P_00">
+            <summary>
+            透明传输
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.ProtocolType.P_01">
+            <summary>
+            645-97协议
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.ProtocolType.P_02">
+            <summary>
+            645-07协议
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.ApplicationArea.ProtocolType.P_03">
+            <summary>
+            698协议
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DataUnit.Data">
+            <summary>
+            所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DataUnit.Error">
+            <summary>
+            解析出错
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DataUnit.Length">
+            <summary>
+            数据单元长度
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT02H_F1">
+            <summary>
+            数据转发
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT02H_F1.DtType">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT02H_F1.DtLength">
+            <summary>
+            数据内容长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT02H_F1.DtData">
+            <summary>
+            数据内容
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F1.ProductID">
+            <summary>
+            厂商代码
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F1.ChipID">
+            <summary>
+            芯片代码
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F1.VerDate">
+            <summary>
+            版本日期
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F1.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT03H_F4">
+            <summary>
+            读取主节点地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F4.Address">
+            <summary>
+            主节点地址；已经恢复顺序,仅上行。
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT03H_F10">
+            <summary>
+            本地通信模块AFN索引
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.DT03H_F10.ToString">
+            <summary>
+            按格式输出所有字符串变量
+            </summary>
+            <returns>格式化的字符串</returns>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.FrqMeterMode">
+            <summary>
+            周期抄表模式：01=集中器主导周期抄表；10=路由主导的周期抄表；11=表示通信模块对两周抄表模式都支持；00保留
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.NodeInfoMode">
+            <summary>
+            从节点信息模式：0=不需要下发从节点信息；1=表示需要下发从节点信息。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.RouteSign">
+            <summary>
+            路由管理方式：0=无路由功能；1=带路由功能
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.CommType">
+            <summary>
+            通信方式：1=窄带电力载波；2=宽带电力载波；3=微功率无线通信；其它保留
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.BrdChnlType">
+            <summary>
+            广播命令信道执行方式：0=不需要信道标识；1=需要根据报文中的信道标识逐个来发送。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.BrdCnfType">
+            <summary>
+            广播命令确认方式：
+            0=广播命令在通信完毕后返回确认报文；
+            1=广播命令立即返回确认报文，具体时间在确认报文中的“等待执行时间”体现。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.FailNodeType">
+            <summary>
+            失败节点切换发起方式：1=通信模块自主切换待抄节点；2=集中器发起通信模块切换待抄节点
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.TxDelaySuprt">
+            <summary>
+            传输延时参数支持：D2、D1、D0分别表示广播、从节点监控、路由主动抄表。1=表示支持延时参数；0=不支持。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.SpeedNum">
+            <summary>
+            速率数量：本地通信信道支持的通信速率数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.ChnlNum">
+            <summary>
+            可操作信道数量：本地通信支持的信道总数量，0代表不需要操作
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.PowerOffInfo">
+            <summary>
+            低压电网掉电信息（仅对于带有多个逻辑信息的低压电力线载波有效）：
+            D0、D1、D2分别表示A、B、C相掉电信息。
+            0=未掉电；1=掉电。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.NodeTimeout">
+            <summary>
+            从节点监控最大超时时间：执行AFN=13H-F1的最大超时时长
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.BrdTimeout">
+            <summary>
+            广播命令最大超时时间：执行AFN=05-F3最大超时时长
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.PktLength">
+            <summary>
+            最大支持的报文长度：可以正确接收的1376.2报文最大长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.IapPktLength">
+            <summary>
+            文件传输支持的最大单个数据包长度：
+            AFN=15H-F1中支持的最大分包大小。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.IapTimeout">
+            <summary>
+            升级操作等待时间：终端发送完最后一个升级数据包后，需要等待模块完成升级的时间长度。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.CcoAddr">
+            <summary>
+            主节点地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.MaxNodeNum">
+            <summary>
+            支持的最大从节点数量：本模块（带路由管理）支持的最大从节点下装数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.CurNodeNum">
+            <summary>
+            当前从节点数量：本模块（带路由管理）当前下装的从节点数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.Ptlrelease">
+            <summary>
+            通信模块使用的协议发布日期
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.PtlEnd">
+            <summary>
+            通信模块使用的协议最后备案日期
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.Dt03hf1">
+            <summary>
+            通信模块厂商代码及版本信息
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F10.Speed">
+            <summary>
+            通信速率列表
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F11.Afn">
+            <summary>
+            AFN功能码
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F11.DtSupport">
+            <summary>
+            数据单元支持数组
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT03H_F11.DataUnit">
+            <summary>
+            支持的数据单元列表
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT04H_F3.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT04H_F3.SeqNum">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT04H_F3.protocol">
+            <summary>
+            协议
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT04H_F3.contentLen">
+            <summary>
+            测试内容长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT04H_F3.content">
+            <summary>
+            测试内容
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT06H_F2">
+            <summary>
+            上报抄读数据
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.DT06H_F2.#ctor(System.Byte[])">
+            <summary>
+            解析
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="P:Model.Entity3762.DT06H_F2.SerialNum">
+            <summary>
+            从节点序号
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT06H_F2.PrtlType">
+            <summary>
+            通信协议类型
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT06H_F2.CommTime">
+            <summary>
+            上行报文通信时长
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT06H_F2.Conlength">
+            <summary>
+            报文长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT06H_F2.Content">
+            <summary>
+            报文内容
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT06H_F4">
+            <summary>
+            上报从节点信息及设备类型
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.DT06H_F4.#ctor(System.Byte[])">
+            <summary>
+            解析
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="M:Model.Entity3762.DT06H_F4.ToString">
+            <summary>
+            生成字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Model.Entity3762.DT06H_F4.NodeNum">
+            <summary>
+            上报从节点数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT06H_F4.NodeInfoRiches">
+            <summary>
+            上报从节点列表
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT06H_F4.ValidArchives">
+            <summary>
+            有效的节点地址名单，剔除采集器地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT13H_F1.NodeAddrList">
+            <summary>
+            从节点地址列表，仅下行有效
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT13H_F1.NodeNum">
+            <summary>
+            从节点数量，仅下行有效
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT13H_F1.TimeSign">
+            <summary>
+            通信时延标识，下行有效
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT13H_F1.Time">
+            <summary>
+            上行通信耗时，上行有效
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F1.RouteNodeNum">
+            <summary>
+            路由支持最大从节点数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F1.NodeNum">
+            <summary>
+            从节点总数量
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT10H_F2">
+            <summary>
+            从节点信息
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F2.SerialNum">
+            <summary>
+            从节点序号/从节点总数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F2.NodeNum">
+            <summary>
+            从节点数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F2.NodeList">
+            <summary>
+            从节点列表
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F21.SerialNum">
+            <summary>
+            从节点序号/从节点总数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F21.NodeNum">
+            <summary>
+            从节点数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F21.NodeNumTotal">
+            <summary>
+            从节点总数量数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F21.NodeList">
+            <summary>
+            从节点列表
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F27.SerialNum">
+            <summary>
+            从节点序号/从节点总数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F27.NodeNum">
+            <summary>
+            从节点数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F27.NodeNumTotal">
+            <summary>
+            从节点总数量数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F27.NodeList">
+            <summary>
+            从节点列表
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT10H_F112">
+            <summary>
+            查询载波芯片参数信息
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F112.Totalnum">
+            <summary>
+            节点总数量；上行参数
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F112.IndexValue">
+            <summary>
+            节点起始序号
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT10H_F112.Num">
+            <summary>
+            节点数量
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762.DT10H_F112.nodeInfo10F112s">
+            <summary>
+            本次传输节点信息列表
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT14H_F1">
+            <summary>
+            路由请求数据
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.DT14H_F1.#ctor(System.Byte[],System.Boolean)">
+            <summary>
+            解析函数
+            </summary>
+            <param name="_data">14H-F1数据单元内容</param>
+            <param name="_direction">传输方向：True=上行；False=下行</param>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F1.Phase">
+            <summary>
+            通信相位
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F1.Address">
+            <summary>
+            通信地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F1.SerialNum">
+            <summary>
+            节点序号
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F1.Sign">
+            <summary>
+            抄读标识
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F1.NodeNum">
+            <summary>
+            从节点附属节点数量
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F1.Content">
+            <summary>
+            抄读内容
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F1.Conlength">
+            <summary>
+            抄读内容长度
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT14H_F3">
+            <summary>
+            请求依通信延时修正通信数据
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762.DT14H_F3.#ctor(System.Byte[],System.Boolean)">
+            <summary>
+            解析
+            </summary>
+            <param name="_data">数据单元</param>
+            <param name="_direction">传输方向</param>
+        </member>
+        <member name="M:Model.Entity3762.DT14H_F3.#ctor(System.Boolean,System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            组帧
+            </summary>
+            <param name="_direciont"></param>
+            <param name="_data"></param>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F3.Content">
+            <summary>
+            传输内容
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F3.Contentlen">
+            <summary>
+            传输长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F3.Delaytime">
+            <summary>
+            预计延迟时间，仅上行。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT14H_F3.Address">
+            <summary>
+            从节点地址，仅上行。
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.DT15H_F1">
+            <summary>
+            文件传输
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT15H_F1.Sign">
+            <summary>
+            文件标识
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT15H_F1.Property">
+            <summary>
+            文件属性
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT15H_F1.Command">
+            <summary>
+            文件指令
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT15H_F1.ParagraphTotal">
+            <summary>
+            总段数N
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT15H_F1.Numofparagraph">
+            <summary>
+            第i段标识
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT15H_F1.Paragraphlength">
+            <summary>
+            第i段数据长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.DT15H_F1.Content">
+            <summary>
+            文件数据
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.SpeedComm">
+            <summary>
+            通信速率解析
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.SpeedComm.Sign">
+            <summary>
+            速率标识：0=bit/s;1=kbit/s
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.SpeedComm.Speed">
+            <summary>
+            通信速率
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.NodeInfo">
+            <summary>
+            10H-F2和11H-F6
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo.Address">
+            <summary>
+            从节点地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo.RelayLvl">
+            <summary>
+            中级级别
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo.SignalLvl">
+            <summary>
+            信号品质
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo.Phase">
+            <summary>
+            相位信息
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo.Protocol">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo.Rsv">
+            <summary>
+            保留，2bit。
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.NodeInfoPoor">
+            <summary>
+            06H-F1和06H-F4
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfoPoor.Address">
+            <summary>
+            通信地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfoPoor.Protocol">
+            <summary>
+            通信协议类型
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfoPoor.SerialNum">
+            <summary>
+            从节点序号，附属节点没有。
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762.NodeInfoRich">
+            <summary>
+            06H-F4从节点信息
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfoRich.Node">
+            <summary>
+            上报的从节点信息
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfoRich.DevType">
+            <summary>
+            设备类型：0 = 采集器；1 = 电能表。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfoRich.SubNodeNum">
+            <summary>
+            从节点下接从节点数量M
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfoRich.CurNodeNum">
+            <summary>
+            本报文传输的节点数量m
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfoRich.SubNodeList">
+            <summary>
+            从节点下接从节点列表
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfoRich.Error">
+            <summary>
+            解析出错
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo10F21.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo10F21.Tei">
+            <summary>
+            节点标识
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo10F21.Tei_Agnt">
+            <summary>
+            代理节点标识
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo10F21.Level">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762.NodeInfo10F21.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.avaible">
+            <summary>
+            构建/解析是否成功
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.error">
+            <summary>
+            错误类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.errorMessage">
+            <summary>
+            错误信息及提示
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.paramsReference">
+            <summary>
+            参数示例参考
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.paramsDescription">
+            <summary>
+            参数说明
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.analysisInstruction">
+            <summary>
+            指令解析
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.analysisContent">
+            <summary>
+            数据内容解析
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.data">
+            <summary>
+            报文完整数据
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.communication">
+            <summary>
+            通信类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.length">
+            <summary>
+            报文长度
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.control">
+            <summary>
+            控制域
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.dir">
+            <summary>
+            传输方向
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.prm">
+            <summary>
+            启动类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.addr">
+            <summary>
+            地址域标识
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.ver">
+            <summary>
+            协议版本号
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.address">
+            <summary>
+            地址域
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.asrc">
+            <summary>
+            源地址
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.adst">
+            <summary>
+            目的地址
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.afn">
+            <summary>
+            应用功能码AFN
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.afnName">
+            <summary>
+            应用功能名称
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.seq_Tx">
+            <summary>
+            发送的帧序号，自加
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.seq_Rx">
+            <summary>
+            解析时的帧序号
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.addr_jzq">
+            <summary>
+            集中器地址，通过设置主节点地址指令改变
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.task_id">
+            <summary>
+            任务ID，自加
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.di">
+            <summary>
+            数据标识编码
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.diUInt32">
+            <summary>
+            数据标识编码,UInt32
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.diName">
+            <summary>
+            报文指令名称
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.diContent">
+            <summary>
+            数据标识内容
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.checkSum">
+            <summary>
+            报文校验和
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762_South.ErrorType">
+            <summary>
+            错误类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.ErrorType.None">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.ErrorType.Di">
+            <summary>
+            SI指令错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.ErrorType.Address">
+            <summary>
+            地址错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.ErrorType.Params">
+            <summary>
+            参数错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.ErrorType.Others">
+            <summary>
+            其它错误
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762_South.CommunicationType">
+            <summary>
+            通信类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.CommunicationType.None">
+            <summary>
+            未知通信类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.CommunicationType.Jzq">
+            <summary>
+            集中器通信
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_South.CommunicationType.Cjq">
+            <summary>
+            采集器通信
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762_South.#ctor(System.Byte[],System.Boolean)">
+            <summary>
+            将数据按照南网376.2解析
+            </summary>
+            <param name="_data">南网数据</param>
+            <param name="isToString">是否生成字符串</param>
+        </member>
+        <member name="M:Model.Entity3762_South.#ctor(System.Byte[],System.Byte[],System.String,System.Int32,Model.Entity3762_South.DirType)">
+            <summary>
+            生成数据帧，以available变量判断是否正确生成。
+            </summary>
+            <param name="_di">DI数据标识编码:4字节</param>
+            <param name="_address">地址域:12字节含源、目标地址或6字节仅目标地址</param>
+            <param name="_params">参数集:字符串</param>
+            <param name="_seq">帧序列:不填时自动+1</param>
+        </member>
+        <member name="M:Model.Entity3762_South.ParseAfnDi(System.Byte[])">
+            <summary>
+            解析数据标识编码，出错时会更新error
+            </summary>
+            <param name="_di">4字节DI编码数据，高字节在前</param>
+        </member>
+        <member name="M:Model.Entity3762_South.SetAfnDiName">
+            <summary>
+            获取afn、di码对应的指令名称
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762_South.GenerateControl(Model.Entity3762_South.DirType)">
+            <summary>
+            生成控制域，依据AfnDi指令
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762_South.ParseControl(System.Byte)">
+            <summary>
+            解析控制域
+            </summary>
+            <param name="_control">控制域</param>
+        </member>
+        <member name="M:Model.Entity3762_South.GenerateAddress(System.Byte[])">
+            <summary>
+            生成地址域
+            </summary>
+            <param name="_control">地址域</param>
+        </member>
+        <member name="M:Model.Entity3762_South.ParseAddress(System.Byte[])">
+            <summary>
+            解析地址域
+            </summary>
+            <param name="_address">地址域</param>
+        </member>
+        <member name="M:Model.Entity3762_South.GenerateDiContent(System.String)">
+            <summary>
+            生成数据标识内容
+            </summary>
+            <param name="_params">参数字符串</param>
+        </member>
+        <member name="M:Model.Entity3762_South.ParseDiContent(System.Byte[])">
+            <summary>
+            解析数据标识内容
+            </summary>
+            <param name="_diContent">数据标识内容</param>
+        </member>
+        <member name="M:Model.Entity3762_South.CreatFrame(System.Int32)">
+            <summary>
+            生成协议帧
+            </summary>
+            <param name="_seq"></param>
+        </member>
+        <member name="M:Model.Entity3762_South.ParseFrame(System.Byte[])">
+            <summary>
+            解析帧
+            </summary>
+            <param name="_params">帧数据</param>
+        </member>
+        <member name="M:Model.Entity3762_South.AnalysisFrame">
+            <summary>
+            分析帧
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762_South.recordError(System.String,Model.Entity3762_South.ErrorType)">
+            <summary>
+            记录解析/合成过程中出现的错误
+            </summary>
+            <param name="_message">错误内容，会被记录在errorMessage中</param>
+            <param name="_type">错误类型，如果传入非None值，则认为该错误为严重错误，合成/解析会标记为失败</param>
+        </member>
+        <member name="M:Model.Entity3762_South.EndianExchange(System.Byte[])">
+            <summary>
+            交换数组顺序
+            </summary>
+            <param name="_di">待交换数组</param>
+        </member>
+        <member name="T:Model.Entity3762_SouthNew">
+            <summary>
+            通用版本的南网376.2协议，依据南网2016版本
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.startSign">
+            <summary>
+            起始符
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.endSign">
+            <summary>
+            结束符
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.AppArea">
+            <summary>
+            应用数据域
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.AddrArea">
+            <summary>
+            地址域
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.cArea">
+            <summary>
+            控制域
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.CArea">
+            <summary>
+            控制域
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.isRightPacket">
+            <summary>
+            是否正确的帧, True: 正确；Flase：错误
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.IsRightPacket">
+            <summary>
+            是否正确的帧, True: 正确；Flase：错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.direction_Creat">
+            <summary>
+            记录组帧时控制域的传输方向
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.isCreat">
+            <summary>
+            生成帧or解析帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.addr_jzq">
+            <summary>
+            存储集中器地址,默认6个8。
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.length">
+            <summary>
+            长度L 是指帧数据的总长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.Length">
+            <summary>
+            长度L 是指帧数据的总长度
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.checkSum">
+            <summary>
+            帧校验和是控制域和用户数据区所有字节的八位位组算术和，不考虑溢出位。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.CheckSum">
+            <summary>
+            帧校验和是控制域和用户数据区所有字节的八位位组算术和，不考虑溢出位。
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.#ctor(System.Byte[])">
+            <summary>
+            解析数据帧
+            </summary>
+            <param name="_data">南网376.2的数据帧</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.#ctor(Model.Entity3762_SouthNew.ApplicationArea,Model.Entity3762_SouthNew.ControlArea,Model.Entity3762_SouthNew.AddressArea,System.Int32)">
+            <summary>
+            生成南网376.2帧
+            </summary>
+            <param name="_appArea">应用数据域</param>
+            <param name="_cArea">控制域，默认使用数据标识DI生成</param>
+            <param name="_addrArea">地址域，02H_01、05H_01和05H_02必须要有地址域</param>
+            <param name="_checkSum">校验和，默认自动计算</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.#ctor(Model.Entity3762_SouthNew.ApplicationArea.DiType,System.Object,Model.Entity3762_SouthNew.AddressArea,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            生成南网376.2帧
+            </summary>
+            <param name="_diType">应用数据域的数据编码标识 DI类型</param>
+            <param name="_data">应用数据域中的数据内容，按照协议中的所列数据类型和内容填写</param>
+            <param name="_addrArea">地址域，02H_01、05H_01和05H_02必须要有地址域</param>
+            <param name="_direction">传输方向：false 下行；true 上行</param>
+            <param name="_seq">应用数据域中，帧序列号</param>
+            <param name="_checkSum">校验和，默认自动计算</param>
+        </member>
+        <member name="T:Model.Entity3762_SouthNew.ControlArea">
+            <summary>
+            控制域C表示报文的传输方向、启动标志和通信模块的通信方式类型信息，由1字节组成
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ControlArea.Data">
+            <summary>
+            控制域的数据
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ControlArea.direction">
+            <summary>
+            传输方向，False：下行；True：上行
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ControlArea.Direction">
+            <summary>
+            传输方向，False：下行；True：上行
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ControlArea.startSign">
+            <summary>
+            启动标识，False: 从动；True：主动
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ControlArea.StartSign">
+            <summary>
+            启动标识，False: 从动；True：主动
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ControlArea.addrSign">
+            <summary>
+            地址域标识。Fasle：不存在地址域；True：存在
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ControlArea.AddrSign">
+            <summary>
+            地址域标识。Fasle：不存在地址域；True：存在
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ControlArea.version">
+            <summary>
+            版本号， 目前为0.
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ControlArea.Version">
+            <summary>
+            版本号， 目前为0.
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ControlArea.#ctor(System.Byte)">
+            <summary>
+            解析控制域
+            </summary>
+            <param name="_data">控制域原始字节</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ControlArea.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Byte)">
+            <summary>
+            控制域组帧
+            </summary>
+            <param name="_direction">传输方向，False：下行；True：上行</param>
+            <param name="_startSign">启动标识，False: 从动；True：主动</param>
+            <param name="_addrSign">地址域标识。Fasle：不存在地址域；True：存在</param>
+            <param name="_Version">版本号， 目前为0.</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ControlArea.#ctor(Model.Entity3762_SouthNew.ApplicationArea.DiType,System.Boolean)">
+            <summary>
+            根据数据编码标识DI自动生成控制域，默认传输方向是下行
+            </summary>
+            <param name="_diTyp">数据编码标识</param>
+            <param name="_direction">传输方向，False：下行；True：上行</param>
+        </member>
+        <member name="T:Model.Entity3762_SouthNew.ApplicationArea">
+            <summary>
+            应用数据域
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.#ctor(Model.Entity3762_SouthNew.ApplicationArea.DiType,System.Object,System.Int32,System.Boolean)">
+            <summary>
+            应用数据域组帧,_data 按照南网协议中规定的数据格式组合，多个参数使用object[] 传入
+            </summary>
+            <param name="_type">数据编码标识类型，根据AFN分类</param>
+            <param name="_data">应用数据域中的数据部分</param>
+            <param name="_seq">帧序号，默认自增；可以赋值，从而指定帧序号</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.#ctor(System.Byte[])">
+            <summary>
+            解析应用数据域
+            </summary>
+            <param name="_data">传入数据域所有字节</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.GetAFN_DI(Model.Entity3762_SouthNew.ApplicationArea.DiType)">
+            <summary>
+            生成AFN 和 DI
+            </summary>
+            <param name="_type"></param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.GenerateDiContent(System.Object)">
+            <summary>
+            生成数据标识内容
+            </summary>
+            <param name="_data">参数字符串</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.GenerateData(System.Int32)">
+            <summary>
+            生成数据域的所有字节
+            </summary>
+            <param name="_seq"></param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.CreatTwoByteFromInt(System.Object)">
+            <summary>
+            将Int型转换成两个字节
+            00H_01, 02H_02
+            </summary>
+            <param name="_params">int型参数</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.CreatA01H_02(System.Object)">
+            <summary>
+            否认帧
+            </summary>
+            <param name="_params">一个字节，如果是NULL,则值为0</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.CreatA02H_01(System.Object)">
+            <summary>
+            添加任务
+            </summary>
+            <param name="_params"></param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.CreatA04H_02(System.Object)">
+            <summary>
+            添加从节点，数据组中每个变量一个从节点地址。
+            </summary>
+            <param name="_param"></param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.CreatA06H_01(System.Object)">
+            <summary>
+            请求集中器时间
+            </summary>
+            <param name="_param">如果为NULL，则使用PC当前时间自动组帧</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.ApplicationArea.CreatA04H_01(System.Object)">
+            <summary>
+            设置主节点地址
+            </summary>
+            <param name="_param">6字节地址</param>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.startSign">
+            <summary>
+            启动标识
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.dIType">
+            <summary>
+            数据标识编码
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ApplicationArea.DIType">
+            <summary>
+            数据标识编码
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.data">
+            <summary>
+            应用数据域所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ApplicationArea.Data">
+            <summary>
+            应用数据域所有字节
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.diContent">
+            <summary>
+            数据标识内容
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ApplicationArea.DiContent">
+            <summary>
+            数据标识内容
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.modeSign">
+            <summary>
+            通信双方类型标识，0xE8表示集中器与本地模块通信
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.afn">
+            <summary>
+            应用功能码
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ApplicationArea.Afn">
+            <summary>
+            应用功能码
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.dI3">
+            <summary>
+            DI3：通信双方类型标识， E8 表示集中器与本地模块通信，EA 表示采集器与本地模块通信。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ApplicationArea.DI3">
+            <summary>
+            DI3：通信双方类型标识， E8 表示集中器与本地模块通信，EA 表示采集器与本地模块通信。
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.sequenceNum_Creat">
+            <summary>
+            生成帧时使用的帧序号，为了帧序号连贯性使用static
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.sequenceNum_Parse">
+            <summary>
+            解析帧的帧序号，不影响生成帧，所以分开
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ApplicationArea.SequenceNum">
+            <summary>
+            帧序号
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.dI2">
+             <summary>
+             DI2：报文上下行类型及内容相关标识，
+            00 表示上下行均用，但下行无数据内容；
+            01 表示上下行均用，数据内容格式一致；
+            02 表示仅下行用，上行为确认/否认报文；
+            03 表示仅下行用，带数据内容。对应上行报文为04
+            04 表示仅上行用，带数据内容。对应下行报文为03
+            05 表示仅上行用，下行为确认/否认报文
+            06 表示上下行均用，但上行无数据内容；
+            集中器、采集器发送给本地模块的报文为下行报文；本地模块发送给采集器、集中器的报文为上行报文。
+             </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ApplicationArea.DI2">
+             <summary>
+             DI2：报文上下行类型及内容相关标识，
+            00 表示上下行均用，但下行无数据内容；
+            01 表示上下行均用，数据内容格式一致；
+            02 表示仅下行用，上行为确认/否认报文；
+            03 表示仅下行用，带数据内容。对应上行报文为04
+            04 表示仅上行用，带数据内容。对应下行报文为03
+            05 表示仅上行用，下行为确认/否认报文
+            06 表示上下行均用，但上行无数据内容；
+            集中器、采集器发送给本地模块的报文为下行报文；本地模块发送给采集器、集中器的报文为上行报文。
+             </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.dI1">
+            <summary>
+            DI1：功能码类型定义：与AFN 值保持一致。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ApplicationArea.DI1">
+            <summary>
+            DI1：功能码类型定义：与AFN 值保持一致。
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.dI0">
+            <summary>
+            DI0：功能码子类型。
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.ApplicationArea.DI0">
+            <summary>
+            DI0：功能码子类型。
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762_SouthNew.ApplicationArea.DiType">
+            <summary>
+            集中器的DI编码标识
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A00H_01">
+            <summary>
+            确认
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A00H_02">
+            <summary>
+            否认
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A01H_01">
+            <summary>
+            复位硬件
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A01H_02">
+            <summary>
+            初始化档案
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A01H_03">
+            <summary>
+            初始化任务
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A02H_01">
+            <summary>
+            添加任务
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A02H_02">
+            <summary>
+            删除任务
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A02H_03">
+            <summary>
+            查询未完成任务数
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A02H_04">
+            <summary>
+            未完成任务列表,包含 查询/返回
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A02H_05">
+            <summary>
+            未完成任务列表,包含 查询/返回
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A02H_06">
+            <summary>
+            查询剩余可分配任务数
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A02H_07">
+            <summary>
+            添加多播任务
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A02H_08">
+            <summary>
+            启动任务
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A02H_09">
+            <summary>
+            暂停任务 
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A03H_01">
+            <summary>
+            查询厂商代码和版本信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A03H_02">
+            <summary>
+            查询本地通信模块运行模式信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A03H_03">
+            <summary>
+            查询主节点地址
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A03H_04">
+            <summary>
+            通信延时时长，包含 查询/返回
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A03H_05">
+            <summary>
+            查询从节点数量
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A03H_06">
+            <summary>
+            从节点信息，包含 查询/返回
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A03H_07">
+            <summary>
+            查询从节点主动注册进度
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A03H_08">
+            <summary>
+            从节点的父节点，包含 查询/返回
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A04H_01">
+            <summary>
+            设置主节点地址
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A04H_02">
+            <summary>
+            添加从节点
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A04H_03">
+            <summary>
+            删除从节点
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A04H_04">
+            <summary>
+            允许/禁止上报从节点事件
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A04H_05">
+            <summary>
+            激活从节点主动注册
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A04H_06">
+            <summary>
+            终止从节点主动注册
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A05H_01">
+            <summary>
+            上报任务数据
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A05H_02">
+            <summary>
+            上报从节点事件
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A05H_03">
+            <summary>
+            上报从节点信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A05H_04">
+            <summary>
+            上报从节点注册结束
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A05H_05">
+            <summary>
+            上报任务状态
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A06H_01">
+            <summary>
+            请求集中器时间
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A07H_01">
+            <summary>
+            启动文件传输
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A07H_02">
+            <summary>
+            传输文件内容
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A07H_03">
+            <summary>
+            查询文件信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A07H_04">
+            <summary>
+            查询文件处理进度
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DiType.A07H_05">
+            <summary>
+            文件传输失败节点，包含 查询/返回。
+            组帧时，DI2默认会根据传输方向等于03/04；
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame">
+            <summary>
+            否认帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.Timeout">
+            <summary>
+            通信超时
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.InvalidData">
+            <summary>
+            无效数据标识内容
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.Length">
+            <summary>
+            长度错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.CheckSum">
+            <summary>
+            校验错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.InvalidDI">
+            <summary>
+            数据标识编码不存在
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.Format">
+            <summary>
+            格式错误
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.MeterRepetition">
+            <summary>
+            表号重复
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.InvalidMeter">
+            <summary>
+            表号不存在
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.NoResponse">
+            <summary>
+            电表应用层无应答
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.Busy">
+            <summary>
+            主节点忙
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.NotSupport">
+            <summary>
+            主节点不支持此命令
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.NoAnswer">
+            <summary>
+            从节点不应答
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.NotNet">
+            <summary>
+            从节点不再网内
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.TaskFull">
+            <summary>
+            添加任务时剩余可分配任务数不足
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.InvalidReportTask">
+            <summary>
+            上报任务数据时任务不存在
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.TaskRepetition">
+            <summary>
+            任务ID重复
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.MeterHadNotTask">
+            <summary>
+            查询任务时模块没有此任务
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.DenyFrame.IvaliaTask">
+            <summary>
+            任务ID不存在
+            </summary>
+        </member>
+        <member name="F:Model.Entity3762_SouthNew.ApplicationArea.sequenceNumSpecial">
+            <summary>
+            判断帧序号是否使用类内部的自动增加的标识
+            </summary>
+        </member>
+        <member name="T:Model.Entity3762_SouthNew.AddressArea">
+            <summary>
+            地址域
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.AddressArea.#ctor(System.Byte[])">
+            <summary>
+            解析数据帧时使用。
+            </summary>
+            <param name="_modelSign">模块标识</param>
+            <param name="_data">地址域数据</param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.AddressArea.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            生成数据帧时使用，如果无地址域，不需要给参数赋值。
+            </summary>
+            <param name="_oriAddress">源地址6字节，字节顺序已经转换。</param>
+            <param name="_dstAddress">目的地址6字节，字节顺序已经转换。</param>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.AddressArea.Data">
+            <summary>
+            地址域所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.AddressArea.OriAddress">
+            <summary>
+            源地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity3762_SouthNew.AddressArea.DstAddress">
+            <summary>
+            目的地址
+            </summary>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.AddressArea.SetAddressArea(System.Byte[])">
+            <summary>
+            给地址域赋值
+            </summary>
+            <param name="_value"></param>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.EndianExchange(System.Byte[])">
+            <summary>
+            字节数组顺序转换
+            </summary>
+            <param name="data">需要转换的数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Model.Entity3762_SouthNew.HexStringToHexByte(System.String)">
+            <summary>
+            将16进制的字符串转换成16进制字节数组
+            </summary>
+            <param name="hexString">需要转换的字符串</param>
+            <returns>16进制数组</returns>
+        </member>
+        <member name="M:Model.Entity645.#ctor(System.Byte[])">
+            <summary>
+            解析数据帧时使用
+            </summary>
+            <param name="_data">645数据</param>
+        </member>
+        <member name="M:Model.Entity645.#ctor(Model.Entity645.ControlArea,Model.Entity645.DataArea,System.Byte[],System.Byte,System.Boolean)">
+            <summary>
+            生成数据帧时使用
+            </summary>
+            <param name="_control">控制域</param>
+            <param name="_data">数据域</param>
+            <param name="_prefixEnable">是否有前导符</param>
+        </member>
+        <member name="F:Model.Entity645.prefixEnable">
+            <summary>
+            前导符
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity645.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity645.PrefixByte">
+            <summary>
+            前导符
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.address">
+             <summary>
+            地址应为littleEndian(小端模式) 
+             </summary>
+        </member>
+        <member name="F:Model.Entity645.sequenceNum">
+            <summary>
+            帧序号
+            </summary>
+        </member>
+        <member name="P:Model.Entity645.SequenceNum">
+            <summary>
+            帧序号
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.checkSum">
+            <summary>
+            校验和
+            </summary>
+        </member>
+        <member name="P:Model.Entity645.CheckSum">
+            <summary>
+            校验和
+            </summary>
+        </member>
+        <member name="M:Model.Entity645.ControlArea.#ctor(System.Byte)">
+            <summary>
+            解析数据帧时使用
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="M:Model.Entity645.ControlArea.#ctor(Model.Entity645.ControlArea.FunctionCode,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            生成数据帧时使用。功能码必填，其它参数可以选择写入。
+            </summary>
+            <param name="_code">功能码</param>
+            <param name="_direction">上/下方向</param>
+            <param name="_slaveResponse">正/异常应答</param>
+            <param name="_subsequentFrame">有无后续帧</param>
+        </member>
+        <member name="P:Model.Entity645.ControlArea.Data">
+            <summary>
+            控制域字段值
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ControlArea.direction">
+            <summary>
+            false:下行；true：上行
+            </summary>
+        </member>
+        <member name="P:Model.Entity645.ControlArea.Direction">
+            <summary>
+            false:下行；true：上行
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ControlArea.slaveResponse">
+            <summary>
+            false: 正常应答；true：异常应答。
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ControlArea.subsequentFrame">
+            <summary>
+            fasle: 无后续数据帧；true：有后续数据帧。
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ControlArea.funCode">
+            <summary>
+            功能码
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.Rsv">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.SecurityFrame">
+            <summary>
+            安全认证命令
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.BroadcastTimeCheck">
+            <summary>
+            广播校时
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.ReadData">
+            <summary>
+            读数据
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.ReadSubsequentData">
+            <summary>
+            读后续帧
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.ReadAddress">
+            <summary>
+            读地址
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.WriteData">
+            <summary>
+            写数据: 0x14
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.WriteAddress">
+            <summary>
+            写地址
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.FreezeCommand">
+            <summary>
+            冻结命令
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.AlterBaudrate">
+            <summary>
+            更改通信速率
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.AlterPassword">
+            <summary>
+            修改密码
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.ClearMaxNeed">
+            <summary>
+            最大需量清零
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.ClearMeter">
+            <summary>
+            电表清零
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.ClearEvent">
+            <summary>
+            事件清零
+            </summary>    
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.AlarmEtc">
+            <summary>
+            报警，跳闸，保电，警报解除
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.MultiFunctionControl">
+            <summary>
+            多功端输出控制命令
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ControlArea.FunctionCode.Error">
+            <summary>
+            错误或未知数据
+            </summary>
+        </member>
+        <member name="M:Model.Entity645.DataArea.#ctor(System.Byte[],System.Int32@)">
+            <summary>
+            解析数据帧时使用
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="M:Model.Entity645.DataArea.#ctor(System.Byte[],System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            生成数据帧时使用,时间和日期会自动组帧
+            </summary>
+            <param name="_dataSign"></param>
+            <param name="_data"></param>
+            <param name="_password"></param>
+            <param name="_operatorCode"></param>
+        </member>
+        <member name="P:Model.Entity645.DataArea.Data">
+            <summary>
+            本字段所有字节,没有减0x33，没有恢复顺序
+            </summary>
+        </member>
+        <member name="P:Model.Entity645.DataArea.DataSign">
+            <summary>
+            数据标识，已经减去0x33，恢复顺序
+            </summary>
+        </member>
+        <member name="P:Model.Entity645.DataArea.Length">
+            <summary>
+            数据域长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity645.DataArea.DataData">
+            <summary>
+            数据域中数据，已经减去0x33，恢复顺序。
+            </summary>
+        </member>
+        <member name="M:Model.Entity645.InquireByteArrayIsExsit(System.Byte[],System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            查询字节数组A是否存在数组B中
+            </summary>
+            <param name="_A">数组A</param>
+            <param name="_B">数组B</param>
+            <param name="_B_offset">指定从数组B中查询的起始位置，默认等于0，如果小于0，查询方向为倒序</param>
+            <param name="_A_offset">指定从数组A中查询的起始位置，默认等于0，不能小于0</param>
+            <returns>是否存在的结果，true：存在；false：不存在</returns>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.meterAddress">
+            <summary>
+            默认地址为1的数组
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.meterValue">
+            <summary>
+            模拟表数值
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.operatorCode">
+            <summary>
+            操作者代码
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.SecretCode">
+            <summary>
+            645密码
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.eventStatueData_DD">
+            <summary>
+            掉电事件内容
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.eventStatueData_KG">
+            <summary>
+            开盖事件内容
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.eventStatueData_GL">
+            <summary>
+            过流事件内容
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.read_ZHYGZDN">
+            <summary>
+            数据标识：组合有功总电能
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.read_ZXYGZDN">
+            <summary>
+            数据标识：正向有功总电能
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.power645">
+            <summary>
+            数据标识：功耗表 有功功率
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.eventDDSign">
+            <summary>
+            掉电事件数据标识，最后一个字节为0表示读取总次数，1~A表示上几次的信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.eventKGSign">
+            <summary>
+            开盖事件数据标识，最后一个字节为0表示读取总次数，1~A表示上几次的信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.prefixCharacters">
+            <summary>
+            帧前导符
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.addressOfReadWriteAddress">
+            <summary>
+            全地址匹配符
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.addressOfBroadcast">
+            <summary>
+            广播地址
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.eventClearDT">
+            <summary>
+            清除事件的数据标识
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.eventClearData">
+            <summary>
+            清除事件的命令，含操作者代码和密码。
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.eventStatusWord_DS">
+            <summary>
+            事件状态的数据标识
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.timeDate">
+            <summary>
+            时间-日期
+            </summary>
+        </member>
+        <member name="F:Model.Entity645.ConstontData.timeHour">
+            <summary>
+            时间-时分秒
+            </summary>
+        </member>
+        <member name="T:Model.Entity698.ControlArea">
+            <summary>
+            控制域
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.ControlArea.Data">
+            <summary>
+            本字段字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.ControlArea.Direction">
+            <summary>
+            传输方向位：DIR=0表示此帧是由客户机发出的；DIR=1表示此帧是由服务器发出的。
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.ControlArea.PrimaryReqMsg">
+            <summary>
+            启动标志位：PRM=1表示此帧是由客户机发起的；PRM=0表示此帧是由服务器发起的。
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.ControlArea.SubFrameSign">
+            <summary>
+            分帧标志位为1，表示此帧链路用户数据为APDU片段；分帧标志位为0表示此帧链路用户数据为完整APDU。
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.ControlArea.Rsv">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.ControlArea.FunctionCode">
+            <summary>
+            功能码：1 = 链路管理；3 = 用户数据
+            </summary>
+        </member>
+        <member name="T:Model.Entity698.AddressArea">
+            <summary>
+            地址域
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AddressArea.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AddressArea.Sa">
+            <summary>
+            服务器地址域
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AddressArea.SA.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AddressArea.SA.AddrType">
+            <summary>
+            地址类型: 0表示单地址，1表示通配地址，2表示组地址，3表示广播地址。
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AddressArea.SA.AddrLogic">
+            <summary>
+            逻辑地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AddressArea.SA.AddrLength">
+            <summary>
+            地址长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AddressArea.SA.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AddressArea.Ca">
+            <summary>
+            客户机地址CA用1字节无符号整数表示，取值范围0…255，值为0表示不关注客户机地址。
+            </summary>
+        </member>
+        <member name="T:Model.Entity698.ApplicationArea">
+            <summary>
+            用户数据域
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.IsRigthtPacket">
+            <summary>
+            是否正确的698帧，true = 正确； fasle = 错误。
+            </summary>
+        </member>
+        <member name="F:Model.Entity698.StartSign">
+            <summary>
+            帧起始符
+            </summary>
+        </member>
+        <member name="F:Model.Entity698.EndSign">
+            <summary>
+            帧结束符
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.Length">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.CtrlArea">
+            <summary>
+            控制域
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AddrArea">
+            <summary>
+            地址域
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.AppArea">
+            <summary>
+            链路用户数据域
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.HeadCS">
+            <summary>
+            帧头校验HCS为2字节，是对帧头部分除起始字符和HCS本身之外的所有字节的校验。
+            </summary>
+        </member>
+        <member name="P:Model.Entity698.FrameCS">
+            <summary>
+            帧校验FCS为2字节，是对整帧除起始字符、结束字符和FCS本身之外的所有字节的校验。
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.#ctor(System.Byte[])">
+            <summary>
+            需要将payload初始化，并赋值。
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.#ctor(Model.Entity7E.Type,Model.Entity7E.PIB_Name,System.Object,System.Byte[],Model.Entity7E.StandardVer)">
+            <summary>
+            管理帧组帧，使用已定义的PIB。
+            </summary>
+            <param name="_type">管理帧类型</param>
+            <param name="_name">管理帧名字</param>
+            <param name="_value">该管理帧的payload部分，字节或者字节数组</param>
+            <param name="_address">地址，如果与远程模块交互，必须有</param>
+            <param name="_sVer">管理帧的版本</param>
+        </member>
+        <member name="M:Model.Entity7E.#ctor(Model.Entity7E.Type,System.Byte[],System.Object,System.Byte[],Model.Entity7E.StandardVer)">
+            <summary>
+            管理帧组帧，使用pibs.xlsx中的管理帧两个字节的ID。
+            </summary>
+            <param name="_type">管理帧类型</param>
+            <param name="_name">管理帧两个字节的ID</param>
+            <param name="_value">该管理帧的payload部分，字节或者字节数组</param>
+            <param name="_address">地址，如果与远程模块交互，必须有</param>
+            <param name="_sVer">管理帧的版本</param>
+        </member>
+        <member name="P:Model.Entity7E.SVer">
+            <summary>
+            管理帧版本
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.Return7E_Frame(System.Byte[])">
+            <summary>
+            将7E帧从数组中截取出来，仅支持里面含有一个的。
+            </summary>
+            <param name="_data">需要处理的数组</param>
+            <returns>7E帧类型</returns>
+        </member>
+        <member name="T:Model.Entity7E.PIB">
+            <summary>
+            管理帧的payload部分
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.PIB.Payload">
+            <summary>
+            管理帧除去PIB值后面的内容。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PIB_Name.captureBoard">
+            <summary>
+            采数板
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PIB_Name.DeviceMode">
+            <summary>
+            设置抄控器、监控器1、监控器3模式
+            </summary>  
+        </member>
+        <member name="F:Model.Entity7E.PIB_Name.vcc_Det">
+            <summary>
+            发送保护
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PIB_Name.RegistryMeterInfo">
+            <summary>
+            注册表信息
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PIB_Name.RegistryMeterNumbers">
+            <summary>
+            注册表数量
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PIB_Name.TxBCN">
+            <summary>
+            发送信标帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PIB_Name.tmi">
+            <summary>
+            配置TMI模式
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PIB_Name.PhySet">
+            <summary>
+            配置物理层参数
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.SFO_Info">
+            <summary>
+            读取或配置频偏信息
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.SFO_Info.#ctor(System.Byte[])">
+            <summary>
+            解析数据
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="F:Model.Entity7E.SFO_Info.topicWord">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.SFO_Info.osc_flash">
+            <summary>
+            OSC频偏寄存器值，通过芯片内部电容阵列来纠正频偏
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.SFO_Info.ltv_flash">
+            <summary>
+            LTV 频偏值，由 DSP 通过 LTV 来纠正频偏，此为有符号数。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.SFO_Info.osc_qmd">
+            <summary>
+            OSC频偏寄存器值，通过芯片内部电容阵列来纠正频偏
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.SFO_Info.ltv_qmd">
+            <summary>
+            LTV 频偏值，由 DSP 通过 LTV 来纠正频偏，此为有符号数。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.SFO_Info.rx_ltv_mode">
+            <summary>
+            当此值为非零值，表示频偏已被锁定
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.SFO_Info.left">
+            <summary>
+            表示残余频偏
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.SFO_Info.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.PLC_TxLevel">
+            <summary>
+            发送电平
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PLC_TxLevel.topicWord">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.PLC_TxLevel.#ctor(System.Byte[])">
+            <summary>
+            解析 构造函数
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="M:Model.Entity7E.PLC_TxLevel.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            组帧 构造函数
+            </summary>
+            <param name="_value">发送电平值</param>
+            <param name="_status">当前发送值还是上一次发送值</param>
+        </member>
+        <member name="P:Model.Entity7E.PLC_TxLevel.Data">
+            <summary>
+            本字段值
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.PLC_TxLevel.Status">
+            <summary>
+            状态，True：当前物理层发送采用的值；False：上一次物理层发送采用的值
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.PLC_TxLevel.Value">
+            <summary>
+            发送电平值
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.ClearCounter.ToString">
+            <summary>
+            返回三个字符串数组，分别是DSP、MCU和附加内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Model.Entity7E.UIDClass">
+            <summary>
+            出厂信息帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.UIDClass.topicWord">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.UIDClass.DllType">
+            <summary>
+            数据链路层类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.UIDClass.CHIPModel.Gazelle">
+            <summary>
+            HT8550
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.UIDClass.CHIPModel.Etna">
+            <summary>
+            HT8910/HT8912
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.UIDClass.CHIPModel.Glory">
+            <summary>
+            HT8580/HT8582/HT8586
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.UIDClass.CHIPModel.HT861X">
+            <summary>
+            Zeus: HT1508
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.UIDClass.CHIPModel.HT861X_C">
+            <summary>
+            Zeus: HT1616 
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.UIDClass.PCBTYPE">
+            <summary>
+            PCB类型
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.UIDClass.GDWSTANDARD">
+            <summary>
+            国网376.2标准
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.UIDClass.CODETYPE">
+            <summary>
+            程序类型
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.UIDClass.DLL_Type">
+            <summary>
+            DLL 类型
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.UIDClass.VEDORCODE">
+            <summary>
+            CIU厂商
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.ContinueSend.#ctor(Model.Entity7E.ContinueSend.PH,Model.Entity7E.ContinueSend.CH,System.Byte,System.Byte)">
+            <summary>
+            连续发送组帧
+            </summary>
+            <param name="_ph">选择的相位，A、B、C和ABC</param>
+            <param name="_ch">信道，PLCOnly、PAOnly和WLOnly</param>
+            <param name="_time"></param>
+            <param name="_lvl"></param>
+        </member>
+        <member name="P:Model.Entity7E.ContinueSend.Data">
+            <summary>
+            连续发送的数据内容
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ContinueSend.CH">
+            <summary>
+            信道选择
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.CH.PLCOnly">
+            <summary>
+            仅载波 B[0]b[3:0]
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.CH.PAOnly">
+            <summary>
+            仅PA打开 B[0]b[3:0]
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.CH.WLOnly">
+            <summary>
+            仅无线 B[0]b[3:0]
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ContinueSend.PH">
+            <summary>
+            相位选择
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.PH.PH_A">
+            <summary>
+            CCO-C
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.PH.PH_B">
+            <summary>
+            WL-0
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.PH.PH_C">
+            <summary>
+            WL-1
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.PH.PH_ABC">
+            <summary>
+            WL-PN
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.ON">
+            <summary>
+            单位10s，FF * 10 = 2550s
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.OFF">
+            <summary>
+            关闭连续发送
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ContinueSend.defaultLVL">
+            <summary>
+            方案默认lvl是15.
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.AutoModEN">
+            <summary>
+            BPSK to QPSK 
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ChipSelectOfJZQ_M">
+            <summary>
+            独立收发左模块芯片选择
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.SendBCN">
+            <summary>
+            发送信标帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.MeterInfoOfRegistry.data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.MeterInfoOfRegistry.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.MeterInfoOfRegistry.#ctor(System.Byte[])">
+            <summary>
+            解析注册表信息管理帧
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="F:Model.Entity7E.MeterInfoOfRegistry.commentOfMeter.data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.MeterInfoOfRegistry.commentOfMeter.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.MeterInfoOfRegistry.commentOfMeter.address">
+            <summary>
+            mac地址
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.MeterInfoOfRegistry.commentOfMeter.role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.MeterInfoOfRegistry.commentOfMeter.tEI">
+            <summary>
+            TEI
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.MeterInfoOfRegistry.commentOfMeter.level">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.MeterInfoOfRegistry.commentOfMeter.pcoTEI">
+            <summary>
+            pco的TEI
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.MeterInfoOfRegistry.commentOfMeter.deviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.MeterInfoOfRegistry.commentOfMeter.index">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PhyInfo.tmi">
+            <summary>
+            TMI模式，TMI-0xD时，表示TMI_EXT模式
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PhyInfo.sfo">
+            <summary>
+            上一帧的SFO，低位在前，S16格式，单位ppm；
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PhyInfo.syncp">
+            <summary>
+            上电以后，SYNCP同步成功的次数，低位在前。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PhyInfo.syncm">
+            <summary>
+            上电以后，SYNCM同步成功的次数，低位在前。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PhyInfo.fchRight">
+            <summary>
+            上电以后，FCH译码正确的次数，低位在前。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PhyInfo.fchError">
+            <summary>
+            上电以后，FCH译码错误的次数，低位在前。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PhyInfo.payloadRight">
+            <summary>
+            上电以后，payload译码正确的次数，低位在前。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.PhyInfo.payloadError">
+            <summary>
+            上电以后，payload译码错误的次数，低位在前。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.CaptureBoard.comTypeSign">
+            <summary>
+            命令类型
+            b[3:0]：表示此条命令的类型
+            0：配置参数；1：启动采数；2：数据读取；3：启动测试
+            b[7:4]：保留，默认为0.
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.CaptureBoard.ComType">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.CaptureBoard.trigMode">
+            <summary>
+            触发条件
+            b[0]：启动采数的条件，0：立即启动；1：等待接收到正确数据帧
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.CaptureBoard.TrigMode">
+            <summary>
+            触发条件
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.CaptureBoard.vgaLevel">
+            <summary>
+            VGA增益档位
+            b[7]：是否由ht8610芯片自行决定VGA增益。0:固定增益；1：ht8610自行决定
+            b[6]：保留，默认为0.
+            b[5:0]：仅当 b[7]=0时，表示VGA的增益，否则此值无意义。
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.CaptureBoard.dataLengthWillCapture">
+            <summary>
+            待采集数据大小,b[3:0]：表示待采集的数据大小或者待读取的数据大小
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.CaptureBoard.DataLengthWillCapture">
+            <summary>
+            待采集数据大小
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.CaptureBoard.dataLengthHadCapture">
+            <summary>
+            已采集数据大小,b[7:0]：表示已采集数据大小，精度 8MB，最大 1GB。
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.CaptureBoard.DataLengthHadCapture">
+            <summary>
+            已采集数据大小
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.CaptureBoard.fpgaReadySign">
+            <summary>
+            FPGA是否准备完毕，0：还未准备好；1：已经准备好
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.CaptureBoard.FpgaReadySign">
+            <summary>
+            FPGA是否准备完毕，0：还未准备好；1：已经准备好
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.CaptureBoard.rsv">
+            <summary>
+            保留值
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.CaptureBoard.Rsv">
+            <summary>
+            保留值
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.CaptureBoard.#ctor(Model.Entity7E.CaptureBoard.ComType,System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            采数板管理帧组帧。
+            </summary>
+            <param name="_comType">管理帧的类型</param>
+            0：配置参数;1：启动采数;2：数据读取;3：启动测试
+            <param name="_dataLength">取值范围 0 ~ 15。数据大小(MB) = (_dataLength+1)* 64 (MB).默认值为0，即64MB。</param>
+            <param name="_vgaLvl">VGA增益,默认值:固定增益，且VGA增益最小</param>
+            <param name="_trigMode">启动采数的条件</param>
+            0：立即开始采数；1：接收到一帧正确的数据包开始采数（默认值）。
+            <param name="_rsv">保留字节</param>
+        </member>
+        <member name="P:Model.Entity7E.PhyParamSet.FchNum">
+            <summary>
+            PHY层FCH个数
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.PhyParamSet.BandType">
+            <summary>
+            PHY层目前支持的band，仅0，1；
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.PhyParamSet.Standmode">
+             <summary>
+             表示当前的standard mode  
+            -0x0：旧国网标准（目前仅 HT4 组网方案在采用）
+            -0x1：中电华瑞/南网标准 
+            -0x2：新国网标准
+             </summary>
+        </member>
+        <member name="P:Model.Entity7E.PhyParamSet.StandType">
+             <summary>
+             表示当前 standard type
+            -0x0：海思方案
+            -0x1：南网方案
+            -0x2：国网方案
+            -0x3：自适应
+            -0x4：不确定方案，由 B[0]，B[1]，B[2] 来决定。
+             </summary>
+        </member>
+        <member name="P:Model.Entity7E.PhyParamSet.ToneMaskEn">
+            <summary>
+            ToneMask使能
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.typeValue">
+            <summary>
+            出厂测试帧子类型：心跳 or 结果
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.TypeValue">
+            <summary>
+            出厂测试帧子类型：心跳 or 结果
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.Heart">
+            <summary>
+            心跳帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Heart.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Heart.Data">
+            <summary>
+            所有字节
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Heart.runState">
+            <summary>
+            运行状态
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Heart.RunState">
+            <summary>
+            运行状态
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Heart.ckqState">
+            <summary>
+            抄控器状态
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Heart.CkqState">
+            <summary>
+            抄控器状态
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Heart.staState">
+            <summary>
+            待测模块状态
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Heart.StaState">
+            <summary>
+            待测模块状态
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Heart.relayState">
+            <summary>
+            继电器状态
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Heart.RelayState">
+            <summary>
+            继电器状态
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Heart.devVersion">
+            <summary>
+            工装程序版本
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Heart.DevVersion">
+            <summary>
+            工装程序版本
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Heart.devVerDate">
+            <summary>
+            工装程序日期
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Heart.DevVerDate">
+            <summary>
+            工装程序日期
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Heart.devID">
+            <summary>
+            工装ID
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Heart.DevID">
+            <summary>
+            工装ID
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.Confirm">
+            <summary>
+            确认帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Confirm.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.Device">
+            <summary>
+            与工装通信
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Device.Data">
+            <summary>
+            所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Device.SwthWord">
+            <summary>
+            区分类型控制字
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Device.Payload">
+            <summary>
+            载荷部分
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.Device.SwitchRelay">
+            <summary>
+            切换继电器
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.ProductTest.Device.SwitchRelay.#ctor(System.Byte)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.SwitchRelay.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Device.SwitchRelay.Data">
+            <summary>
+            所有字节
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.Device.SwitchRelay.SwitchResult">
+            <summary>
+            切换继电器的类型
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.SwitchRelay.SwitchResult.DC">
+            <summary>
+            弱电
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.SwitchRelay.SwitchResult.A">
+            <summary>
+            强电，单相/三相的A相
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.SwitchRelay.SwitchResult.B">
+            <summary>
+            三相的B相
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.SwitchRelay.SwitchResult.C">
+            <summary>
+            三相的C相
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.Device.Reset">
+            <summary>
+            复位工装的发送端和待测端
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.ProductTest.Device.Reset.#ctor(System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.Reset.tx">
+            <summary>
+            发送端
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.Reset.dut">
+            <summary>
+            待测端
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.Reset.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Device.Reset.Data">
+            <summary>
+            所有字节
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.Device.Reset.Result">
+            <summary>
+            复位类型，有效or无效
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.Reset.Result.Invalid">
+            <summary>
+            无效
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.Reset.Result.Valid">
+            <summary>
+            有效
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.Device.ReadPower">
+            <summary>
+            读取功耗值
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.Device.ReadPower.PowerValue">
+            <summary>
+            单位mA
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.ReadPower.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.Device.Mode">
+            <summary>
+            设置工装发送端和待测端的工作模式
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.Device.Mode.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.ProductTest.DataTransfer.#ctor(System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_data">管理帧的payload</param>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.DataTransfer.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity7E.ProductTest.DataTransfer.Payload">
+            <summary>
+            本字段载荷
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.DeviceTx">
+            <summary>
+            与工装发送端通信
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.ProductTest.DeviceTx.#ctor(System.Byte[])">
+            <summary>
+            与发送端通信的构造函数
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.DeviceTx.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.DeviceDut">
+            <summary>
+            与工装DUT端通信
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.ProductTest.DeviceDut.#ctor(System.Byte[])">
+            <summary>
+            与DUT端通信的构造函数
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.DeviceDut.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.DeviceInfrared">
+            <summary>
+            与工装红外通信
+            </summary>
+        </member>
+        <member name="M:Model.Entity7E.ProductTest.DeviceInfrared.#ctor(System.Byte[])">
+            <summary>
+            与红外端通信的构造函数
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.DeviceInfrared.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.HeartBeatSwitch">
+            <summary>
+            心跳帧上报开关
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.HeartBeatSwitch.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:Model.Entity7E.ProductTest.DeviceEEPROM">
+            <summary>
+            设置工装EEPROM参数
+            </summary>
+        </member>
+        <member name="F:Model.Entity7E.ProductTest.DeviceEEPROM.topicword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Model.Entity97.Address">
+            <summary>
+            地址域
+            </summary>
+        </member>
+        <member name="P:Model.Entity97.Data">
+            <summary>
+            本字段所有字节
+            </summary>
+        </member>
+        <member name="P:Model.Entity97.Direction">
+            <summary>
+            传输方向, false:下行；true：上行
+            </summary>
+        </member>
+        <member name="F:Model.Entity97.TypeOf97.Return">
+            <summary>
+            回传帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity97.TypeOf97.PassThrough">
+            <summary>
+            透传帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity97.TypeOf97.repeatReturn">
+            <summary>
+            重复回传帧
+            </summary>
+        </member>
+        <member name="F:Model.Entity97.TypeOf97.repeatPassThrough">
+            <summary>
+            重复透传帧
+            </summary>
+        </member>
+        <member name="T:Model.EntityED">
+            <summary>
+            TB数据帧结构
+            </summary>
+        </member>
+        <member name="M:Model.EntityED.#ctor(System.Byte[])">
+            <summary>
+            解析函数
+            </summary>
+            <param name="_data"></param>
+        </member>
+        <member name="P:Model.EntityED.Data">
+            <summary>
+            所有数据内容
+            </summary>
+        </member>
+        <member name="P:Model.EntityED.Length">
+            <summary>
+            数据包长度,不包含帧头、帧尾和帧的长度字节
+            </summary>
+        </member>
+        <member name="P:Model.EntityED.Config">
+            <summary>
+            控制命令
+            </summary>
+        </member>
+        <member name="P:Model.EntityED.Start">
+            <summary>
+            起始符
+            </summary>
+        </member>
+        <member name="P:Model.EntityED.CheckSum">
+            <summary>
+            校验位
+            </summary>
+        </member>
+        <member name="P:Model.EntityED.End">
+            <summary>
+            结束符
+            </summary>
+        </member>
+        <member name="P:Model.EntityED.Payload">
+            <summary>
+            帧载荷内容
+            </summary>
+        </member>
+        <member name="P:Model.EntityED.Rsv">
+            <summary>
+            保留3字节
+            </summary>
+        </member>
+        <member name="P:Model.EntityED.Version">
+            <summary>
+            该类型帧版本号
+            </summary>
+        </member>
+        <member name="P:Model.JkqPacket.Data">
+            <summary>
+            所有数据内容
+            </summary>
+        </member>
+        <member name="P:Model.JkqPacket.Version">
+            <summary>
+            该类型帧版本号
+            </summary>
+        </member>
+        <member name="P:Model.JkqPacket.DevTime">
+            <summary>
+            设备时间
+            </summary>
+        </member>
+        <member name="P:Model.JkqPacket.Payload">
+            <summary>
+            PLC上的数据帧
+            </summary>
+        </member>
+    </members>
+</doc>

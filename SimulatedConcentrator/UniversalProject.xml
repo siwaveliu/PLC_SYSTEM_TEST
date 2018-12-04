@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UniversalProject</name>
+    </assembly>
+    <members>
+        <member name="M:UniversalProject.CRCclass.GetCRC16ByByte(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            正序算法
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalProject.CRCclass.GetCRC16ByByte698(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            国网698 CRC16算法
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalProject.CRCclass.GetCRC16ByByte2(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            逆序算法
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalProject.DialogFilePath.ReturnSavePath(UniversalProject.DialogFilePath.ExtensionType,System.String,System.Boolean)">
+            <summary>
+            根据用户输入返回存储文件所需的路径
+            </summary>
+            <param name="extension">选择存储的文件类型</param>
+            <param name="fileDirectory">默认路径</param>
+            <param name="option">true：显示对话框；false：默认路径或者程序加载路径创建</param>
+            <returns></returns>
+        </member>
+        <member name="T:UniversalProject.FileEncryptDecrypt">
+            <summary>
+            文件加密
+            </summary>
+        </member>
+        <member name="F:UniversalProject.FileEncryptDecrypt.key">
+            <summary>
+            加密字符
+            </summary>
+        </member>
+        <member name="M:UniversalProject.FileEncryptDecrypt.EncryptFile(System.String,System.String,System.String)">
+            <summary>
+            将密钥加密写入到文件
+            </summary>
+            <param name="sInputFilename">需要加密的文件</param>
+            <param name="sOutputFilename">加密后的文件</param>
+            <param name="sKey"></param>
+        </member>
+        <member name="M:UniversalProject.FileEncryptDecrypt.DecryptFile(System.String,System.String)">
+            <summary>
+            打开密钥文件
+            </summary>
+            <param name="sInputFilename">文件路径</param>
+            <param name="sKey"></param>
+        </member>
+        <member name="M:UniversalProject.FileEncryptDecrypt.Encrypt(System.String,System.String)">
+            <summary>
+            加密文件
+            </summary>
+            <param name="_outPath">输出加密文件路径</param>
+            <param name="_inputPath">输入文件路径</param>
+        </member>
+        <member name="M:UniversalProject.FileEncryptDecrypt.Decrypt(System.String)">
+            <summary>
+            解密文件
+            </summary>
+            <param name="filename">打开文件路径</param>
+            <returns>返回加密文件的内容</returns>
+        </member>
+        <member name="T:UniversalProject.FormatListOfStringForShow">
+            <summary>
+            格式化要显示的字符串
+            ---------------title-------------
+               name:data    //annotation
+            </summary>
+        </member>
+        <member name="M:UniversalProject.FormatListOfStringForShow.#ctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:UniversalProject.FormatListOfStringForShow.Name">
+            <summary>
+            要显示的字段名称
+            </summary>
+        </member>
+        <member name="P:UniversalProject.FormatListOfStringForShow.Data">
+            <summary>
+            要显示的字段内容
+            </summary>
+        </member>
+        <member name="P:UniversalProject.FormatListOfStringForShow.Annotation">
+            <summary>
+            要显示的字段注释
+            </summary>
+        </member>
+        <member name="M:UniversalProject.FormatListOfStringForShow.Add(System.String,System.String,System.String)">
+            <summary>
+            添加要显示的内容
+            </summary>
+            <param name="_name">名称字段</param>
+            <param name="_data">内容字段</param>
+            <param name="_annotation">注释字段</param>
+        </member>
+        <member name="M:UniversalProject.FormatListOfStringForShow.AddRange(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            添加要显示的内容
+            </summary>
+            <param name="_name">名称列表</param>
+            <param name="_data">内容列表</param>
+            <param name="_annotation">注释列表</param>
+        </member>
+        <member name="M:UniversalProject.FormatListOfStringForShow.ToString(System.String)">
+            <summary>
+            输出格式化后的字符串
+            </summary>
+            <param name="_title">显示标题，为空则不显示</param>
+            <returns>格式化字符串</returns>
+        </member>
+        <member name="M:UniversalProject.FormatListOfStringForShow.ToStringList(System.String)">
+            <summary>
+            输出格式化后的字符列表
+            </summary>
+            <param name="_title">显示标题，为空则不显示</param>
+            <returns>格式化后的字符串列表</returns>
+        </member>
+        <member name="T:UniversalProject.IFormatListOfString">
+            <summary>
+            使用FormatListOfString的接口
+            </summary>
+        </member>
+        <member name="M:UniversalProject.IFormatListOfString.AddStringList(UniversalProject.FormatListOfStringForShow)">
+            <summary>
+            将字符串列表按照FormatListOfString添加到现有的FormatListOfStringForShow实例中
+            </summary>
+            <param name="_format">已经存在的FormatListOfStringForShow实例</param>
+            <returns>添加后的FormatListOfStringForShow实例</returns>
+        </member>
+        <!-- 对于成员“M:UniversalProject.IFormatListOfString.ToString”忽略有格式错误的 XML 注释 -->
+        <member name="P:UniversalProject.Ini.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="M:UniversalProject.Ini.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            ini文件
+            </summary>
+            <param name="_path">文件路径</param>
+        </member>
+        <member name="M:UniversalProject.Ini.ReadValues">
+            <summary>
+            批量读取键值对
+            </summary>
+            <returns>返回INI配置结构体列表,单独结构可以通过索引获取或设置</returns>
+        </member>
+        <member name="M:UniversalProject.Ini.ReadValueFromString(System.String,System.String,System.String,System.String@)">
+            <summary>
+            从ini字符串中读取匹配关键字的值
+            </summary>
+            <param name="data">ini字符串</param>
+            <param name="key">匹配的关键字</param>
+            <param name="section">匹配的段落</param>
+            <param name="comments">注释，通过ref返回</param>
+            <returns>返回匹配的value</returns>
+        </member>
+        <member name="M:UniversalProject.Ini.WriteToString(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            将指定内容写入到ini格式字符串中
+            </summary>
+            <param name="data">ini格式字符串</param>
+            <param name="section">写入的段落</param>
+            <param name="key">写入的关键字</param>
+            <param name="value">写入的值</param>
+            <param name="comment">写入的注释</param>
+            <returns>写入内容后的ini格式字符串</returns>
+        </member>
+        <member name="T:UniversalProject.IniStruct">
+            <summary>
+            每个section结构体
+            </summary>
+        </member>
+        <member name="P:UniversalProject.LogRecordAndSave.LogPath">
+            <summary>
+            存储文件的路径
+            </summary>
+        </member>
+        <member name="M:UniversalProject.LogRecordAndSave.#ctor(System.Windows.Forms.RichTextBox,System.String,System.Int32)">
+            <summary>
+            创建一个可以自动保存，并将信息打印到RichTextBox上。
+            </summary>
+            <param name="_rtb">显示的RichTextBox，如果是NULL那么将不显示</param>
+            <param name="_path">存储文件的路径，如果为NULL，那么将不存储</param>
+            <param name="_lines">RichTextBox自动清除的行数</param>
+        </member>
+        <member name="M:UniversalProject.LogRecordAndSave.ShowReplaceTheLastMatchFunction(System.String,System.String)">
+            <summary>
+            替换最后匹配的字符串
+            </summary>
+            <param name="_old">原始字符串</param>
+            <param name="_new">新的字符串</param>
+        </member>
+        <member name="M:UniversalProject.LogRecordAndSave.SaveLogToTextFile(System.String)">
+            <summary>
+            将_log存入已有的txt文件中
+            </summary>
+            <param name="_log">需要存入的内容</param>
+        </member>
+        <member name="M:UniversalProject.LogRecordAndSave.CreatNewLogFile(System.String)">
+            <summary>
+            根据路径创建新的txt日志文件。
+            </summary>
+            <param name="_path">新txt日志文件路径</param>
+        </member>
+        <member name="T:UniversalProject.MTimer">
+            <summary>  
+            对于高精度测试我们应当使用QueryPerformanceFrequency函数和QueryPerformanceCounter函数。  
+            通过它们可以获得比Environment.TickCount更高的精确度。  
+            实际上Environment.TickCount就是在调用QueryPerformanceFrequency函数和QueryPerformanceCounter函数。  
+            </summary>  
+            <example>  
+            MTimer t = new MTimer();  
+            t.GetAbsoluteTime();  
+            t.GetElapsedTime();  
+            t.Reset();  
+            t.GetTime();  
+            </example>  
+        </member>
+        <member name="M:UniversalProject.MTimer.QueryPerformanceFrequency(System.Int64@)">
+            <summary>  
+            获取时间的精度  
+            </summary>  
+            <param name="PerformanceFrequency"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:UniversalProject.MTimer.QueryPerformanceCounter(System.Int64@)">
+            <summary>  
+            获取时间计数  
+            </summary>  
+            <param name="PerformanceCount"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:UniversalProject.MTimer.#ctor">
+            <summary>  
+            new  
+            </summary>  
+        </member>
+        <member name="M:UniversalProject.MTimer.Reset">
+            <summary>  
+            重置时间相关计数器  
+            </summary>  
+        </member>
+        <member name="M:UniversalProject.MTimer.GetTime">
+            <summary>  
+            获取当前与最近一次 reset 时间差,单位：秒  
+            </summary>  
+            <returns>The time since last reset.</returns>  
+        </member>
+        <member name="M:UniversalProject.MTimer.GetTimeTicks">
+            <summary>
+            获取当前与最近一次reset时间差，Ticks。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalProject.MTimer.GetAbsoluteTime">
+            <summary>  
+            获取当前系统的时间 ticks 数  
+            </summary>  
+            <returns>The current time in seconds.</returns>  
+        </member>
+        <member name="M:UniversalProject.MTimer.GetElapsedTime">
+            <summary>  
+            获取此次与上次调用此方法的两次时间差  
+            </summary>  
+            <returns>The number of seconds since last call of this function.</returns>  
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.InquireByteArrayIsExsit(System.Byte[],System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            查询字节数组A是否存在数组B中
+            </summary>
+            <param name="_A">数组A</param>
+            <param name="_B">数组B</param>
+            <param name="_B_offset">指定从数组B中查询的起始位置，默认等于0，如果小于0，查询方向为倒序</param>
+            <param name="_A_offset">指定从数组A中查询的起始位置，默认等于0，不能小于0</param>
+            <returns>是否存在的结果，true：存在；false：不存在</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.ReturnFileNameExtension(System.String)">
+            <summary>
+            返回文件名和文件的扩展名
+            </summary>
+            <param name="path">输入的文件完整路径</param>
+            <returns>0:FileName; 1:Extension，无扩展名 = None</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.ReturnFileNamePathExtension(System.String)">
+            <summary>
+            返回文件路径（剔除扩展名）和文件的扩展名
+            </summary>
+            <param name="path">输入的文件完整路径</param>
+            <returns>0:FileName + Path; 1:Extension，无扩展名 = None</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.ReturnFilePathExtension(System.String)">
+            <summary>
+            返回文件所在文件夹的路径和文件的扩展名
+            </summary>
+            <param name="path">输入的文件完整路径</param>
+            <returns>0:File Path;1:Extension，无扩展名 = None</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.ByteArrayToHexString(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            将字节数组按照16进制形式转成字符串
+            </summary>
+            <param name="array">字节数组</param>
+            <param name="offset">偏移量</param>
+            <param name="length">偏移量</param>
+            <returns>16进制的字符串</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.HexStringToHexByte(System.String)">
+            <summary>
+            将16进制的字符串转换成16进制字节数组
+            </summary>
+            <param name="hexString">需要转换的字符串</param>
+            <returns>16进制数组</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.stringToHexByte(System.String)">
+            <summary>
+            将10进制的字符串转换成16进制字节数组
+            </summary>
+            <param name="hexString">需要转换的字符串</param>
+            <returns>16进制数组</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.byteToHexString(System.Byte[])">
+            <summary>
+            不建议使用，请用ByteArrayToHexString
+            字节数组转换成16进制字符串。
+            </summary>
+            <param name="b">字节数组</param>
+            <returns>16进制字符串</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.byteToHexString(System.Byte[],System.Int32)">
+            <summary>
+            不建议使用，请用ByteArrayToHexString
+            可以选择起始位置的字节数组转换
+            </summary>
+            <param name="b">字节数组</param>
+            <param name="offset">数组的起始未知</param>
+            <returns>16进制字符串</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.byteToHexString(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            不建议使用，请用ByteArrayToHexString
+            将字节按照16进制转换成字符串
+            </summary>
+            <param name="b">字节数组</param>
+            <param name="index">起始位置</param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.byteToHexStringNoSpace(System.Byte[])">
+            <summary>
+            不建议使用，请用ByteArrayToHexString
+            字节数据按照16进制转换成字符串，无空格。
+            </summary>
+            <param name="b">字节数组</param>
+            <returns>16进制字符串</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.byteToString(System.Byte[])">
+            <summary>
+            不建议使用，请用ByteArrayToHexString
+            将字节数组转换成UTF-16的字符串
+            </summary>
+            <param name="b">字符串的字节数组</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.SubByteArray(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            拆分字节数组
+            </summary>
+            <param name="_data">待拆分的数组</param>
+            <param name="_index">起始位置</param>
+            <param name="_length">长度</param>
+            <returns>拆分后，从_index开始的_length长度的数组</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.TextBoxToInt(System.Windows.Forms.TextBox,System.Int32)">
+            <summary>
+            将TextBox值转化为int32，_default值为转化异常时返回的值。
+            </summary>
+            <param name="_textBox"></param>
+            <param name="_default"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalProject.WinRAR.Compress(System.String,System.String)">
+            <summary>
+            将文件在原始位置以原始名字压缩，并删除当前文件
+            </summary>
+            <param name="_path">文件所在目录</param>
+            <param name="_Name">文件名字</param>
+        </member>
+        <member name="M:UniversalProject.WinRAR.RARsave(System.String,System.String,System.String)">
+            <summary>
+            压缩文件，并删除原始文件
+            </summary>
+            <param name="patch">原始文件的绝对路径和文件名</param>
+            <param name="rarPatch">压缩文件目录</param>
+            <param name="rarName">压缩文件名</param>
+        </member>
+        <member name="M:UniversalProject.WinRAR.UnCompress(System.String,System.String)">
+            <summary>
+            将文件在原始位置以原始名字压缩，并删除当前文件
+            </summary>
+            <param name="_path">文件所在目录</param>
+            <param name="_Name">文件名字</param>
+        </member>
+        <member name="M:UniversalProject.WinRAR.unRAR(System.String,System.String,System.String)">
+            <summary>
+            解压缩
+            </summary>
+            <param name="patch">压缩文件目录</param>
+            <param name="unRARPatch">压缩文件名字</param>
+            <param name="rarName">解压缩后的目录</param>
+        </member>
+    </members>
+</doc>
