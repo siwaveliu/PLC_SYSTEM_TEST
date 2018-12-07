@@ -27,23 +27,37 @@ def run(tb, band, escort=False):
     cco_mac_addr = '00-00-00-00-00-9C'  # type: str
     cco_mac_addr_other = '00-00-00-00-00-9D'  # type: str
 
+    if  escort:
+        cct_other = concentrator.Concentrator(config.CONCENTRATOR_OTHER_PORT)
+        cct_other.open_port()
+
     band = int(band)
     if  band != config.DEFAULT_BAND:
         cco_switch_band.run(tb, tb.cct, band)
         config.DEFAULT_BAND = band
 
     # 必须先打开串口以免上电后的延迟导致无法收到03H_F10
-    if  escort:
-        cct_other = concentrator.Concentrator(config.CONCENTRATOR_OTHER_PORT)
-        cct_other.open_port()
 
-
-    tb.meter_platform_power_reset()
 
     # 确认CCO已经激活
-    tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1)
+    res = None
+    for i in range(3):
+        res = tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
+        if  res is None:
+            tb.meter_platform_power_reset()
+            continue
+        else:
+            break
+    assert res is not None, "wait 03H_F10 failed, check cco device"
     if escort:
-        cct_other.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1)
+        for i in range(3):
+            res = cct_other.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
+            if res is None:
+                tb.meter_platform_power_reset()
+                continue
+            else:
+                break
+        assert res is not None, "wait 03H_F10 failed, check cco_other device"
     # 设置CCO主节点地址
     plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
     tc_common.set_cco_mac_addr(tb.cct, cco_mac_addr)

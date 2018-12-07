@@ -49,7 +49,7 @@ def run(tb, cct, band):
     plc_tb_ctrl._debug(sec_nodes_addr_list)
     tc_common.add_sub_node_addr(cct, sec_nodes_addr_list)
 
-    tc_common.check_nw_top(cct, nw_top_main, 600)
+    tc_common.check_nw_top(cct, nw_top_main, 800)
 
     r_band = tc_common.read_cco_band(cct)
     plc_tb_ctrl._debug("default Band: " + str(r_band))
@@ -59,7 +59,8 @@ def run(tb, cct, band):
         plc_tb_ctrl._debug("wait for cco switch band")
         tb._change_band(band)
         wait = True
-        endtime = time.time().__add__(4 * 60)
+        starttime = time.time()
+        endtime = starttime.__add__(10 * 60)
         while wait:
             if endtime < time.time():
                 break
@@ -68,6 +69,7 @@ def run(tb, cct, band):
             # if payload.cco_mac_addr == cco_mac_addr:
             wait = False
         assert wait == False, 'cco switch band timeout'
+        plc_tb_ctrl._debug("switch Band elapse: {:.2f}".format(time.time() - starttime) )
     tc_common.check_nw_top(cct, nw_top_main, 60)
 
 
