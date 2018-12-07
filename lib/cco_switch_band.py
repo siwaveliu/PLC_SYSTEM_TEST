@@ -15,7 +15,7 @@ def run(tb, cct, band):
     Args:
         tb (plc_tb_ctrl.PlcSystemTestbench): testbench object .
     """
-    node_addr_list_file = u'tc/tc_iot_4/互操作性表架拓扑地址_完整版_树形.txt'
+    node_addr_list_file = u'tc/tc_iot_4/互操作性表架拓扑地址_所有_树形.txt'
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(cct, concentrator.Concentrator), "cct type is not concentrator"
     cco_mac_addr = '00-00-00-00-00-9E'  # type: str
