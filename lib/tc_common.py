@@ -97,17 +97,19 @@ def del_sub_node_addr(cct,mac_addr_list):
           - addr: 00-00-00-00-00-01
     '''
     mac_dict_list = []
-    couter = 0  # type: int
     dl_afn11f2_pkt = plc_tb_ctrl.PlcSystemTestbench._load_data_file(data_file='afn11f2_dl.yaml')
-    for couter in range(1, len(mac_addr_list) + 1):
-        if couter % 15 == 0 or couter == len(mac_addr_list):
+    total = len(mac_addr_list)
+    for couter in range(total):
+        mac_dict_list.append(mac_addr_list[couter])
+        if couter % 15 == 0 or couter == total - 1:
             dl_afn11f2_pkt['user_data']['value']['data']["data"]['num'] = len(mac_dict_list)
             dl_afn11f2_pkt['user_data']['value']['data']["data"]['list'] = mac_dict_list
             frame = concentrator.build_gdw1376p2_frame(dict_content=dl_afn11f2_pkt)
             assert frame is not None
+            # plc_tb_ctrl._debug(frame)
             cct.send_frame(frame)
             # 等待确认
-            cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
+            cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0, tm_assert=False)
             mac_dict_list = []
 
 
@@ -946,12 +948,15 @@ def check_nw_top(cct, nw_top, timeout=120):
     del out_nw_top[cct.mac_addr]
     start_time = time.time()
     stop_time = start_time + calc_timeout(timeout)
-    timeoutcounter = 0;
+    timeoutcounter = 0
     while True:
         afn10f21_ul_frame = query_nw_top(cct, 1, 61)
         if afn10f21_ul_frame is None:
             timeoutcounter += 1
             cct.clear_port_rx_buf()
+            cct.close_port()
+            time.sleep(0.2)
+            cct.open_port()
             assert timeoutcounter < 3, "read cco top info fail"
             continue
         else:
@@ -990,12 +995,12 @@ def check_nw_top(cct, nw_top, timeout=120):
         if time.time() > stop_time:
             break
 
-        time.sleep(calc_timeout(1))
+        time.sleep(calc_timeout((data.total_num - data.curr_num) // 10 + 1))
 
     if (succ):
         plc_tb_ctrl._debug("nw established within {:.2f} seconds".format(time.time() - start_time))
     else:
-        assert False, "fail to complete nw establishment within {:.2f} seconds".format(time.time() - start_time)
+        assert False, ("fail to complete nw establishment within {:.2f} seconds".format(time.time() - start_time))
 
 def pause_exec(message):
     plc_tb_ctrl._debug(message)
