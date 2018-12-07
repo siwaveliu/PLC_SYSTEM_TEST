@@ -69,7 +69,7 @@
             修改成5s
              </summary>
         </member>
-        <member name="M:BLL.ProtocolReceiveClass.#ctor(System.Boolean,System.Int32,System.Boolean,BLL.ProtocolReceiveClass.FrameType[])">
+        <member name="M:BLL.ProtocolReceiveClass.#ctor(System.Int32,BLL.ProtocolReceiveClass.FrameType[])">
             <summary>
             默认是打开按照协议接收数据的。
             </summary>
