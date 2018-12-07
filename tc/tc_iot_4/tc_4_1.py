@@ -22,7 +22,7 @@ def run(tb, band, escort=False):
         node_addr_list_file = u'tc/tc_iot_4/互操作性表架拓扑地址_待测_树形.txt'
         node_addr_list_file_other = u'tc/tc_iot_4/互操作性表架拓扑地址_陪测_树形.txt'
     else:
-        node_addr_list_file = u'tc/tc_iot_4/互操作性表架拓扑地址_完整版_树形.txt'
+        node_addr_list_file = u'tc/tc_iot_4/互操作性表架拓扑地址_所有_树形.txt'
 
     cco_mac_addr = '00-00-00-00-00-9C'  # type: str
     cco_mac_addr_other = '00-00-00-00-00-9D'  # type: str

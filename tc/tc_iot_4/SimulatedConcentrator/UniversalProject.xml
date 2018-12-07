@@ -400,6 +400,23 @@
             <param name="_default"></param>
             <returns></returns>
         </member>
+        <member name="M:UniversalProject.UsefullFuncClass.Clone``1(System.Object)">
+            <summary>
+            Clones the specified list.
+            T must use [Serializable]
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="List">The list.</param>
+            <returns>List{``0}.</returns>
+        </member>
+        <member name="M:UniversalProject.UsefullFuncClass.DeepCopy``1(``0)">
+            <summary>
+            Deep copy List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
         <member name="M:UniversalProject.WinRAR.Compress(System.String,System.String)">
             <summary>
             将文件在原始位置以原始名字压缩，并删除当前文件
