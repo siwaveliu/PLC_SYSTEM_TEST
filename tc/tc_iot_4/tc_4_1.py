@@ -19,10 +19,10 @@ def run(tb, band, escort=False):
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
     if  escort:
-        node_addr_list_file = u'tc/tc_iot_4/互操作性表架拓扑地址_待测_树形.txt'
-        node_addr_list_file_other = u'tc/tc_iot_4/互操作性表架拓扑地址_陪测_树形.txt'
+        node_addr_list_file = config.IOT_TOP_LIST_DETERMINAND
+        node_addr_list_file_other = config.IOT_TOP_LIST_ESCORT
     else:
-        node_addr_list_file = u'tc/tc_iot_4/互操作性表架拓扑地址_所有_树形.txt'
+        node_addr_list_file = config.IOT_TOP_LIST_ALL
 
     cco_mac_addr = '00-00-00-00-00-9C'  # type: str
     cco_mac_addr_other = '00-00-00-00-00-9D'  # type: str

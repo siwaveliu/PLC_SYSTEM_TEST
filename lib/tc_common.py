@@ -945,7 +945,13 @@ def check_nw_top(cct, nw_top, timeout=120):
     node_num = len(nw_top)
     # 复制拓扑图
     out_nw_top = dict(nw_top)
-    del out_nw_top[cct.mac_addr]
+    try:
+        if  out_nw_top.has_key(cct.mac_addr):
+            del out_nw_top[cct.mac_addr]
+    except KeyError:
+        pass
+    else:
+        pass
     start_time = time.time()
     stop_time = start_time + calc_timeout(timeout)
     timeoutcounter = 0
@@ -970,7 +976,7 @@ def check_nw_top(cct, nw_top, timeout=120):
                 del out_nw_top[n.addr]
         plc_tb_ctrl._debug(out_nw_top)
 
-        if ((data.total_num == node_num) and (data.curr_num == node_num)):
+        if ((data.total_num >= node_num) and (data.curr_num >= node_num)):
             plc_tb_ctrl._debug("nw established within {:.2f} seconds".format(time.time() - start_time))
             for node in data.node_list:
                 if nw_top.has_key(node.addr):
