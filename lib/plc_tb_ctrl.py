@@ -325,7 +325,7 @@ class PlcSystemTestbench(object):
         indextmp += len(dst_dir) + 1
         tc_path = s1[:indextmp]
         if tc_path[-1] != r'\\':
-            tc_path += r"\\"
+           tc_path += r'\\'
         _debug(tc_path)
         for dirpath, dirs, files in os.walk(tc_path + u'tc'):
             if tc_file_name in files:
@@ -339,9 +339,20 @@ class PlcSystemTestbench(object):
 
         band = BuiltIn().get_variable_value("${band}")
         band = band.split(',')
-
         net = BuiltIn().get_variable_value("${net}")
-        _debug(net)
+        tmp = '_' + net + ".txt"
+        config.IOT_TOP_LIST_ALL += tmp
+        # config.IOT_TOP_LIST_ALL = tc_path + config.IOT_TOP_LIST_ALL
+        config.IOT_TOP_LIST_PROXY += tmp
+        # config.IOT_TOP_LIST_PROXY = tc_path + config.IOT_TOP_LIST_PROXY
+        config.IOT_TOP_LIST_DYNATIC += tmp
+        # config.IOT_TOP_LIST_DYNATIC = tc_path + config.IOT_TOP_LIST_DYNATIC
+        config.IOT_TOP_LIST_STATIC += tmp
+        # config.IOT_TOP_LIST_STATIC = tc_path + config.IOT_TOP_LIST_STATIC
+        config.IOT_TOP_LIST_DETERMINAND += tmp
+        # config.IOT_TOP_LIST_DETERMINAND = tc_path + config.IOT_TOP_LIST_DETERMINAND
+        config.IOT_TOP_LIST_ESCORT += tmp
+        # config.IOT_TOP_LIST_ESCORT = tc_path + config.IOT_TOP_LIST_ESCORT
 
         # 执行用例
         for b in band:

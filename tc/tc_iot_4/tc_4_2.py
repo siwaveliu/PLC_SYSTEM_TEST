@@ -21,8 +21,8 @@ def run(tb, band):
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
 
-    node_addr_list_file_static = u'tc/tc_iot_4/互操作性表架拓扑地址_静态_树形.txt'
-    node_addr_list_file_dynatic = u'tc/tc_iot_4/互操作性表架拓扑地址_动态_树形.txt'
+    node_addr_list_file_static = config.IOT_TOP_LIST_STATIC
+    node_addr_list_file_dynatic = config.IOT_TOP_LIST_DYNATIC
     band = int(band)
     if  band != config.DEFAULT_BAND:
         cco_switch_band.run(tb, tb.cct, band)
