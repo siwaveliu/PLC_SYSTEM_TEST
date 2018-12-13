@@ -22,7 +22,7 @@ def run(tb, band):
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
 
     node_addr_list_file_dynatic = config.IOT_TOP_LIST_DYNATIC
-    nw_top_main = tc_4_1.run(tb, band)
+    nw_top_main, sec_nodes_addr_list = tc_4_1.run(tb, band)
 
     # 删除动态文件中从节点
     plc_tb_ctrl._debug("del another half of nodes's address to main cco, and start the main net")

@@ -974,7 +974,8 @@ def check_nw_top(cct, nw_top, timeout=120):
         for n in data.node_list:
             if out_nw_top.has_key(n.addr):
                 del out_nw_top[n.addr]
-        plc_tb_ctrl._debug(out_nw_top)
+        if  out_nw_top.__len__() < 10:
+            plc_tb_ctrl._debug(out_nw_top)
 
         if ((data.total_num >= node_num) and (data.curr_num >= node_num)):
             plc_tb_ctrl._debug("nw established within {:.2f} seconds".format(time.time() - start_time))

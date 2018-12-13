@@ -340,19 +340,14 @@ class PlcSystemTestbench(object):
         band = BuiltIn().get_variable_value("${band}")
         band = band.split(',')
         net = BuiltIn().get_variable_value("${net}")
-        tmp = '_' + net + ".txt"
-        config.IOT_TOP_LIST_ALL += tmp
-        # config.IOT_TOP_LIST_ALL = tc_path + config.IOT_TOP_LIST_ALL
-        config.IOT_TOP_LIST_PROXY += tmp
-        # config.IOT_TOP_LIST_PROXY = tc_path + config.IOT_TOP_LIST_PROXY
-        config.IOT_TOP_LIST_DYNATIC += tmp
-        # config.IOT_TOP_LIST_DYNATIC = tc_path + config.IOT_TOP_LIST_DYNATIC
-        config.IOT_TOP_LIST_STATIC += tmp
-        # config.IOT_TOP_LIST_STATIC = tc_path + config.IOT_TOP_LIST_STATIC
-        config.IOT_TOP_LIST_DETERMINAND += tmp
-        # config.IOT_TOP_LIST_DETERMINAND = tc_path + config.IOT_TOP_LIST_DETERMINAND
-        config.IOT_TOP_LIST_ESCORT += tmp
-        # config.IOT_TOP_LIST_ESCORT = tc_path + config.IOT_TOP_LIST_ESCORT
+        if  config.IOT_TOP_LIST_ALL.__contains__(net) == False:
+            tmp = '_' + net + ".txt"
+            config.IOT_TOP_LIST_ALL += tmp
+            config.IOT_TOP_LIST_PROXY += tmp
+            config.IOT_TOP_LIST_DYNATIC += tmp
+            config.IOT_TOP_LIST_STATIC += tmp
+            config.IOT_TOP_LIST_DETERMINAND += tmp
+            config.IOT_TOP_LIST_ESCORT += tmp
 
         # 执行用例
         for b in band:
