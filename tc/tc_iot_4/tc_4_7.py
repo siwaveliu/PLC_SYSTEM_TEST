@@ -58,7 +58,6 @@ def run(tb, band):
 
         timeout = stop_time - time.time()
 
-
     elapsed_time = round((time.time() - start_time) / 60)
     assert len(nodes_list) == 0, "meter search fail"
-    assert elapsed_time == duration, "receive receive 06f3 late"
+    assert elapsed_time <= duration, "receive receive 06f3 late"
