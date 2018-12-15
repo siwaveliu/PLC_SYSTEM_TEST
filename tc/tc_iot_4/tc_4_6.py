@@ -4,9 +4,9 @@ import robot
 import plc_tb_ctrl
 import concentrator
 import tc_common
-import plc_packet_helper
-import time
+import datetime
 import meter
+import tc_4_1
 
 
 '''
@@ -14,58 +14,56 @@ import meter
 验证多 STA 站点时广播校时命令是否能准确下发
 '''
 
-def run(tb):
+def run(tb, band):
     """
     Args:
         tb (plc_tb_ctrl.PlcSystemTestbench): testbench object .
     """
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
+    assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
 
-    cco_mac_addr      = '00-00-00-00-00-9C'
-    cct = concentrator.Concentrator()
-    cct.open_port()
+    plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
+    nw_top, nodes_list = tc_4_1.run(tb, band)
 
-    gdw1376p2_frame = cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1)
-
-    plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
-    tc_common.set_cco_mac_addr(cct, cco_mac_addr)
-
-    plc_tb_ctrl._debug("reset CCO param area")
-    tc_common.reset_cco_param_area(cct)
-
-    #set sub node address
-    plc_tb_ctrl._debug("add secondary nodes")
-    # key is meter address, value is level
-    nw_top = {
-         cco_mac_addr: 0,
-         '00-00-01-68-50-27': 1,
-         '00-00-01-63-54-52': 2,
-         '00-00-01-63-28-29': 3,
-         '00-00-01-70-33-67': 4,
-         '00-00-01-61-22-95': 5
-    }
-
-    sec_nodes_addr_list = []
-    for meter_addr, level in nw_top.iteritems():
-        if (level > 0):
-            sec_nodes_addr_list.append(meter_addr)
-
-    plc_tb_ctrl._debug(sec_nodes_addr_list)
-    tc_common.add_sub_node_addr(cct, sec_nodes_addr_list)
-
-    plc_tb_ctrl._debug("step5: check nw top")
-    tc_common.check_nw_top(cct, nw_top)
+    # 激活tb，监听CCO发出广播校时帧
+    tc_common.activate_tb(tb, band)
 
     plc_tb_ctrl._debug("step6: start time calibration")
     dl_1376p2_pkt = tb._load_data_file(data_file='afn05f3_dl.yaml')
     dl_1376p2_645 = dl_1376p2_pkt['user_data']['value']['data']['data']['data']
+    now = datetime.datetime.now()
+    now.second.__add__(1)
+    snow = now.strftime("%S-%M-%H-%d-%m-%y")
+    snow = snow.split('-')
+    dl_1376p2_645[10] = snow[0]
+    dl_1376p2_645[11] = snow[1]
+    dl_1376p2_645[12] = snow[2]
+    dl_1376p2_645[13] = snow[3]
+    dl_1376p2_645[14] = snow[4]
+    dl_1376p2_645[15] = snow[5]
+    # 计算校验和必须放在645帧最后
     dl_1376p2_645[-2] = meter.calc_dlt645_cs8(map(chr, dl_1376p2_645))
 
     frame = concentrator.build_gdw1376p2_frame(dict_content=dl_1376p2_pkt)
 
     assert frame is not None
-    cct.send_frame(frame)
-    cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
+    tb.cct.send_frame(frame)
+    tb.cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
+    pkt_id = "APL_TIME_CALI"
+    [fc, mac_frame_head, apm] = tb._wait_for_plc_apm(pkt_id, 10)
 
-    #真实电表只对+-5min以内的调整生效，并且一天只能调整一次时间，可以检查模拟表是否收到了校时命令
-    tc_common.pause_exec("check meter simulator")
+    # check FC broadcast flag
+    assert fc.var_region_ver.broadcast_flag == 1, "cco don't use broadcast mode"
+    # check mac_head broadcast direction
+    assert  mac_frame_head.broadcast_dir != 2, 'cco use wrong broadcast direction'
+    # apl packet check
+    assert apm is not None, "APL_TIME_CALI not received"
+    # check 1. 测试CCO 转发的下行广播校时报文时其报文端口号是否为0x11；
+    assert apm.header.port == 0x11, "pkt header port id err"
+    # check 2. 测试CCO 转发的下行广播校时报文时其报文ID 是否为0x0001（集中器主动抄表）；
+    assert apm.header.id == pkt_id, "pkt header packet id err"
+    # check 3. 测试CCO 转发的下行广播校时报文时其报文控制字是否为0；
+    assert apm.header.ctrl_word == 0, "pkt header ctrl word err"
+    # check 4. 测试CCO 转发的下行广播校时数据没有改变内容
+    dl_apl_645 = apm.body.dl.data
+    assert cmp(dl_apl_645, dl_1376p2_645) == 0, "pkt body data - 645 pkt err"

@@ -57,6 +57,7 @@ def run(tb, cct, band):
     if  r_band != band:
         tc_common.write_cco_band(cct, band)
         plc_tb_ctrl._debug("wait for cco switch band")
+        tc_common.activate_tb(tb, band)
         tb._change_band(band)
         wait = True
         starttime = time.time()
