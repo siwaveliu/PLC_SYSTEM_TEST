@@ -4,7 +4,7 @@ import robot
 import plc_tb_ctrl
 import concentrator
 import tc_common
-import plc_packet_helper
+import tc_4_1
 import time
 
 
@@ -13,56 +13,40 @@ import time
 验证多 STA 站点时，表端产生故障事件，事件主动上报准确性和效率
 '''
 
-def run(tb):
+def run(tb, band):
     """
     Args:
         tb (plc_tb_ctrl.PlcSystemTestbench): testbench object .
     """
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
+    assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
 
-    cco_mac_addr      = '00-00-00-00-00-9C'
-    cct = concentrator.Concentrator()
-    cct.open_port()
+    addListFile = u'./addrlist/互操作性表架拓扑地址_事件上报.txt'
 
-    gdw1376p2_frame = cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1)
+    plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
+    tc_4_1.run(tb, band)
 
-    plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
-    tc_common.set_cco_mac_addr(cct, cco_mac_addr)
+    # 重新复位表架，造成上电的事件上报
+    tb.meter_platform_power_reset()
+    # 读取事件上报的地址列表
+    top, nodelist = tc_common.read_node_top_list(addListFile, log=True)
+    # 记录起始时间
+    starttime = time.time()
+    # 600s时间等待组网完成和事件上报，该时间与电科院并不一致
+    while time.time() - starttime < 600:
+        plc_tb_ctrl._debug("wait for AFN06F5")
+        frame1376p2 = tb.cct.wait_for_gdw1376p2_frame(afn=0x06, dt1=16, dt2=0, timeout=time.time() - starttime, tm_assert=False)
+        if frame1376p2 is not None:
+            plc_tb_ctrl._debug(frame1376p2.userdata.a.src)
 
-    plc_tb_ctrl._debug("reset CCO param area")
-    tc_common.reset_cco_param_area(cct)
+    if nodelist.__len__() != 0:
+        s = ''
+        for n in nodelist:
+            s += n + "; "
+        plc_tb_ctrl._debug("these are meters who don't report event: " + s)
 
-    #set sub node address
-    plc_tb_ctrl._debug("add secondary nodes")
-    # key is meter address, value is level
-    nw_top = {
-         cco_mac_addr: 0,
-         '00-00-01-68-50-27': 1,
-         '00-00-01-63-54-52': 2,
-         '00-00-01-63-28-29': 3,
-         '00-00-01-70-33-67': 4,
-         '00-00-01-61-22-95': 5
-    }
+    assert nodelist.__len__() == 0, "still have event that don't report"
 
-    sec_nodes_addr_list = []
-    for meter_addr, level in nw_top.iteritems():
-        if (level > 0):
-            sec_nodes_addr_list.append(meter_addr)
 
-    plc_tb_ctrl._debug(sec_nodes_addr_list)
-    tc_common.add_sub_node_addr(cct, sec_nodes_addr_list)
-
-    plc_tb_ctrl._debug("step5: check nw top")
-    tc_common.check_nw_top(cct, nw_top)
-
-    tc_common.pause_exec("step6: open meter, then press OK")
-
-    plc_tb_ctrl._debug("step7: check AFN06F5")
-    frame1376p2 = cct.wait_for_gdw1376p2_frame(afn=0x06, dt1=16, dt2=0, timeout=3)
-
-    frame1376p2 = cct.wait_for_gdw1376p2_frame(afn=0x06, dt1=16, dt2=0, timeout=3, tm_assert=False)
-    assert frame1376p2 is None, "afn06f5 should not be received again"
-
-    assert False, "not verified yet"
 
 

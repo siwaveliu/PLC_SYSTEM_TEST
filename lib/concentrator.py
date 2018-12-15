@@ -114,7 +114,7 @@ class Concentrator(object):
                 if (len(self.frame) >= GDW1376P2_FRAME_HEAD_SIZE):
                     self.update_gdw1376p2_frame_total_len()
             else:
-	            self.frame = ''
+                self.frame = ''
 
     def read_gdw1376p2_frame(self):
         result = None
