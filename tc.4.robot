@@ -16,9 +16,6 @@ tc_4.2
 tc_4.3
     run iot test    tc_4_3
 
-tc_4.4
-    run iot test    tc_4_4
-
 tc_4.5
     run iot test    tc_4_5
 
@@ -36,3 +33,8 @@ tc_4.9
 
 tc_4.10
     run iot test    tc_4_10
+
+tc_4.4
+    run iot test    tc_4_4
+
+
