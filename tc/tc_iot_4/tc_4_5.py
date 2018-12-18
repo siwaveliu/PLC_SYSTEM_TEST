@@ -31,7 +31,7 @@ def run(tb, band):
     plc_tb_ctrl._debug("step8: single mr")
     tc_common.exec_cct_mr_single(tb, tb.cct, tb.cct.mac_addr,
                                  nodes_list, mr_max_exp_time,
-                                 50, [0x01, 0x01, 0x06, 0x05]) # 上一次日冻结正向有功电能数据
+                                 50, [0x00, 0x00, 0x00, 0x00]) # 上一次日冻结正向有功电能数据
     tb.cct.close_port()
     time.sleep(1)
     plc_tb_ctrl._debug("step9: multiple mr")

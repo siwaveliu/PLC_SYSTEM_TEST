@@ -101,12 +101,12 @@ def del_sub_node_addr(cct,mac_addr_list):
     total = len(mac_addr_list)
     for couter in range(total):
         mac_dict_list.append(mac_addr_list[couter])
-        if couter % 15 == 0 or couter == total - 1:
+        if (couter !=0 and couter % 15 == 0) or couter == total - 1:
+            plc_tb_ctrl._debug(mac_dict_list)
             dl_afn11f2_pkt['user_data']['value']['data']["data"]['num'] = len(mac_dict_list)
             dl_afn11f2_pkt['user_data']['value']['data']["data"]['list'] = mac_dict_list
             frame = concentrator.build_gdw1376p2_frame(dict_content=dl_afn11f2_pkt)
             assert frame is not None
-            # plc_tb_ctrl._debug(frame)
             cct.send_frame(frame)
             # 等待确认
             cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0, tm_assert=False)
@@ -1089,13 +1089,13 @@ def exec_cct_mr_single(tb, cct, cco_addr, sta_addr, timeout, num, di):
                     total_time_used += time_used
 
         plc_tb_ctrl._debug(result)
-
+    total = num * len(sta_addr)
     if succ_cnt > 0:
         plc_tb_ctrl._debug("Total: {}, Succ: {}, Percentage: {}%, Avg Time: {:.2f}".\
-                        format(num, succ_cnt, round(succ_cnt * 100.0 / num), total_time_used / succ_cnt))
+                        format(total, succ_cnt, round(succ_cnt * 100.0 / total), total_time_used / succ_cnt))
     else:
         plc_tb_ctrl._debug("Total: {}, Succ: {}, Percentage: {}%, Avg Time: {:.2f}".\
-                        format(num, succ_cnt, round(succ_cnt * 100.0 / num), total_time_used))
+                        format(total, succ_cnt, round(succ_cnt * 100.0 / total), total_time_used))
 
 
 # 使用F1F1并发抄读STA

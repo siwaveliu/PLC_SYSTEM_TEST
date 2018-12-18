@@ -82,7 +82,7 @@ def run(tb, band, escort=False):
     plc_tb_ctrl._debug("set sub node address to main cco, and start the main net")
     nw_top_main, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file, cco_mac_addr, True)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
-    tc_common.check_nw_top(tb.cct, nw_top_main, 500)
+    tc_common.check_nw_top(tb.cct, nw_top_main, 600)
     return nw_top_main, sec_nodes_addr_list
 
 

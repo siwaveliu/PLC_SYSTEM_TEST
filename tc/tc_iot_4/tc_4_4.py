@@ -28,6 +28,8 @@ def run(tb, band):
     tb.usb_relay_device.open(3)
     nw_top_main, sec_node_list = tc_common.read_node_top_list(node_addr_list_file_proxy, None, True)
     plc_tb_ctrl._debug("wait 700s for top change")
-    time.sleep(700)
+    time.sleep(800)
     tc_common.check_nw_top(tb.cct, nw_top_main, 200)
     tb.usb_relay_device.close(3)
+    # 恢复改变的拓扑
+    tc_common.pause_exec("reset attenuation and power on level3 STA, then press OK")

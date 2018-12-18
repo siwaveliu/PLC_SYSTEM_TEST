@@ -34,7 +34,7 @@ JLINK_PATH = "D:/jlink/JLink_V612a/JLink.exe"
 
 SITRACE_PATH = r"D:\svn\sources\SIWP9006\plc_system_test\venv\Scripts\SiTrace.exe"
 
-SIMUCCT = "./SimulatedConcentrator/"
+SIMUCCT = u"C:/D/plc_system_test/tc/tc_iot_4/SimulatedConcentrator/"
 
 #SIWP9006
 DEVICE="Cortex-M0"

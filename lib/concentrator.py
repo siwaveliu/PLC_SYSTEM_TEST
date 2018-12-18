@@ -154,6 +154,9 @@ class Concentrator(object):
 
     # timeout: wait for x seconds
     def wait_for_gdw1376p2_frame(self, dir = "UL", afn = None, dt1 = None, dt2 = None, timeout = None, tm_assert=True):
+        afn = hex(afn)
+        dt1 = hex(dt1)
+        dt2 = hex(dt2)
         plc_tb_ctrl._debug('Wait for gdw1376p2 frame. DIR={}, AFN={},DT1={},DT2={}'.format(dir, afn, dt1, dt2))
 
         result = None
@@ -169,16 +172,16 @@ class Concentrator(object):
                 if (dir is not None) and (frame.cf.dir != dir):
                     plc_tb_ctrl._debug("Exp dir: {}, Recv: {} ".format(dir, frame.cf.dir))
                     continue
-
-                if (afn is not None) and (frame.user_data.value.afn != afn):
+                tmp = hex(frame.user_data.value.afn)
+                if (afn is not None) and (tmp != afn):
                     plc_tb_ctrl._debug("Exp afn: {}, Recv: {} ".format(afn, frame.user_data.value.afn))
                     continue
-
-                if (dt1 is not None) and (frame.user_data.value.data.dt1 != dt1):
+                tmp = hex(frame.user_data.value.data.dt1)
+                if (dt1 is not None) and (tmp != dt1):
                     plc_tb_ctrl._debug("Exp dt1: {}, Recv: {} ".format(dt1, frame.user_data.value.data.dt1))
                     continue
-
-                if (dt2 is not None) and (frame.user_data.value.data.dt2 != dt2):
+                tmp = hex(frame.user_data.value.data.dt2)
+                if (dt2 is not None) and (tmp != dt2):
                     plc_tb_ctrl._debug("Exp dt2: {}, Recv: {} ".format(dt2, frame.user_data.value.data.dt2))
                     continue
 

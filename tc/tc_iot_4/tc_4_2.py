@@ -53,7 +53,7 @@ def run(tb, band):
     nw_top_main, sec_nodes_addr_list =tc_common.read_node_top_list(node_addr_list_file_static, cco_mac_addr, True)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
     # 检查拓扑图
-    tc_common.check_nw_top(tb.cct, nw_top_main, 500)
+    tc_common.check_nw_top(tb.cct, nw_top_main, 600)
 
     # 添加后入网的从节点
     plc_tb_ctrl._debug("set another half of nodes's address to main cco, and start the main net")
@@ -62,7 +62,7 @@ def run(tb, band):
     # 更新拓扑图
     nw_top_main.update(nw_top_main_other)
     # 检查新的拓扑图
-    tc_common.check_nw_top(tb.cct, nw_top_main, 500)
+    tc_common.check_nw_top(tb.cct, nw_top_main, 600)
 
     # Dialogs.pause_execution("Add new secondary nodes")
 

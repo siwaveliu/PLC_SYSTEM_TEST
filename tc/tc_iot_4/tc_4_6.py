@@ -26,7 +26,7 @@ def run(tb, band):
     nw_top, nodes_list = tc_4_1.run(tb, band)
 
     # 激活tb，监听CCO发出广播校时帧
-    tc_common.activate_tb(tb, band)
+    tc_common.activate_tb(tb, int(band))
 
     plc_tb_ctrl._debug("step6: start time calibration")
     dl_1376p2_pkt = tb._load_data_file(data_file='afn05f3_dl.yaml')
@@ -35,12 +35,12 @@ def run(tb, band):
     now.second.__add__(1)
     snow = now.strftime("%S-%M-%H-%d-%m-%y")
     snow = snow.split('-')
-    dl_1376p2_645[10] = snow[0]
-    dl_1376p2_645[11] = snow[1]
-    dl_1376p2_645[12] = snow[2]
-    dl_1376p2_645[13] = snow[3]
-    dl_1376p2_645[14] = snow[4]
-    dl_1376p2_645[15] = snow[5]
+    dl_1376p2_645[10] = int(snow[0])
+    dl_1376p2_645[11] = int(snow[1])
+    dl_1376p2_645[12] = int(snow[2])
+    dl_1376p2_645[13] = int(snow[3])
+    dl_1376p2_645[14] = int(snow[4])
+    dl_1376p2_645[15] = int(snow[5])
     # 计算校验和必须放在645帧最后
     dl_1376p2_645[-2] = meter.calc_dlt645_cs8(map(chr, dl_1376p2_645))
 
