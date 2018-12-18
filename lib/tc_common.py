@@ -1056,40 +1056,41 @@ def exec_cct_mr_single(tb, cct, cco_addr, sta_addr, timeout, num, di):
     for i in range(num):
         dl_afn13f1_pkt = tb._load_data_file(data_file='afn13f1_dl.yaml')
         for sta in sta_addr:
-            sn += 1
-            dl_afn13f1_pkt['cf']['prm']  = 'MASTER'
-            dl_afn13f1_pkt['user_data']['value']['r']['comm_module_flag']  = 1
-            dl_afn13f1_pkt['user_data']['value']['r']['sn'] = i
-            dl_afn13f1_pkt['user_data']['value']['a']['src'] = cco_addr
-            dl_afn13f1_pkt['user_data']['value']['a']['dst'] = sta
-            dlt645_frame = create_dlt645_data_read_req_frame(sta, di)
-            dl_afn13f1_pkt['user_data']['value']['data']['data']['packet_len'] = len(dlt645_frame)
-            dl_afn13f1_pkt['user_data']['value']['data']['data']['packet'] = [ord(d) for d in dlt645_frame]
+            for d in di:
+                sn += 1
+                dl_afn13f1_pkt['cf']['prm']  = 'MASTER'
+                dl_afn13f1_pkt['user_data']['value']['r']['comm_module_flag']  = 1
+                dl_afn13f1_pkt['user_data']['value']['r']['sn'] = i
+                dl_afn13f1_pkt['user_data']['value']['a']['src'] = cco_addr
+                dl_afn13f1_pkt['user_data']['value']['a']['dst'] = sta
+                dlt645_frame = create_dlt645_data_read_req_frame(sta, d)
+                dl_afn13f1_pkt['user_data']['value']['data']['data']['packet_len'] = len(dlt645_frame)
+                dl_afn13f1_pkt['user_data']['value']['data']['data']['packet'] = [ord(d) for d in dlt645_frame]
 
-            msdu = concentrator.build_gdw1376p2_frame(dict_content=dl_afn13f1_pkt)
-            assert msdu is not None
+                msdu = concentrator.build_gdw1376p2_frame(dict_content=dl_afn13f1_pkt)
+                assert msdu is not None
 
-            start_time = time.time()
-            cct.send_frame(msdu)
+                start_time = time.time()
+                cct.send_frame(msdu)
 
-            gdw1376p2_frame = cct.wait_for_gdw1376p2_frame(afn=0x13, dt1=0x01, dt2=0, timeout=timeout, tm_assert=False)
-            time_used = time.time() - start_time
+                gdw1376p2_frame = cct.wait_for_gdw1376p2_frame(afn=0x13, dt1=0x01, dt2=0, timeout=timeout, tm_assert=False)
+                time_used = time.time() - start_time
 
-            if gdw1376p2_frame is None:
-                result = "[{}]: FAIL".format(i)
-            else:
-                afn13f1_data = gdw1376p2_frame.user_data.value.data.data
-                if 0 == afn13f1_data.packet_len:
-                    continue
+                if gdw1376p2_frame is None:
+                    result = "[{}]: FAIL".format(i)
+                else:
+                    afn13f1_data = gdw1376p2_frame.user_data.value.data.data
+                    if 0 == afn13f1_data.packet_len:
+                        continue
 
-                dlt645_frame = "".join([chr(d) for d in afn13f1_data.packet])
-                if (verify_mr_result(dlt645_frame, [di])):
-                    succ_cnt += 1
-                    result = "[{}]: SUCC. Time: {:.2f} second".format(i, time_used)
-                    total_time_used += time_used
+                    dlt645_frame = "".join([chr(d) for d in afn13f1_data.packet])
+                    if (verify_mr_result(dlt645_frame, [d])):
+                        succ_cnt += 1
+                        result = "[{}]: SUCC. Time: {:.2f} second".format(i, time_used)
+                        total_time_used += time_used
 
         plc_tb_ctrl._debug(result)
-    total = num * len(sta_addr)
+    total = num * len(sta_addr) * len(di)
     if succ_cnt > 0:
         plc_tb_ctrl._debug("Total: {}, Succ: {}, Percentage: {}%, Avg Time: {:.2f}".\
                         format(total, succ_cnt, round(succ_cnt * 100.0 / total), total_time_used / succ_cnt))

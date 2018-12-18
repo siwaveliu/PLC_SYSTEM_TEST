@@ -154,9 +154,12 @@ class Concentrator(object):
 
     # timeout: wait for x seconds
     def wait_for_gdw1376p2_frame(self, dir = "UL", afn = None, dt1 = None, dt2 = None, timeout = None, tm_assert=True):
-        afn = hex(afn)
-        dt1 = hex(dt1)
-        dt2 = hex(dt2)
+        if  afn is not None:
+            afn = hex(afn)
+        if dt1 is not None:
+            dt1 = hex(dt1)
+        if dt2 is not None:
+            dt2 = hex(dt2)
         plc_tb_ctrl._debug('Wait for gdw1376p2 frame. DIR={}, AFN={},DT1={},DT2={}'.format(dir, afn, dt1, dt2))
 
         result = None

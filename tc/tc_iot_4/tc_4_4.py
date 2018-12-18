@@ -27,8 +27,9 @@ def run(tb, band):
     # 关闭代理层级
     tb.usb_relay_device.open(3)
     nw_top_main, sec_node_list = tc_common.read_node_top_list(node_addr_list_file_proxy, None, True)
-    plc_tb_ctrl._debug("wait 700s for top change")
-    time.sleep(800)
+    t = 800
+    plc_tb_ctrl._debug("wait %ds for top change" % t)
+    time.sleep(t)
     tc_common.check_nw_top(tb.cct, nw_top_main, 200)
     tb.usb_relay_device.close(3)
     # 恢复改变的拓扑

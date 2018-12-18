@@ -76,11 +76,11 @@ def run(tb, band, escort=False):
     # 启动陪测CCO和STA组网
     if escort:
         plc_tb_ctrl._debug("set sub node address to consorting cco, and start the escort net")
-        nw_top_main_other, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file_other, cco_mac_addr, True)
+        nw_top_main_other, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file_other, cco_mac_addr, False)
         tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
     # set sub node address
     plc_tb_ctrl._debug("set sub node address to main cco, and start the main net")
-    nw_top_main, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file, cco_mac_addr, True)
+    nw_top_main, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file, cco_mac_addr, False)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
     tc_common.check_nw_top(tb.cct, nw_top_main, 600)
     return nw_top_main, sec_nodes_addr_list

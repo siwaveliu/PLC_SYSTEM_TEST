@@ -34,21 +34,9 @@ def run(tb, cct, band):
 
     # set sub node address
     plc_tb_ctrl._debug("set sub node address to main cco, and start the main net")
-    f = open(node_addr_list_file,'r')
-    addr_list = f.readlines()
-    nw_top_main = { cco_mac_addr : 0}
-    for l in addr_list:
-        # key is meter address, value is level
-        key, value = l.split(':')
-        nw_top_main[key] = int(value.strip())
-    f.close()
-    sec_nodes_addr_list = []
-    for meter_addr, level in nw_top_main.iteritems():
-        if (level > 0):
-            sec_nodes_addr_list.append(meter_addr)
-    plc_tb_ctrl._debug(sec_nodes_addr_list)
-    tc_common.add_sub_node_addr(cct, sec_nodes_addr_list)
+    nw_top_main, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file, cco_mac_addr, False)
 
+    tc_common.add_sub_node_addr(cct, sec_nodes_addr_list)
     tc_common.check_nw_top(cct, nw_top_main, 800)
 
     r_band = tc_common.read_cco_band(cct)

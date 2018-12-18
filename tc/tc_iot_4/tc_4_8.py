@@ -33,8 +33,8 @@ def run(tb, band):
     for i in range(len(nodelist)):
         nodelist[i] = nodelist[i].replace('-','')
     # 計算結束时间
-    stoptime = time.time() + 600
-    # 600s时间等待组网完成和事件上报，该时间与电科院并不一致
+    stoptime = time.time() + 1000
+    # 1000s时间等待组网完成和事件上报，该时间与电科院并不一致
     while stoptime - time.time() > 0:
         frame1376p2 = tb.cct.wait_for_gdw1376p2_frame(afn=0x06, dt1=16, dt2=0, timeout=(stoptime - time.time()),
                                                       tm_assert=False)
