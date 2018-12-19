@@ -24,14 +24,15 @@ def run(tb, band):
     addListFile = u'./tc/tc_iot_4/addrlist/互操作性表架拓扑地址_事件上报.txt'
 
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
-    tc_4_1.run(tb, band)
-
-    # 重新复位表架，造成上电的事件上报
-    tb.meter_platform_power_reset()
+    # tc_4_1.run(tb, band)
+    #
+    # # 重新复位表架，造成上电的事件上报
+    # tb.meter_platform_power_reset()
     # 读取事件上报的地址列表
     top, nodelist = tc_common.read_node_top_list(addListFile, log=True)
     for i in range(len(nodelist)):
         nodelist[i] = nodelist[i].replace('-','')
+    plc_tb_ctrl._debug(nodelist)
     # 計算結束时间
     stoptime = time.time() + 1000
     # 1000s时间等待组网完成和事件上报，该时间与电科院并不一致
@@ -41,19 +42,13 @@ def run(tb, band):
         if frame1376p2 is not None:
             frame645 = frame1376p2.user_data.value.data.data
             tc_common.send_gdw1376p2_ack(tb.cct, frame1376p2.user_data.value.r.sn)
-            addrTmp = list(frame645.data)
-            addrTmp = addrTmp[-24: -30: -1]
-            addr = ""
-            for a in addrTmp:
-                if a < 10:
-                    addr += '0' + hex(a)
-                else:
-                    addr += hex(a)
-            addr = addr.replace('0x','')
+            addrTmp = frame645.data[-24: -30: -1]
+            # "".join("{:02x}".format(x) for x in addrTmp)
+            addr = "".join("%02x" % x for x in addrTmp)
             for a in nodelist:
                 if a == addr:
                     nodelist.remove(a)
-                    plc_tb_ctrl._debug(addr)
+            plc_tb_ctrl._debug(addr)
         if  nodelist.__len__() == 0:
             break
     if nodelist.__len__() != 0:
