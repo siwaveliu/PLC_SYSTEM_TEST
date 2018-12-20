@@ -247,8 +247,6 @@ def read_mr_max_exp_time(cct):
 
 def send_gdw1376p2_ack(cct, sn):
     assert isinstance(cct, concentrator.Concentrator)
-
-    cct.clear_port_rx_buf()
     frame = concentrator.build_gdw1376p2_frame(dict_content= {
         'head':
         {'len': 0},
@@ -429,7 +427,7 @@ def send_dlt645_addr_read_reply_frame(m,addr):
 
 # di: 数据标识，未+0x33
 def create_dlt645_data_read_req_frame(addr, di):
-    di = [d+0x33 for d in di]
+    ditmp = [d+0x33 for d in di]
     frame = meter.build_dlt645_07_frame(dict_content={
         'head':{
                 'addr': addr,
@@ -442,10 +440,10 @@ def create_dlt645_data_read_req_frame(addr, di):
         'body':{
                 #there is a RawCopy, so 'value' is a must
                 'value':{
-                        'DI0':di[0],
-                        'DI1':di[1],
-                        'DI2':di[2],
-                        'DI3':di[3],
+                        'DI0':ditmp[0],
+                        'DI1':ditmp[1],
+                        'DI2':ditmp[2],
+                        'DI3':ditmp[3],
                         }
                 },
 
@@ -961,7 +959,7 @@ def check_nw_top(cct, nw_top, timeout=120):
             timeoutcounter += 1
             cct.clear_port_rx_buf()
             cct.close_port()
-            time.sleep(0.2)
+            time.sleep(0.5)
             cct.open_port()
             assert timeoutcounter < 3, "read cco top info fail"
             continue
@@ -970,7 +968,6 @@ def check_nw_top(cct, nw_top, timeout=120):
         data = afn10f21_ul_frame.user_data.value.data.data
 
         plc_tb_ctrl._debug("node num: {}".format(data.total_num))
-        out_len = out_nw_top.__len__()
         for n in data.node_list:
             if out_nw_top.has_key(n.addr):
                 del out_nw_top[n.addr]
@@ -1002,7 +999,7 @@ def check_nw_top(cct, nw_top, timeout=120):
         if time.time() > stop_time:
             break
 
-        time.sleep(calc_timeout((data.total_num - data.curr_num) // 10 + 1))
+        time.sleep((node_num - data.curr_num) // 10 + 1)
 
     if (succ):
         plc_tb_ctrl._debug("nw established within {:.2f} seconds".format(time.time() - start_time))
@@ -1049,21 +1046,21 @@ def verify_mr_result(dlt645_frame, di_list):
 
 
 # 使用13F1点抄STA
-def exec_cct_mr_single(tb, cct, cco_addr, sta_addr, timeout, num, di):
+def exec_cct_mr_single(tb, cct, cco_addr, sta_addr, timeout, num, di_list):
     succ_cnt = 0
     total_time_used = 0
     sn = 0
     for i in range(num):
         dl_afn13f1_pkt = tb._load_data_file(data_file='afn13f1_dl.yaml')
         for sta in sta_addr:
-            for d in di:
+            for di in di_list:
                 sn += 1
                 dl_afn13f1_pkt['cf']['prm']  = 'MASTER'
                 dl_afn13f1_pkt['user_data']['value']['r']['comm_module_flag']  = 1
                 dl_afn13f1_pkt['user_data']['value']['r']['sn'] = i
                 dl_afn13f1_pkt['user_data']['value']['a']['src'] = cco_addr
                 dl_afn13f1_pkt['user_data']['value']['a']['dst'] = sta
-                dlt645_frame = create_dlt645_data_read_req_frame(sta, d)
+                dlt645_frame = create_dlt645_data_read_req_frame(sta, di)
                 dl_afn13f1_pkt['user_data']['value']['data']['data']['packet_len'] = len(dlt645_frame)
                 dl_afn13f1_pkt['user_data']['value']['data']['data']['packet'] = [ord(d) for d in dlt645_frame]
 
@@ -1084,13 +1081,13 @@ def exec_cct_mr_single(tb, cct, cco_addr, sta_addr, timeout, num, di):
                         continue
 
                     dlt645_frame = "".join([chr(d) for d in afn13f1_data.packet])
-                    if (verify_mr_result(dlt645_frame, [d])):
+                    if (verify_mr_result(dlt645_frame, [di])):
                         succ_cnt += 1
                         result = "[{}]: SUCC. Time: {:.2f} second".format(i, time_used)
                         total_time_used += time_used
 
         plc_tb_ctrl._debug(result)
-    total = num * len(sta_addr) * len(di)
+    total = num * len(sta_addr) * len(di_list)
     if succ_cnt > 0:
         plc_tb_ctrl._debug("Total: {}, Succ: {}, Percentage: {}%, Avg Time: {:.2f}".\
                         format(total, succ_cnt, round(succ_cnt * 100.0 / total), total_time_used / succ_cnt))

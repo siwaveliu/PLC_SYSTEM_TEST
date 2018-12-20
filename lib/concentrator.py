@@ -130,7 +130,7 @@ class Concentrator(object):
             self.frame += frame_body_tail
 
         # check frame
-        if (len(self.frame) >= GDW1376P2_FRAME_HEAD_SIZE) and (len(self.frame) == self.frame_total_len):
+        if (len(self.frame) >= GDW1376P2_FRAME_HEAD_SIZE) and (len(self.frame) >= self.frame_total_len):
             try:
                 frame = gdw1376p2.gdw1376p2.parse(self.frame)
                 cs = calc_gdw1376p2_cs8(self.frame)
@@ -160,12 +160,11 @@ class Concentrator(object):
             dt1 = hex(dt1)
         if dt2 is not None:
             dt2 = hex(dt2)
-        plc_tb_ctrl._debug('Wait for gdw1376p2 frame. DIR={}, AFN={},DT1={},DT2={}'.format(dir, afn, dt1, dt2))
-
-        result = None
         if timeout is None:
             timeout = DEFAULT_GDW1376P2_FRAME_TIMEOUT
         timeout *= config.CLOCK_RATE
+        plc_tb_ctrl._debug('Wait for gdw1376p2 frame. DIR={}, AFN={},DT1={},DT2={}, time: {:.1f}'.format(dir, afn, dt1, dt2, timeout))
+        result = None
         stop_time = time.time() + timeout
         timeout_str = robot.utils.secs_to_timestr(timeout)
         timeout_error = '{0} timeout'.format(timeout_str)
