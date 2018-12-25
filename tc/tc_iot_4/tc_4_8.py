@@ -24,10 +24,10 @@ def run(tb, band):
     addListFile = u'./tc/tc_iot_4/addrlist/互操作性表架拓扑地址_事件上报.txt'
 
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
-    # tc_4_1.run(tb, band)
-    #
-    # # 重新复位表架，造成上电的事件上报
-    # tb.meter_platform_power_reset()
+    tc_4_1.run(tb, band, False)
+
+    # 重新复位表架，造成上电的事件上报
+    tb.meter_platform_power_determind_reset()
     # 读取事件上报的地址列表
     top, nodelist = tc_common.read_node_top_list(addListFile, log=True)
     for i in range(len(nodelist)):

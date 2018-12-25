@@ -10,7 +10,7 @@ import config
 验证多 STA 站点时组网准确性和效率
 '''
 
-def run(tb, band, escort=False):
+def run(tb, band, escort=True):
     """
     Args:
         tb (plc_tb_ctrl.PlcSystemTestbench): testbench object .
@@ -26,42 +26,49 @@ def run(tb, band, escort=False):
 
     cco_mac_addr = '00-00-00-00-00-9C'  # type: str
     cco_mac_addr_other = '00-00-00-00-00-9D'  # type: str
-
+    tb.cct.mac_addr = cco_mac_addr
     if  escort:
         cct_other = concentrator.Concentrator(config.CONCENTRATOR_OTHER_PORT)
         cct_other.open_port()
+        cct_other.mac_addr = cco_mac_addr_other
 
     band = int(band)
     if  band != config.DEFAULT_BAND:
-        cco_switch_band.run(tb, tb.cct, band)
-        config.DEFAULT_BAND = band
-
-    # 必须先打开串口以免上电后的延迟导致无法收到03H_F10
-
-
-    # 确认CCO已经激活
-    res = None
-    for i in range(3):
-        res = tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
-        if  res is None:
-            tb.meter_platform_power_reset()
-            continue
+        if escort :
+            cco_switch_band.run(tb, tb.cct, band, node_addr_list_file)
+            # 在脚本启动的通用入口，默认会关闭陪测得cco
+            tb._deactivate_tb()
+            tb.meter_platform_power_escort(1)
+            cco_switch_band.run(tb, cct_other, band, node_addr_list_file_other)
         else:
-            break
-    assert res is not None, "wait 03H_F10 failed, check cco device"
-    if escort:
+            cco_switch_band.run(tb, tb.cct, band, node_addr_list_file)
+        config.DEFAULT_BAND = band
+    else:
+        # 确认CCO已经激活
+        res = None
         for i in range(3):
-            res = cct_other.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
-            if res is None:
-                tb.meter_platform_power_reset()
+            res = tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
+            if  res is None:
+                tb.meter_platform_power_determind_reset()
                 continue
             else:
                 break
-        assert res is not None, "wait 03H_F10 failed, check cco_other device"
+        assert res is not None, "wait 03H_F10 failed, check cco device"
+        if escort:
+            # 必须先打开串口以免上电后的延迟导致无法收到03H_F10
+            tb.meter_platform_power_escort(1)
+            for i in range(3):
+                res = cct_other.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
+                if res is None:
+                    tb.meter_platform_power_escort(2)
+                    continue
+                else:
+                    break
+            assert res is not None, "wait 03H_F10 failed, check cco_other device"
     # 设置CCO主节点地址
     plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
     tc_common.set_cco_mac_addr(tb.cct, cco_mac_addr)
-    tb.cct.mac_addr = cco_mac_addr
+
     if escort:
         plc_tb_ctrl._debug("set other CCO addr={}".format(cco_mac_addr_other))
         tc_common.set_cco_mac_addr(cct_other, cco_mac_addr_other)
@@ -76,8 +83,8 @@ def run(tb, band, escort=False):
     # 启动陪测CCO和STA组网
     if escort:
         plc_tb_ctrl._debug("set sub node address to consorting cco, and start the escort net")
-        nw_top_main_other, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file_other, cco_mac_addr, False)
-        tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
+        nw_top_main_other, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file_other, cco_mac_addr_other, False)
+        tc_common.add_sub_node_addr(cct_other, sec_nodes_addr_list)
     # set sub node address
     plc_tb_ctrl._debug("set sub node address to main cco, and start the main net")
     nw_top_main, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file, cco_mac_addr, False)

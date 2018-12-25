@@ -12,10 +12,9 @@ import time
 
 
 #设置主节点地址函数
-def set_cco_mac_addr(cct,mac_addr):
+def set_cco_mac_addr(cct, mac_addr):
     assert isinstance(cct, concentrator.Concentrator)
     cct.clear_port_rx_buf()
-    cct.mac_addr = mac_addr
     frame = concentrator.build_gdw1376p2_frame(dict_content= {
         'head':{'len':0},
         'cf':{'dir':'DL','prm':'MASTER','comm_mode':'BB_PLC'},
@@ -1465,6 +1464,7 @@ def write_cco_band(cct, band):
     cct.send_frame(frame)
     # 等待确认
     cct.wait_for_gdw1376p2_frame(afn=0x00, dt1=0x01, dt2=0)
+
 
 def read_node_top_list(file, cco_mac_addr=None, log=False):
     # type: (unicode, str, bool) -> object

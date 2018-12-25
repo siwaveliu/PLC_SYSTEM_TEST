@@ -22,7 +22,7 @@ def run(tb, band):
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
 
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
-    nw_top, nodes_list = tc_4_1.run(tb, band)
+    nw_top, nodes_list = tc_4_1.run(tb, band, False)
 
 
     plc_tb_ctrl._debug("step6: send 11f5")

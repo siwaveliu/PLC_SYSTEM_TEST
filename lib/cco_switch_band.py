@@ -10,21 +10,20 @@ import config
 cco 切频段
 '''
 
-def run(tb, cct, band):
+def run(tb, cct, band, addrfilepath):
     """
     Args:
         tb (plc_tb_ctrl.PlcSystemTestbench): testbench object .
     """
-    node_addr_list_file = config.IOT_TOP_LIST_ALL
+    node_addr_list_file = addrfilepath
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(cct, concentrator.Concentrator), "cct type is not concentrator"
-    cco_mac_addr = '00-00-00-00-00-9C'  # type: str
+    cco_mac_addr = cct.mac_addr  # type: str
 
     cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1)
 
     plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
     tc_common.set_cco_mac_addr(cct, cco_mac_addr)
-    cct.mac_addr = cco_mac_addr
 
     plc_tb_ctrl._debug("reset CCO param area")
     tc_common.reset_cco_param_area(cct)

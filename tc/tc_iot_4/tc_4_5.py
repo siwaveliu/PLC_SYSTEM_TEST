@@ -23,7 +23,7 @@ def run(tb, band):
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
 
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
-    nw_top, nodes_list = tc_4_1.run(tb, band)
+    nw_top, nodes_list = tc_4_1.run(tb, band, False)
 
     plc_tb_ctrl._debug("step2: get meter read max exp time")
     mr_max_exp_time = tc_common.read_mr_max_exp_time(tb.cct) + 5

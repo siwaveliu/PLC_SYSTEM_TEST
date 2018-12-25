@@ -315,8 +315,9 @@ class PlcSystemTestbench(object):
         _trace_printf('===================')
 
         self._init_param()
-        self.meter_platform_power_reset()
-
+        self.meter_platform_power_determind_reset()
+        # 默认情况下关闭陪测cco
+        self.meter_platform_power_escort(0)
         tc_file_name = tc_name + '.py'
         tc_file_full_path = None
         dst_dir = "plc_system_test"
@@ -1214,16 +1215,31 @@ class PlcSystemTestbench(object):
         result = self.usb_relay_device.close(EVENT_CHANNEL)
         assert 0 == result, "close relay fail"
 
-    def meter_platform_power_reset(self):
-        self.usb_relay_device.open(1, 2, 3)
+    def meter_platform_power_determind_reset(self):
+        self.usb_relay_device.open(1, 3)
         time.sleep(5)
         self.tb_uart.close_tb_test_port()
         self.tb_uart.open_tb_test_port()
         _debug("power off all of meters and cco, delay 5s")
-        self.usb_relay_device.close(1, 2, 3)
+        self.usb_relay_device.close(1, 3)
         _debug("power on all of meters and cco. delay 5s for boot")
         time.sleep(5)
         self._deactivate_tb()
+
+    def meter_platform_power_escort(self, status=0):
+        '''
+        :param status: 0=off;1=on;2=reset,use 5s
+        :return: None
+        '''
+        if status == 0:
+            self.usb_relay_device.open(2)
+        elif status == 1:
+            self.usb_relay_device.close(2)
+        elif status == 2:
+            self.usb_relay_device.open(2)
+            time.sleep(5)
+            self.usb_relay_device.close(2)
+
 
 if __name__ == '__main__':
     pass

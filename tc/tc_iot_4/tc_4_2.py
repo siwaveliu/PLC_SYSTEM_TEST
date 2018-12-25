@@ -23,27 +23,26 @@ def run(tb, band):
 
     node_addr_list_file_static = config.IOT_TOP_LIST_STATIC
     node_addr_list_file_dynatic = config.IOT_TOP_LIST_DYNATIC
+    cco_mac_addr      = '00-00-00-00-00-9C'
+    tb.cct.mac_addr = cco_mac_addr
     band = int(band)
     if  band != config.DEFAULT_BAND:
+        # 切换band前必须复位，如果是脚本刚启动，那么就不需要复位了
         cco_switch_band.run(tb, tb.cct, band)
         config.DEFAULT_BAND = band
-    tb.meter_platform_power_reset()
-
-    # 确认CCO已经激活
-    res = None
-    for i in range(3):
-        tb.meter_platform_power_reset()
-        res = tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
-        if  res is None:
-            continue
-        else:
-            break
-    assert res is not None, "wait 03H_F10 failed, check cco device"
+    else:# 如果切换频段成功，那么就不需要再确认CCO已经激活了
+        # 确认CCO已经激活
+        res = None
+        for i in range(3):
+            res = tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
+            if  res is None:
+                tb.meter_platform_power_determind_reset()
+            else:
+                break
+        assert res is not None, "wait 03H_F10 failed, check cco device"
     # 设置主节点地址
-    cco_mac_addr      = '00-00-00-00-00-9C'
     plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
     tc_common.set_cco_mac_addr(tb.cct, cco_mac_addr)
-    tb.cct.mac_addr = cco_mac_addr
 
     plc_tb_ctrl._debug("reset CCO param area")
     tc_common.reset_cco_param_area(tb.cct)

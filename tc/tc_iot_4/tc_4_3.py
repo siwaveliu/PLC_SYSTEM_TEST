@@ -21,7 +21,7 @@ def run(tb, band):
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
 
-    nw_top_main, sec_nodes_addr_list = tc_4_1.run(tb, band)
+    nw_top_main, sec_nodes_addr_list = tc_4_1.run(tb, band, False)
     node_addr_list_file_dynatic = config.IOT_TOP_LIST_DYNATIC
     # 删除动态文件中从节点
     plc_tb_ctrl._debug("del another half of nodes's address to main cco, and start the main net")
