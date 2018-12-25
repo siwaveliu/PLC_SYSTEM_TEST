@@ -36,24 +36,22 @@ def run(tb, band):
         for i in range(3):
             res = tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
             if  res is None:
-                tb.meter_platform_power_determind_reset()
+                tb.meter_platform_power_tested_reset()
             else:
                 break
         assert res is not None, "wait 03H_F10 failed, check cco device"
     # 设置主节点地址
     plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
     tc_common.set_cco_mac_addr(tb.cct, cco_mac_addr)
-
+    # 清除CCO档案
     plc_tb_ctrl._debug("reset CCO param area")
     tc_common.reset_cco_param_area(tb.cct)
-
     # 添加先入网的从节点
     plc_tb_ctrl._debug("set half of nodes's address to main cco, and start the main net")
     nw_top_main, sec_nodes_addr_list =tc_common.read_node_top_list(node_addr_list_file_static, cco_mac_addr, True)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
     # 检查拓扑图
     tc_common.check_nw_top(tb.cct, nw_top_main, 600)
-
     # 添加后入网的从节点
     plc_tb_ctrl._debug("set another half of nodes's address to main cco, and start the main net")
     nw_top_main_other, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file_dynatic, None, True)

@@ -315,7 +315,7 @@ class PlcSystemTestbench(object):
         _trace_printf('===================')
 
         self._init_param()
-        self.meter_platform_power_determind_reset()
+        self.meter_platform_power_tested_reset()
         # 默认情况下关闭陪测cco
         self.meter_platform_power_escort(0)
         tc_file_name = tc_name + '.py'
@@ -347,7 +347,7 @@ class PlcSystemTestbench(object):
             config.IOT_TOP_LIST_PROXY += tmp
             config.IOT_TOP_LIST_DYNATIC += tmp
             config.IOT_TOP_LIST_STATIC += tmp
-            config.IOT_TOP_LIST_DETERMINAND += tmp
+            config.IOT_TOP_LIST_TESTED += tmp
             config.IOT_TOP_LIST_ESCORT += tmp
 
         # 执行用例
@@ -1215,7 +1215,7 @@ class PlcSystemTestbench(object):
         result = self.usb_relay_device.close(EVENT_CHANNEL)
         assert 0 == result, "close relay fail"
 
-    def meter_platform_power_determind_reset(self):
+    def meter_platform_power_tested_reset(self):
         self.usb_relay_device.open(1, 3)
         time.sleep(5)
         self.tb_uart.close_tb_test_port()

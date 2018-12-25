@@ -80,7 +80,7 @@ IOT_TOP_LIST_PROXY = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_代�
 IOT_TOP_LIST_DYNATIC = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_动态'
 IOT_TOP_LIST_STATIC = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_静态'
 IOT_TOP_LIST_ALL = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_所有'
-IOT_TOP_LIST_DETERMINAND = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_待测'
+IOT_TOP_LIST_TESTED = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_待测'
 IOT_TOP_LIST_ESCORT = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_陪测'
 
 # TB can not be Reset, so add win-serial for reset

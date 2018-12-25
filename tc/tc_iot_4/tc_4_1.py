@@ -19,7 +19,7 @@ def run(tb, band, escort=True):
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
     if  escort:
-        node_addr_list_file = config.IOT_TOP_LIST_DETERMINAND
+        node_addr_list_file = config.IOT_TOP_LIST_TESTED
         node_addr_list_file_other = config.IOT_TOP_LIST_ESCORT
     else:
         node_addr_list_file = config.IOT_TOP_LIST_ALL
@@ -49,7 +49,7 @@ def run(tb, band, escort=True):
         for i in range(3):
             res = tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
             if  res is None:
-                tb.meter_platform_power_determind_reset()
+                tb.meter_platform_power_tested_reset()
                 continue
             else:
                 break
