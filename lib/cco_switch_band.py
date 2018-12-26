@@ -37,8 +37,8 @@ def run(tb, cct, band):
     nw_top_main, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file, cco_mac_addr, False)
 
     tc_common.add_sub_node_addr(cct, sec_nodes_addr_list)
-    tc_common.check_nw_top(cct, nw_top_main, 800)
 
+    tc_common.check_nw_top(cct, nw_top_main, 800)
     r_band = tc_common.read_cco_band(cct)
     plc_tb_ctrl._debug("default Band: " + str(r_band))
 
