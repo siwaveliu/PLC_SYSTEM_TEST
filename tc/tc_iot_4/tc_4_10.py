@@ -4,74 +4,68 @@ import robot
 import plc_tb_ctrl
 import concentrator
 import tc_common
-import plc_packet_helper
+import subprocess
 import time
-
-
+import config
+import cco_switch_band
 '''
 4.10 多网络综合测试
 验证在多网络条件下，每一个网络的抄表效率和准确性
 '''
 
-def run(tb):
+
+def run(tb, band):
     """
     Args:
         tb (plc_tb_ctrl.PlcSystemTestbench): testbench object .
     """
-    assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
+    assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench), "tb type is not plc_tb_ctrl.PlcSystemTestbench"
+    assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
 
-    cco_mac_addr      = '00-00-00-00-00-9C'
-    cct = concentrator.Concentrator()
-    cct.open_port()
+    plc_tb_ctrl._debug("step1: switch band if needed.")
+    tb.cct.mac_addr =  '00-12-34-56-78-90'
 
-    gdw1376p2_frame = cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1)
+    cct_other = concentrator.Concentrator(config.CONCENTRATOR_OTHER_PORT)
+    cct_other.open_port()
+    cct_other.mac_addr = '00-12-34-56-78-91'
 
-    plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
-    tc_common.set_cco_mac_addr(cct, cco_mac_addr)
+    band = int(band)
+    if  band != config.DEFAULT_BAND:
+        cco_switch_band.run(tb, tb.cct, band, config.IOT_TOP_LIST_TESTED)
+        # 在脚本启动的通用入口，默认会关闭陪测得cco
+        tb._deactivate_tb()
+        tb.meter_platform_power_escort(1)
+        cco_switch_band.run(tb, cct_other, band, config.IOT_TOP_LIST_ESCORT)
+    else:
+        plc_tb_ctrl._debug("wait 5s for reset")
+        time.sleep(5)
+    # 关闭串口
+    tb.cct.close_port()
+    cct_other.close_port()
+    # 待测CCO复位
+    plc_tb_ctrl._debug("reset determinand cco")
+    tb.meter_platform_power_tested_reset()
+    # 陪测的CCO复位
+    tb.meter_platform_power_escort(2)
 
-    plc_tb_ctrl._debug("reset CCO param area")
-    tc_common.reset_cco_param_area(cct)
+    plc_tb_ctrl._debug("step8: read mr")
+    m1 = subprocess.Popen([config.SIMUCCT + "SimulatedConcentrator.exe",
+                          "true",
+                          config.SIMUCCT + "tc_4_10_read_2_1.ini"])
+    m2 = subprocess.Popen([config.SIMUCCT + "SimulatedConcentrator.exe",
+                          "true",
+                          config.SIMUCCT + "tc_4_10_read_2_2.ini"])
 
-    #set sub node address
-    plc_tb_ctrl._debug("add secondary nodes")
-    # key is meter address, value is level
-    nw_top = {
-         cco_mac_addr: 0,
-         '00-00-01-68-50-27': 1,
-         '00-00-01-63-54-52': 2,
-         '00-00-01-63-28-29': 3,
-         '00-00-01-70-33-67': 4,
-         '00-00-01-61-22-95': 5
-    }
-
-    sec_nodes_addr_list = []
-    for meter_addr, level in nw_top.iteritems():
-        if (level > 0):
-            sec_nodes_addr_list.append(meter_addr)
-
-    plc_tb_ctrl._debug(sec_nodes_addr_list)
-    tc_common.add_sub_node_addr(cct, sec_nodes_addr_list)
-
-    plc_tb_ctrl._debug("step6: check nw top")
-    tc_common.check_nw_top(cct, nw_top)
-
-    plc_tb_ctrl._debug("step7: get meter read max exp time")
-    mr_max_exp_time = tc_common.read_mr_max_exp_time(cct) + 5
-
-    plc_tb_ctrl._debug("step8: single mr")
-    tc_common.exec_cct_mr_single(tb, cct, cco_mac_addr,
-                                 sec_nodes_addr_list[2], mr_max_exp_time,
-                                 10, [0x01, 0x01, 0x06, 0x05]) # 上一次日冻结正向有功电能数据
+    m1.wait()
+    m2.wait()
 
     plc_tb_ctrl._debug("step9: multiple mr")
-    di_list = [
-        [0x01, 0x01, 0x06, 0x05], #上一次日冻结正向有功电能数据
-        [0x01, 0x00, 0x06, 0x05], # （上 1 次）日冻结时间
-        [0x00, 0x00, 0x00, 0x00], # 当前组合有功总电能
-    ]
-    tc_common.exec_cct_mr_multiple(tb, cct, cco_mac_addr,
-                                   sec_nodes_addr_list[0:3], 90, 10,
-                                   di_list)
 
-
-    assert False, "not verified yet"
+    m1 = subprocess.Popen([config.SIMUCCT + "SimulatedConcentrator.exe",
+                          "true",
+                          config.SIMUCCT + "tc_4_10_simu_2_1.ini"])
+    m2 = subprocess.Popen([config.SIMUCCT + "SimulatedConcentrator.exe",
+                          "true",
+                          config.SIMUCCT + "tc_4_10_simu_2_2.ini"])
+    m1.wait()
+    m2.wait()

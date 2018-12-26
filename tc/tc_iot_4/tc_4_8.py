@@ -6,7 +6,7 @@ import concentrator
 import tc_common
 import tc_4_1
 import time
-
+import config
 '''
 4.8 事件主动上报测试
 验证多 STA 站点时，表端产生故障事件，事件主动上报准确性和效率
@@ -24,14 +24,35 @@ def run(tb, band):
     addListFile = u'./tc/tc_iot_4/addrlist/互操作性表架拓扑地址_事件上报.txt'
 
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
-    tc_4_1.run(tb, band)
+    tc_4_1.run(tb, band, False)
 
     # 重新复位表架，造成上电的事件上报
-    tb.meter_platform_power_reset()
+    tb.meter_platform_power_tested_reset()
+    # 确认CCO已经激活
+    res = None
+    for i in range(3):
+        res = tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
+        if res is None:
+            tb.meter_platform_power_tested_reset()
+            continue
+        else:
+            break
+    # 设置主节点地址
+    tb.cct.mac_addr =  '00-00-00-00-00-9C'
+    plc_tb_ctrl._debug("set CCO addr={}".format(tb.cct.mac_addr))
+    tc_common.set_cco_mac_addr(tb.cct, tb.cct.mac_addr)
+    # 清除CCO档案
+    plc_tb_ctrl._debug("reset CCO param area")
+    tc_common.reset_cco_param_area(tb.cct)
+    # 添加从节点
+    plc_tb_ctrl._debug("set sub node address to main cco, and start the main net")
+    nw_top_main, sec_nodes_addr_list = tc_common.read_node_top_list(config.IOT_TOP_LIST_ALL, tb.cct.mac_addr, False)
+    tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
     # 读取事件上报的地址列表
     top, nodelist = tc_common.read_node_top_list(addListFile, log=True)
     for i in range(len(nodelist)):
         nodelist[i] = nodelist[i].replace('-','')
+    plc_tb_ctrl._debug(nodelist)
     # 計算結束时间
     stoptime = time.time() + 1000
     # 1000s时间等待组网完成和事件上报，该时间与电科院并不一致
@@ -41,19 +62,13 @@ def run(tb, band):
         if frame1376p2 is not None:
             frame645 = frame1376p2.user_data.value.data.data
             tc_common.send_gdw1376p2_ack(tb.cct, frame1376p2.user_data.value.r.sn)
-            addrTmp = list(frame645.data)
-            addrTmp = addrTmp[-24: -30: -1]
-            addr = ""
-            for a in addrTmp:
-                if a < 10:
-                    addr += '0' + hex(a)
-                else:
-                    addr += hex(a)
-            addr = addr.replace('0x','')
+            addrTmp = frame645.data[-24: -30: -1]
+            # "".join("{:02x}".format(x) for x in addrTmp)
+            addr = "".join("%02x" % x for x in addrTmp)
             for a in nodelist:
                 if a == addr:
                     nodelist.remove(a)
-                    plc_tb_ctrl._debug(addr)
+            plc_tb_ctrl._debug(addr)
         if  nodelist.__len__() == 0:
             break
     if nodelist.__len__() != 0:
