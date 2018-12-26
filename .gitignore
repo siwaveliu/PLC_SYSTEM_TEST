@@ -1,4 +1,4 @@
-# Byte-compiled / optimized / DLL files
+﻿# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -117,4 +117,3 @@ log
 
 #模拟集中器
 模拟集中器测试报告/
-*.ini

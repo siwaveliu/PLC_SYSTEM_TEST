@@ -349,7 +349,8 @@ class PlcSystemTestbench(object):
             config.IOT_TOP_LIST_STATIC += tmp
             config.IOT_TOP_LIST_TESTED += tmp
             config.IOT_TOP_LIST_ESCORT += tmp
-
+            config.IOT_TOP_LIST_2_1 += tmp
+            config.IOT_TOP_LIST_2_2 += tmp
         # 执行用例
         for b in band:
             tc.run(self, b)
@@ -1216,14 +1217,9 @@ class PlcSystemTestbench(object):
         assert 0 == result, "close relay fail"
 
     def meter_platform_power_tested_reset(self):
-        self.usb_relay_device.open(1, 3)
-        time.sleep(5)
         self.tb_uart.close_tb_test_port()
         self.tb_uart.open_tb_test_port()
-        _debug("power off all of meters and cco, delay 5s")
-        self.usb_relay_device.close(1, 3)
-        _debug("power on all of meters and cco. delay 5s for boot")
-        time.sleep(5)
+        self.meter_platform_power(1, 3)
         self._deactivate_tb()
 
     def meter_platform_power_escort(self, status=0):
@@ -1231,14 +1227,27 @@ class PlcSystemTestbench(object):
         :param status: 0=off;1=on;2=reset,use 5s
         :return: None
         '''
+        self.meter_platform_power(status, 2)
+
+    def meter_platform_power(self, status=0, *channel):
+        '''
+        :param status: 0=off;1=on;2=reset,use 5s
+        :channel: 继电器控制通道
+        :return: None
+        '''
         if status == 0:
-            self.usb_relay_device.open(2)
+            _debug("power off")
+            self.usb_relay_device.open(*channel)
         elif status == 1:
-            self.usb_relay_device.close(2)
+            _debug("power on")
+            self.usb_relay_device.close(*channel)
         elif status == 2:
-            self.usb_relay_device.open(2)
+            _debug("power off. delay 5s for shutdown")
+            self.usb_relay_device.open(*channel)
             time.sleep(5)
-            self.usb_relay_device.close(2)
+            self.usb_relay_device.close(*channel)
+            _debug("power on . delay 10s for boot")
+            time.sleep(10)
 
 
 if __name__ == '__main__':

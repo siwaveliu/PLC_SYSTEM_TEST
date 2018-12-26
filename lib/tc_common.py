@@ -67,7 +67,6 @@ def add_sub_node_addr(cct, mac_addr_list, wait_ack=True):
     mac_dict_list =[]
     couter = 0 # type: int
     dl_afn11f1_pkt = plc_tb_ctrl.PlcSystemTestbench._load_data_file(data_file='afn11f1_dl.yaml')
-    plc_tb_ctrl._debug(dl_afn11f1_pkt)
     for addr in mac_addr_list:
         mac_dict_list.append({'addr':addr,'proto_type':'PROTO_DLT645_07'})
         couter += 1
@@ -1375,41 +1374,9 @@ def sta_init(mtr, meter_addr='00-00-00-00-00-01'):
 # send afn03f16, 读取CCO频段
 def read_cco_band(cct):
     assert isinstance(cct, concentrator.Concentrator)
-
     cct.clear_port_rx_buf()
-    frame = concentrator.build_gdw1376p2_frame(dict_content={
-        'head':
-            {'len': 0},
-        'cf':
-            {'dir': 'DL',
-             'prm': 'MASTER',
-             'comm_mode': 'BB_PLC'
-             },
-        'user_data': {
-            'value': {
-                'r': {
-                    'relay_level': 0,
-                    'conflict_detect_flag': 0,
-                    'comm_module_flag': 0,
-                    'subnode_flag': 0,
-                    'route_flag': 0,
-                    'coding_type': 'NO_ENCODING',
-                    'channel_id': 0,
-                    'reply_len': 0,
-                    'comm_rate_flag': 'BPS',
-                    'comm_rate': 0,
-                    'sn': 0
-                },  # end of r
-                'a': 'null',
-                'afn': 0x03,
-                'data': {
-                    'dt1': 128,
-                    'dt2': 1,
-                }  # end of data
-            }  # end of value
-        },  # end of user_data
-        'tail': {'cs': 0}
-    })  # end of dict_content
+    dl_afn03f16_pkt = plc_tb_ctrl.PlcSystemTestbench._load_data_file(data_file='afn03f16_dl.yaml')
+    frame = concentrator.build_gdw1376p2_frame(dict_content=dl_afn03f16_pkt)  # end of dict_content
 
     assert frame is not None
     cct.send_frame(frame)
@@ -1420,46 +1387,12 @@ def read_cco_band(cct):
 # send afn05f16, 设置CCO频段
 def write_cco_band(cct, band):
     assert isinstance(cct, concentrator.Concentrator)
-
     cct.clear_port_rx_buf()
-    frame = concentrator.build_gdw1376p2_frame(dict_content={
-        'head':
-            {'len': 0},
-        'cf':
-            {'dir': 'DL',
-             'prm': 'MASTER',
-             'comm_mode': 'BB_PLC'
-             },
-        'user_data': {
-            'value': {
-                'r': {
-                    'relay_level': 0,
-                    'conflict_detect_flag': 0,
-                    'comm_module_flag': 0,
-                    'subnode_flag': 0,
-                    'route_flag': 0,
-                    'coding_type': 'NO_ENCODING',
-                    'channel_id': 0,
-                    'reply_len': 0,
-                    'comm_rate_flag': 'BPS',
-                    'comm_rate': 0,
-                    'sn': 0
-                },  # end of r
-                'a': 'null',
-                'afn': 0x05,
-                'data': {
-                    'dt1': 128,
-                    'dt2': 1,
-                    'data':
-                        {
-                            'band': band
-                        }
-                }  # end of data
-            }  # end of value
-        },  # end of user_data
-        'tail': {'cs': 0}
-    })  # end of dict_content
-
+    if type(band) is not int:
+        band = int(band)
+    dl_afn05f16_pkt = plc_tb_ctrl.PlcSystemTestbench._load_data_file(data_file='afn05f16_dl.yaml')
+    dl_afn05f16_pkt['user_data']['value']['data']['data']['band'] = band
+    frame = concentrator.build_gdw1376p2_frame(dict_content=dl_afn05f16_pkt)
     assert frame is not None
     cct.send_frame(frame)
     # 等待确认
@@ -1491,3 +1424,20 @@ def read_node_top_list(file, cco_mac_addr=None, log=False):
     if log:
         plc_tb_ctrl._debug(sec_nodes_addr_list)
     return nw_top_main, sec_nodes_addr_list
+
+def wait_cco_power_on(tb, cct, *channel):
+    '''
+    :param tb:
+    :param cct:
+    :param channel: cco所在的继电器通道
+    :return: None
+    '''
+    res = None
+    for i in range(3):
+        tb.meter_platform_power(channel)
+        res = cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
+        if res is None:
+            continue
+        else:
+            break
+    assert res is not None, "wait 03H_F10 failed, check cco device"

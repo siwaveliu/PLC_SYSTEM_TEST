@@ -30,15 +30,11 @@ def run(tb, band):
     cct_other.mac_addr = '00-12-34-56-78-91'
 
     band = int(band)
-    if  band != config.DEFAULT_BAND:
-        cco_switch_band.run(tb, tb.cct, band, config.IOT_TOP_LIST_TESTED)
-        # 在脚本启动的通用入口，默认会关闭陪测得cco
-        tb._deactivate_tb()
-        tb.meter_platform_power_escort(1)
-        cco_switch_band.run(tb, cct_other, band, config.IOT_TOP_LIST_ESCORT)
-    else:
-        plc_tb_ctrl._debug("wait 5s for reset")
-        time.sleep(5)
+    cco_switch_band.run(tb, tb.cct, band, config.IOT_TOP_LIST_2_1, 1, 3)
+    # 在脚本启动的通用入口，默认会关闭陪测得cco
+    tb._deactivate_tb()
+    tb.meter_platform_power_escort(1)
+    cco_switch_band.run(tb, cct_other, band, config.IOT_TOP_LIST_2_2, 2)
     # 关闭串口
     tb.cct.close_port()
     cct_other.close_port()
@@ -60,7 +56,6 @@ def run(tb, band):
     m2.wait()
 
     plc_tb_ctrl._debug("step9: multiple mr")
-
     m1 = subprocess.Popen([config.SIMUCCT + "SimulatedConcentrator.exe",
                           "true",
                           config.SIMUCCT + "tc_4_10_simu_2_1.ini"])

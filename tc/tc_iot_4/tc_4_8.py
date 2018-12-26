@@ -25,18 +25,9 @@ def run(tb, band):
 
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
     tc_4_1.run(tb, band, False)
-
-    # 重新复位表架，造成上电的事件上报
-    tb.meter_platform_power_tested_reset()
-    # 确认CCO已经激活
-    res = None
-    for i in range(3):
-        res = tb.cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
-        if res is None:
-            tb.meter_platform_power_tested_reset()
-            continue
-        else:
-            break
+    # 确认CCO已经激活, 由于确认过程中会复位通道1，3；
+    # 表架的电表会重新上电，从而模块会读取事件。
+    tc_common.wait_cco_power_on(tb, tb.cct, 1, 3)
     # 设置主节点地址
     tb.cct.mac_addr =  '00-00-00-00-00-9C'
     plc_tb_ctrl._debug("set CCO addr={}".format(tb.cct.mac_addr))
