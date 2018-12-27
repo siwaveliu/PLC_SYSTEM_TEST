@@ -26,9 +26,7 @@ def run(tb, band):
     cco_mac_addr      = '00-00-00-00-00-9C'
     tb.cct.mac_addr = cco_mac_addr
     band = int(band)
-    switched = cco_switch_band.run(tb, tb.cct, band)
-    if switched == False:
-        tc_common.wait_cco_power_on(tb, tb.cct, 1, 3)
+    cco_switch_band.run(tb, tb.cct, band, 1, 3)
     # 设置主节点地址
     plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
     tc_common.set_cco_mac_addr(tb.cct, cco_mac_addr)

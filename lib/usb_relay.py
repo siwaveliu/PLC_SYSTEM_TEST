@@ -44,6 +44,7 @@ class UsbRelay(object):
             usb_relay_device_close_one_relay_channel = self.usb_relay_device.usb_relay_device_close_one_relay_channel
             usb_relay_device_close_one_relay_channel.restype = c_int
             for c in channel:
+                # print(type(c))
                 result = usb_relay_device_close_one_relay_channel(self.curr_device, c_int(c))
             return result
         else:

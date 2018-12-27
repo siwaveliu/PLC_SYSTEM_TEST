@@ -4,8 +4,8 @@ head:
   len:                      0
 cf:
   dir:                      DL
-  prm:                      MASTE
-  comm_mode:                BB_PL
+  prm:                      MASTER
+  comm_mode:                BB_PLC
 
 user_data:
   value:
@@ -15,7 +15,7 @@ user_data:
       comm_module_flag:     0
       subnode_flag:         0
       route_flag:           0
-      coding_type:          NO_EN
+      coding_type:          NO_ENCODING
       channel_id:           0
       reply_len:            0
       comm_rate_flag:       BPS

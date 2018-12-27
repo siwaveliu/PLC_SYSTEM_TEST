@@ -315,7 +315,11 @@ class PlcSystemTestbench(object):
         _trace_printf('===================')
 
         self._init_param()
-        self.meter_platform_power_tested_reset()
+        self.meter_platform_power(1, 1, 3)
+        self.tb_uart.close_tb_test_port()
+        self.tb_uart.open_tb_test_port()
+        time.sleep(0.5)
+        self._deactivate_tb()
         # 默认情况下关闭陪测cco
         self.meter_platform_power_escort(0)
         tc_file_name = tc_name + '.py'
@@ -1219,7 +1223,7 @@ class PlcSystemTestbench(object):
     def meter_platform_power_tested_reset(self):
         self.tb_uart.close_tb_test_port()
         self.tb_uart.open_tb_test_port()
-        self.meter_platform_power(1, 3)
+        self.meter_platform_power(2, 1, 3)
         self._deactivate_tb()
 
     def meter_platform_power_escort(self, status=0):

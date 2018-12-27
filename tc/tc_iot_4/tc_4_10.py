@@ -33,7 +33,6 @@ def run(tb, band):
     cco_switch_band.run(tb, tb.cct, band, config.IOT_TOP_LIST_2_1, 1, 3)
     # 在脚本启动的通用入口，默认会关闭陪测得cco
     tb._deactivate_tb()
-    tb.meter_platform_power_escort(1)
     cco_switch_band.run(tb, cct_other, band, config.IOT_TOP_LIST_2_2, 2)
     # 关闭串口
     tb.cct.close_port()

@@ -34,22 +34,13 @@ def run(tb, band, escort=True):
 
     band = int(band)
     if escort :
-        switched = cco_switch_band.run(tb, tb.cct, band, node_addr_list_file, 1, 3)
-        if  switched == False:
-            # 确认CCO已经激活
-            tc_common.wait_cco_power_on(tb, tb.cct, 1, 3)
+        cco_switch_band.run(tb, tb.cct, band, node_addr_list_file, 1, 3)
         # 在脚本启动的通用入口，默认会关闭陪测得cco
         tb._deactivate_tb()
         tb.meter_platform_power_escort(1)
-        switched = cco_switch_band.run(tb, cct_other, band, node_addr_list_file_other, 2)
-        if switched == False:
-            # 必须先打开串口以免上电后的延迟导致无法收到03H_F10
-            tc_common.wait_cco_power_on(tb, cct_other, 2)
+        cco_switch_band.run(tb, cct_other, band, node_addr_list_file_other, 2)
     else:
-        switched = cco_switch_band.run(tb, tb.cct, band, node_addr_list_file, 1, 3)
-        if switched == False:
-            # 确认CCO已经激活
-            tc_common.wait_cco_power_on(tb, tb.cct, 1, 3)
+        cco_switch_band.run(tb, tb.cct, band, node_addr_list_file, 1, 3)
 
     # 设置CCO主节点地址
     plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))

@@ -19,8 +19,7 @@ def run(tb, cct, band, addrfilepath, *channel):
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(cct, concentrator.Concentrator), "cct type is not concentrator"
     cco_mac_addr = cct.mac_addr  # type: str
-    tb.meter_platform_power(2, channel)
-    tc_common.wait_cco_power_on(tb, cct, channel)
+    tc_common.wait_cco_power_on(tb, cct, *channel)
     plc_tb_ctrl._debug("read default band")
     r_band = tc_common.read_cco_band(cct)
     plc_tb_ctrl._debug("default Band: " + str(r_band))

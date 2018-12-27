@@ -1434,7 +1434,7 @@ def wait_cco_power_on(tb, cct, *channel):
     '''
     res = None
     for i in range(3):
-        tb.meter_platform_power(channel)
+        tb.meter_platform_power(2, *channel)
         res = cct.wait_for_gdw1376p2_frame(afn=0x03, dt1=0x02, dt2=1, tm_assert=False)
         if res is None:
             continue
