@@ -35,9 +35,6 @@ def run(tb, band, escort=True):
     band = int(band)
     if escort :
         cco_switch_band.run(tb, tb.cct, band, node_addr_list_file, 1, 3)
-        # 在脚本启动的通用入口，默认会关闭陪测得cco
-        tb._deactivate_tb()
-        tb.meter_platform_power_escort(1)
         cco_switch_band.run(tb, cct_other, band, node_addr_list_file_other, 2)
     else:
         cco_switch_band.run(tb, tb.cct, band, node_addr_list_file, 1, 3)
@@ -66,7 +63,7 @@ def run(tb, band, escort=True):
     plc_tb_ctrl._debug("set sub node address to main cco, and start the main net")
     nw_top_main, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file, cco_mac_addr, False)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
-    tc_common.check_nw_top(tb.cct, nw_top_main, 600)
+    tc_common.check_nw_top(tb.cct, nw_top_main)
     return nw_top_main, sec_nodes_addr_list
 
 

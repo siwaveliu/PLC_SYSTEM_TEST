@@ -157,7 +157,7 @@ def record_test_status():
     if config.AUTO_LOG:
         TB_INSTANCE._stop_dut_logging()
         TB_INSTANCE._stop_tb_logging()
-
+    TB_INSTANCE._stop_tb_logging()
     # 确保sitrace已关闭，串口已释放
     time.sleep(1)
 
@@ -315,11 +315,11 @@ class PlcSystemTestbench(object):
         _trace_printf('===================')
 
         self._init_param()
-        self.meter_platform_power(1, 1, 3)
+        # self.meter_platform_power(1, 1, 3)
         self.tb_uart.close_tb_test_port()
         self.tb_uart.open_tb_test_port()
+        TB_INSTANCE._start_tb_logging()
         time.sleep(0.5)
-        self._deactivate_tb()
         # 默认情况下关闭陪测cco
         self.meter_platform_power_escort(0)
         tc_file_name = tc_name + '.py'
@@ -358,7 +358,6 @@ class PlcSystemTestbench(object):
         # 执行用例
         for b in band:
             tc.run(self, b)
-
     def _init_uart(self, dev_port_baudrate):
         self.tb_uart.open_tb_test_port()
 
@@ -490,16 +489,18 @@ class PlcSystemTestbench(object):
         frame_body = result['body']
         self.tb_uart.send_test_frame(frame_body, cf)
         test_frame = self.tb_uart.wait_for_test_frame("BAND_CONFIG_CNF_CMD")
-        assert test_frame is not None, 'BAND_CONFIG_CNF Timeout'
+        #assert test_frame is not None, 'BAND_CONFIG_CNF Timeout'
         self._init_band_param(band, tonemask)
+        # 清除tb的串口缓存
+        self.tb_uart.clear_tb_port_rx_buf()
 
     def _deactivate_tb(self):
         result = test_frame_helper.build_deactivate_req()
         cf = result['cf']
         frame_body = result['body']
         self.tb_uart.send_test_frame(frame_body, cf)
-        test_frame = self.tb_uart.wait_for_test_frame("DEACTIVATE_CNF_CMD")
-        assert test_frame is not None
+        test_frame = self.tb_uart.wait_for_test_frame("DEACTIVATE_CNF_CMD", timeout_assert= False)
+        #assert test_frame is not None
         #assert test_frame.payload.error_code == "DEACT_NO_ERROR"
 
     def _read_tb_time(self):
@@ -1240,17 +1241,17 @@ class PlcSystemTestbench(object):
         :return: None
         '''
         if status == 0:
-            _debug("power off")
+            _debug("power off: {}".format(channel))
             self.usb_relay_device.open(*channel)
         elif status == 1:
-            _debug("power on")
+            _debug("power on: {}".format(channel))
             self.usb_relay_device.close(*channel)
         elif status == 2:
-            _debug("power off. delay 5s for shutdown")
+            _debug("power off. delay 5s for shutdown: {}" .format(channel))
             self.usb_relay_device.open(*channel)
             time.sleep(5)
             self.usb_relay_device.close(*channel)
-            _debug("power on . delay 10s for boot")
+            _debug("power on . delay 10s for boot: {}".format(channel))
             time.sleep(10)
 
 

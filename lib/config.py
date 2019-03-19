@@ -11,9 +11,9 @@ CONCENTRATOR_BAUDRATE = 9600  # type: int
 CONCENTRATOR_OTHER_PORT = 'COM3' # type: str
 
 TB_PORT = 'COM6'
-TB_BAUDRATE = 460800
+TB_BAUDRATE = 115200
 
-TB_SITRACE_PORT = 'COM27'
+TB_SITRACE_PORT = 'COM4'
 TB_SITRACE_BAUDRATE = 921600
 
 DUT_SITRACE_PORT = 'COM26'
@@ -32,7 +32,7 @@ TB_JLINK_SN = '269200585'
 
 JLINK_PATH = "D:/jlink/JLink_V612a/JLink.exe"
 
-SITRACE_PATH = r"D:\svn\sources\SIWP9006\plc_system_test\venv\Scripts\SiTrace.exe"
+SITRACE_PATH = r"C:\D\SiBox\SiTrace.exe"
 
 SIMUCCT = u"C:/D/plc_system_test/tc/tc_iot_4/SimulatedConcentrator/"
 

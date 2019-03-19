@@ -26,7 +26,7 @@ def run(tb, band):
     cco_mac_addr      = '00-00-00-00-00-9C'
     tb.cct.mac_addr = cco_mac_addr
     band = int(band)
-    cco_switch_band.run(tb, tb.cct, band, 1, 3)
+    cco_switch_band.run(tb, tb.cct, band, None, 1, 3)
     # 设置主节点地址
     plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
     tc_common.set_cco_mac_addr(tb.cct, cco_mac_addr)
@@ -38,7 +38,7 @@ def run(tb, band):
     nw_top_main, sec_nodes_addr_list =tc_common.read_node_top_list(node_addr_list_file_static, cco_mac_addr, True)
     tc_common.add_sub_node_addr(tb.cct, sec_nodes_addr_list)
     # 检查拓扑图
-    tc_common.check_nw_top(tb.cct, nw_top_main, 600)
+    tc_common.check_nw_top(tb.cct, nw_top_main)
     # 添加后入网的从节点
     plc_tb_ctrl._debug("set another half of nodes's address to main cco, and start the main net")
     nw_top_main_other, sec_nodes_addr_list = tc_common.read_node_top_list(node_addr_list_file_dynatic, None, True)
@@ -46,7 +46,7 @@ def run(tb, band):
     # 更新拓扑图
     nw_top_main.update(nw_top_main_other)
     # 检查新的拓扑图
-    tc_common.check_nw_top(tb.cct, nw_top_main, 600)
+    tc_common.check_nw_top(tb.cct, nw_top_main)
 
     # Dialogs.pause_execution("Add new secondary nodes")
 

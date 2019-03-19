@@ -75,6 +75,12 @@ class Concentrator(object):
         self.frame = ''
         self.frame_total_len = 0
 
+    def reset_port(self):
+        self.clear_port_rx_buf()
+        self.close_port()
+        time.sleep(0.5)
+        self.open_port()
+
     def send_frame(self, frame):
         plc_tb_ctrl._trace_byte_stream('DL GDW1376P2', frame)
         self.ser.write(frame)
