@@ -5,15 +5,15 @@ METER_BAUDRATE = 2400
 TEST_PORT = 'COM4'
 TEST_PORT_BAUDRATE = 115200
 
-CONCENTRATOR_PORT = 'COM5'  # type: str
+CONCENTRATOR_PORT = 'COM1'  # type: str
 CONCENTRATOR_BAUDRATE = 9600  # type: int
 
-CONCENTRATOR_OTHER_PORT = 'COM3' # type: str
+CONCENTRATOR_OTHER_PORT = 'COM2' # type: str
 
-TB_PORT = 'COM6'
-TB_BAUDRATE = 115200
+TB_PORT = 'COM7'
+TB_BAUDRATE = 460800
 
-TB_SITRACE_PORT = 'COM4'
+TB_SITRACE_PORT = 'COM11'
 TB_SITRACE_BAUDRATE = 921600
 
 DUT_SITRACE_PORT = 'COM26'
@@ -82,8 +82,9 @@ IOT_TOP_LIST_STATIC = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_静�
 IOT_TOP_LIST_ALL = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_所有'
 IOT_TOP_LIST_TESTED = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_待测'
 IOT_TOP_LIST_ESCORT = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_陪测'
-IOT_TOP_LIST_2_1 = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_2_1'
-IOT_TOP_LIST_2_2 = u'tc/tc_iot_4/addrlist/互操作性表架拓扑地址_2_2'
+IOT_TOP_LIST_2_1 = u'tc/tc_iot_4/addrlist/互操作性表架地址_2_1'
+IOT_TOP_LIST_2_2 = u'tc/tc_iot_4/addrlist/互操作性表架地址_2_2'
+IOT_TOP_LIST_6_ = u'tc/tc_iot_4/addrlist/互操作性表架地址_6_'
 # TB can not be Reset, so add win-serial for reset
 #TB_RESET_PORT = 'COM22'
 #TB_RESET_BAUDRATE = 9600

@@ -1,5 +1,4 @@
 from ctypes import *
-import time
 
 class UsbRelayDeviceInfo(Structure):
     pass

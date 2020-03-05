@@ -21,12 +21,13 @@ def run(tb, band):
     """
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
-
+    band = int(band)
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
     nw_top, nodes_list = tc_4_1.run(tb, band, False)
 
     # 激活tb，监听CCO发出广播校时帧
-    tc_common.activate_tb(tb, int(band))
+    for i in range(3):
+        tb._change_band(band)
 
     plc_tb_ctrl._debug("step6: start time calibration")
     dl_1376p2_pkt = tb._load_data_file(data_file='afn05f3_dl.yaml')

@@ -6,7 +6,7 @@ import concentrator
 import tc_common
 import tc_4_1
 import time
-
+import config
 
 '''
 4.7 搜表功能测试
@@ -24,7 +24,14 @@ def run(tb, band):
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
     nw_top, nodes_list = tc_4_1.run(tb, band, False)
 
+    # cco_mac_addr = '00-00-00-00-00-9C'  # type: str
+    # # 设置CCO主节点地址
+    # plc_tb_ctrl._debug("set CCO addr={}".format(cco_mac_addr))
+    # tc_common.set_cco_mac_addr(tb.cct, cco_mac_addr)
+    # nw_top, nodes_list = tc_common.read_node_top_list(config.IOT_TOP_LIST_ALL, cco_mac_addr, False)
 
+    total_num = len(nodes_list)
+    plc_tb_ctrl._debug("total num: {}".format(total_num))
     plc_tb_ctrl._debug("step6: send 11f5")
     dl_afn11f5_pkt = tb._load_data_file(data_file='afn11f5_dl.yaml')
     dl_afn11f5_pkt['cf']['prm'] = 'MASTER'
@@ -47,17 +54,20 @@ def run(tb, band):
             tc_common.send_gdw1376p2_ack(tb.cct, user_data.r.sn)
             afn06f4 = user_data.data.data
             for node in afn06f4.node:
+                plc_tb_ctrl._debug("report node: {}".format(node))
                 if node.addr in nodes_list:
                     nodes_list.remove(node.addr)
             if nodes_list.__len__() == 0:
                 break
-        elif ((user_data.afn == 0x06) and (3 == dt)): # 06F4 路由工况变动信息
+        elif ((user_data.afn == 0x06) and (3 == dt)): # 06F3 路由工况变动信息
             tc_common.send_gdw1376p2_ack(tb.cct, user_data.r.sn)
             if user_data.data.data.type == 'METER_SEARCH_TASK_COMPLETE':
                 break
 
         timeout = stop_time - time.time()
-
+        plc_tb_ctrl._debug("node reg's num: {}".format(total_num - len(nodes_list)))
     elapsed_time = round((time.time() - start_time) / 60)
+    if(len(nodes_list) > 0):
+        plc_tb_ctrl._debug("still not report Node Reg STA list: {}".format(" ".join("{}".format(x) for x in nodes_list)))
     assert len(nodes_list) == 0, "meter search fail"
     assert elapsed_time <= duration, "receive receive 06f3 late"

@@ -163,6 +163,7 @@ def record_test_status():
 
     TB_INSTANCE._stop_detail_logging()
 
+
 def init_test():
     assert isinstance(TB_INSTANCE, PlcSystemTestbench), "not PlcSystemTestbench instance"
 
@@ -488,7 +489,7 @@ class PlcSystemTestbench(object):
         cf = result['cf']
         frame_body = result['body']
         self.tb_uart.send_test_frame(frame_body, cf)
-        test_frame = self.tb_uart.wait_for_test_frame("BAND_CONFIG_CNF_CMD")
+        test_frame = self.tb_uart.wait_for_test_frame("BAND_CONFIG_CNF_CMD", timeout_assert=False)
         #assert test_frame is not None, 'BAND_CONFIG_CNF Timeout'
         self._init_band_param(band, tonemask)
         # 清除tb的串口缓存
@@ -721,10 +722,7 @@ class PlcSystemTestbench(object):
 
      # wait for beacon
     def _wait_for_plc_beacon(self, timeout = None, timeout_cb = None, content_checker=None):
-        _debug('Wait for beacon')
         beacon = self._wait_for_fc_pl_data(self._check_plc_beacon_fc_payload, timeout, timeout_cb, content_checker)
-        _debug('Beacon received')
-
         return beacon
 
      # wait for sack
@@ -1232,7 +1230,7 @@ class PlcSystemTestbench(object):
         :param status: 0=off;1=on;2=reset,use 5s
         :return: None
         '''
-        self.meter_platform_power(status, 2)
+        self.meter_platform_power(status, 2, 4)
 
     def meter_platform_power(self, status=0, *channel):
         '''

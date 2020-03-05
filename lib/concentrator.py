@@ -12,7 +12,6 @@ GDW1376P2_FRAME_HEAD_SIZE = gdw1376p2.gdw1376p2_head.sizeof()
 GDW1376P2_FRAME_TAIL_SIZE = gdw1376p2.gdw1376p2_tail.sizeof()
 DEFAULT_GDW1376P2_FRAME_TIMEOUT = 10
 START_CHAR = '\x68'
-
 def build_gdw1376p2_frame(dict_content = None, data_str = None, data_file = None):
     data = binary_helper.build(gdw1376p2.gdw1376p2.build, "fail to build gdw1376p2 frame", dict_content, data_file, data_str)
     if data is not None:

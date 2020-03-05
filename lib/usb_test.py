@@ -4,9 +4,10 @@ import time
 i = 0
 usb = usb_relay.UsbRelay()
 usb.init_device(None)
-usb.open(1, 2, 3)
+usb.open(1, 2, 3, 4)
 time.sleep(5)
-usb.close(1, 2, 3)
+# usb.close(1, 2, 3, 4)
+usb.close(1, 3)
 # while True:
 #     i += 1
 #     print("the [" + str(i) + '] times')

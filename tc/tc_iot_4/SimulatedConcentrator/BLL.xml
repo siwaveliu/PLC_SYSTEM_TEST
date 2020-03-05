@@ -115,6 +115,11 @@
             南网协议
             </summary>
         </member>
+        <member name="F:BLL.ProtocolReceiveClass.FrameType.Type_698">
+            <summary>
+            698.45协议
+            </summary>
+        </member>
         <member name="M:BLL.SerialPortConnect.#ctor(BLL.ProtocolReceiveClass,System.IO.Ports.SerialPort)">
             <summary>
             初始化连接

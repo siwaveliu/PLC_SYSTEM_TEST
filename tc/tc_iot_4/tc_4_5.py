@@ -19,17 +19,19 @@ def run(tb, band):
     Args:
         tb (plc_tb_ctrl.PlcSystemTestbench): testbench object .
     """
+    start_time = time.time()
     assert isinstance(tb, plc_tb_ctrl.PlcSystemTestbench),"tb type is not plc_tb_ctrl.PlcSystemTestbench"
     assert isinstance(tb.cct, concentrator.Concentrator), "tb.cct type is not concentrator"
 
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
-    nw_top, nodes_list = tc_4_1.run(tb, band, False)
-
-    plc_tb_ctrl._debug("step2: get meter read max exp time")
-    mr_max_exp_time = tc_common.read_mr_max_exp_time(tb.cct) + 5
+    tc_4_1.run(tb, band, False)
 
     tb.cct.close_port()
-    time.sleep(1)
+
+    stop_time = time.time()
+    if stop_time - start_time < 3600:
+        plc_tb_ctrl._debug("step2: wait for net stable %ds" % (stop_time - start_time))
+        time.sleep(stop_time - start_time)
 
     plc_tb_ctrl._debug("step8: read mr")
     mulprocess = subprocess.Popen([config.SIMUCCT + "SimulatedConcentrator.exe",

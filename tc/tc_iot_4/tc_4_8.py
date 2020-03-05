@@ -25,6 +25,10 @@ def run(tb, band):
 
     plc_tb_ctrl._debug("step1: switch band if needed, wait for net working")
     tc_4_1.run(tb, band, False)
+    plc_tb_ctrl._debug("wait 120s start event_report")
+    time.sleep(60)
+    tc_common.set_event_report(tb.cct, 1)
+    time.sleep(60)
     # 确认CCO已经激活, 由于确认过程中会复位通道1，3；
     # 表架的电表会重新上电，从而模块会读取事件。
     tc_common.wait_cco_power_on(tb, tb.cct, 1, 3)
@@ -45,7 +49,7 @@ def run(tb, band):
         nodelist[i] = nodelist[i].replace('-','')
     plc_tb_ctrl._debug(nodelist)
     # 計算結束时间
-    stoptime = time.time() + 1000
+    stoptime = time.time() + 2000
     # 1000s时间等待组网完成和事件上报，该时间与电科院并不一致
     while stoptime - time.time() > 0:
         frame1376p2 = tb.cct.wait_for_gdw1376p2_frame(afn=0x06, dt1=16, dt2=0, timeout=(stoptime - time.time()),
